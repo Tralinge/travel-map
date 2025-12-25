@@ -1,1 +1,56 @@
-places
+[
+    {
+      title: "Hefei, China",
+      lat: 31.8349,
+      lng: 117.2745,
+      text: "Birth of Kaiya",
+      photos: [
+        "https://tralinge.github.io/travel-map/photos/hefei/web_000.jpg",
+        "https://tralinge.github.io/travel-map/photos/hefei/web_001.jpg",
+        "https://tralinge.github.io/travel-map/photos/hefei/web_002.jpg",
+        "https://tralinge.github.io/travel-map/photos/hefei/web_003.jpg",
+        "https://tralinge.github.io/travel-map/photos/hefei/web_004.jpg",
+        "https://tralinge.github.io/travel-map/photos/hefei/web_005.jpg",
+        "https://tralinge.github.io/travel-map/photos/hefei/web_006.jpg",
+        "https://tralinge.github.io/travel-map/photos/hefei/web_007.jpg",
+        "https://tralinge.github.io/travel-map/photos/hefei/web_008.jpg",
+        "https://tralinge.github.io/travel-map/photos/hefei/web_009.jpg"
+      ]
+    },
+    {
+      title: "Xingyi, China",
+      lat: 25.0121,
+      lng: 104.9077,
+      text: "Trekking in Guizhou",
+      photos: [
+        "https://tralinge.github.io/travel-map/photos/xingyi/web_000.jpg",
+        "https://tralinge.github.io/travel-map/photos/xingyi/web_001.jpg",
+        "https://tralinge.github.io/travel-map/photos/xingyi/web_002.jpg",
+        "https://tralinge.github.io/travel-map/photos/xingyi/web_003.jpg",
+        "https://tralinge.github.io/travel-map/photos/xingyi/web_004.jpg",
+        "https://tralinge.github.io/travel-map/photos/xingyi/web_005.jpg",
+        "https://tralinge.github.io/travel-map/photos/xingyi/web_006.jpg",
+        "https://tralinge.github.io/travel-map/photos/xingyi/web_007.jpg",
+        "https://tralinge.github.io/travel-map/photos/xingyi/web_008.jpg",
+        "https://tralinge.github.io/travel-map/photos/xingyi/web_009.jpg"
+      ]
+    },
+    {
+      title: "Okinawa, Japan",
+      lat: 26.4270,
+      lng: 127.8243,
+      text: "Beach Time",
+      photos: [
+        "https://tralinge.github.io/travel-map/photos/okinawa/web_000.jpg",
+        "https://tralinge.github.io/travel-map/photos/okinawa/web_001.jpg",
+        "https://tralinge.github.io/travel-map/photos/okinawa/web_002.jpg",
+        "https://tralinge.github.io/travel-map/photos/okinawa/web_003.jpg",
+        "https://tralinge.github.io/travel-map/photos/okinawa/web_004.jpg",
+        "https://tralinge.github.io/travel-map/photos/okinawa/web_005.jpg",
+        "https://tralinge.github.io/travel-map/photos/okinawa/web_006.jpg",
+        "https://tralinge.github.io/travel-map/photos/okinawa/web_007.jpg",
+        "https://tralinge.github.io/travel-map/photos/okinawa/web_008.jpg",
+        "https://tralinge.github.io/travel-map/photos/okinawa/web_009.jpg"
+      ]
+    },
+  ]
