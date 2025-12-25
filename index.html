@@ -83,32 +83,37 @@
       return response.json();
     })
     .then(places => {
+      const bounds = L.latLngBounds();
+    
       places.forEach(place => {
         const marker = L.marker([place.lat, place.lng]).addTo(map);
-
+    
+        bounds.extend([place.lat, place.lng]);
+    
         marker.on('click', () => {
           map.panTo([place.lat, place.lng], { animate: true });
-
+    
           document.getElementById('place-title').textContent = place.title;
-
+    
           let html = '';
           if (place.text) {
             html += `<p>${place.text}</p>`;
           }
-
+    
           place.photos.forEach(url => {
             html += `<img src="${url}" alt="">`;
           });
-
+    
           document.getElementById('place-content').innerHTML = html;
         });
       });
+    
       // Auto-fit bounds once on load
-        if (places.length > 1) {
-          map.fitBounds(bounds, { padding: [50, 50] });
-        } else if (places.length === 1) {
-          map.setView([places[0].lat, places[0].lng], 5);
-        }
+      if (places.length > 1) {
+        map.fitBounds(bounds, { padding: [50, 50] });
+      } else if (places.length === 1) {
+        map.setView([places[0].lat, places[0].lng], 5);
+      }
     })
     .catch(err => {
       console.error(err);
