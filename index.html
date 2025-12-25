@@ -92,29 +92,30 @@
   const markerCluster = L.markerClusterGroup();
 
   // ===== SIDEBAR =====
-  document.getElementById("place-title").textContent =
-  [
-    place.year,
-    place.text ? `- ${place.text} in ${place.title}` : `- ${place.title}`
-  ]
-    .filter(Boolean)
-    .join(" ");
-
-
-    let html = "";
-
-    if (place.text) {
-      html += `<p>${place.text}</p>`;
+  function updateSidebar(place) {
+    document.getElementById("place-title").textContent =
+    [
+      place.year,
+      place.text ? `- ${place.text} in ${place.title}` : `- ${place.title}`
+    ]
+      .filter(Boolean)
+      .join(" ");
+  
+  
+      let html = "";
+  
+      if (place.text) {
+        html += `<p>${place.text}</p>`;
+      }
+  
+      if (place.photos && place.photos.length) {
+        place.photos.forEach(photo => {
+          html += `<img src="${photo}" alt="">`;
+        });
+      }
+  
+      document.getElementById("place-content").innerHTML = html;
     }
-
-    if (place.photos && place.photos.length) {
-      place.photos.forEach(photo => {
-        html += `<img src="${photo}" alt="">`;
-      });
-    }
-
-    document.getElementById("place-content").innerHTML = html;
-  }
 
   // ===== DATA LOAD =====
   fetch("places.json")
