@@ -104,10 +104,6 @@
   
       let html = "";
   
-      if (place.text) {
-        html += `<p>${place.text}</p>`;
-      }
-  
       if (place.photos && place.photos.length) {
         place.photos.forEach(photo => {
           html += `<img src="${photo}" alt="">`;
