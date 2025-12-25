@@ -88,6 +88,29 @@
   // Create marker cluster group
   const markerCluster = L.markerClusterGroup();
 
+  <script>
+  function updateSidebar(place) {
+    document.getElementById("place-title").textContent =
+      place.title_en && place.title_local
+        ? `${place.title_en} (${place.title_local})`
+        : place.title_en || place.title_local || "";
+  
+    let html = "";
+  
+    if (place.text) {
+      html += `<p>${place.text}</p>`;
+    }
+  
+    if (place.photos && place.photos.length) {
+      place.photos.forEach(photo => {
+        html += `<img src="${PHOTO_BASE}${photo}" alt="">`;
+      });
+    }
+  
+    document.getElementById("place-content").innerHTML = html;
+  }
+  </script>
+
   fetch("places.json")
     .then(response => response.json())
     .then(places => {
