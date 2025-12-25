@@ -92,11 +92,14 @@
   const markerCluster = L.markerClusterGroup();
 
   // ===== SIDEBAR =====
-  function updateSidebar(place) {
-    document.getElementById("place-title").textContent =
-      place.title_en && place.title_local
-        ? `${place.title_en} (${place.title_local})`
-        : place.title_en || place.title_local || "";
+  document.getElementById("place-title").textContent =
+  [
+    place.year,
+    place.text ? `- ${place.text} in ${place.title}` : `- ${place.title}`
+  ]
+    .filter(Boolean)
+    .join(" ");
+
 
     let html = "";
 
