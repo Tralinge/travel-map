@@ -5,16 +5,20 @@
   <title>Travel Map</title>
 
   <!-- Leaflet CSS -->
-  <link rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-  </link>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  >
 
-  <link rel="stylesheet"
-      href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
-
-  <link rel="stylesheet"
-      href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
-
+  <!-- MarkerCluster CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"
+  >
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"
+  >
 
   <style>
     html, body {
@@ -77,43 +81,46 @@
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 
 <script>
-  // Initialize map
-  const map = L.map('map').setView([20, 0], 2);
+  // ===== MAP INIT =====
+  const map = L.map("map").setView([20, 0], 2);
 
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,
-    attribution: '&copy; OpenStreetMap contributors'
+    attribution: "&copy; OpenStreetMap contributors"
   }).addTo(map);
 
-  // Create marker cluster group
   const markerCluster = L.markerClusterGroup();
 
-  <script>
+  // ===== SIDEBAR =====
   function updateSidebar(place) {
     document.getElementById("place-title").textContent =
       place.title_en && place.title_local
         ? `${place.title_en} (${place.title_local})`
         : place.title_en || place.title_local || "";
-  
+
     let html = "";
-  
+
     if (place.text) {
       html += `<p>${place.text}</p>`;
     }
-  
+
     if (place.photos && place.photos.length) {
       place.photos.forEach(photo => {
-        html += `<img src="${PHOTO_BASE}${photo}" alt="">`;
+        html += `<img src="${photo}" alt="">`;
       });
     }
-  
+
     document.getElementById("place-content").innerHTML = html;
   }
-  </script>
 
-  <script>
+  // ===== DATA LOAD =====
   fetch("places.json")
-    .then(response => response.json())
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Failed to load places.json");
+      }
+      return response.json();
+    })
     .then(places => {
       const bounds = L.latLngBounds();
 
@@ -131,14 +138,17 @@
 
       map.addLayer(markerCluster);
 
-      // Auto-fit bounds once on load
       if (places.length > 1) {
         map.fitBounds(bounds, { padding: [50, 50] });
       } else if (places.length === 1) {
         map.setView([places[0].lat, places[0].lng], 5);
       }
     })
-    .catch(err => console.error("Failed to load places.json", err));
+    .catch(err => {
+      console.error(err);
+      document.getElementById("place-content").innerHTML =
+        "<p style='color:red'>Failed to load location data.</p>";
+    });
 </script>
 
 </body>
