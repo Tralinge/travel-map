@@ -103,6 +103,12 @@
           document.getElementById('place-content').innerHTML = html;
         });
       });
+      // Auto-fit bounds once on load
+        if (places.length > 1) {
+          map.fitBounds(bounds, { padding: [50, 50] });
+        } else if (places.length === 1) {
+          map.setView([places[0].lat, places[0].lng], 5);
+        }
     })
     .catch(err => {
       console.error(err);
