@@ -51,6 +51,35 @@
       cursor: pointer;
     }
 
+    /* ===== CUSTOM YEAR MARKER ===== */
+    .year-marker {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transform: translateY(-8px);
+    }
+
+    .year-label {
+      font-size: 11px;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 1px 5px;
+      border-radius: 8px;
+      margin-bottom: 2px;
+      color: #333;
+      line-height: 1;
+      box-shadow: 0 0 2px rgba(0,0,0,0.3);
+    }
+
+    .pin {
+      width: 12px;
+      height: 12px;
+      background: #e53935;
+      border-radius: 50%;
+      border: 2px solid white;
+      box-shadow: 0 0 3px rgba(0,0,0,0.4);
+    }
+
     /* ===== LIGHTBOX ===== */
     #lightbox {
       position: fixed;
@@ -79,13 +108,8 @@
       padding: 10px;
     }
 
-    #lightbox-prev {
-      left: 20px;
-    }
-
-    #lightbox-next {
-      right: 20px;
-    }
+    #lightbox-prev { left: 20px; }
+    #lightbox-next { right: 20px; }
 
     #lightbox-close {
       position: absolute;
@@ -122,8 +146,6 @@
 
 <!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-<!-- MarkerCluster JS -->
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 
 <script>
@@ -147,33 +169,44 @@
 
   // ===== SIDEBAR =====
   function updateSidebar(place) {
-    const titleEl = document.getElementById("place-title");
-    const contentEl = document.getElementById("place-content");
-
-    titleEl.textContent =
+    document.getElementById("place-title").textContent =
       `${place.year} - ${place.text} in ${place.title}`;
 
-    contentEl.innerHTML = "";
+    const content = document.getElementById("place-content");
+    content.innerHTML = "";
 
     currentPhotos = place.photos || [];
 
     currentPhotos.forEach((photo, index) => {
       const img = document.createElement("img");
       img.src = photo;
-      img.alt = "";
-      img.addEventListener("click", () => openLightbox(index));
-      contentEl.appendChild(img);
+      img.onclick = () => openLightbox(index);
+      content.appendChild(img);
     });
   }
 
   // ===== DATA LOAD =====
   fetch("places.json")
-    .then(response => response.json())
+    .then(r => r.json())
     .then(places => {
       const bounds = L.latLngBounds();
 
       places.forEach(place => {
-        const marker = L.marker([place.lat, place.lng]);
+        const shortYear = String(place.year).slice(-2);
+
+        const icon = L.divIcon({
+          className: "",
+          html: `
+            <div class="year-marker">
+              <div class="year-label">'${shortYear}</div>
+              <div class="pin"></div>
+            </div>
+          `,
+          iconSize: [30, 40],
+          iconAnchor: [15, 34]
+        });
+
+        const marker = L.marker([place.lat, place.lng], { icon });
 
         marker.on("click", () => {
           map.setView([place.lat, place.lng], 6);
@@ -188,7 +221,7 @@
       map.fitBounds(bounds, { padding: [50, 50] });
     });
 
-  // ===== LIGHTBOX CONTROLS =====
+  // ===== LIGHTBOX =====
   function openLightbox(index) {
     currentIndex = index;
     document.getElementById("lightbox-img").src = currentPhotos[currentIndex];
@@ -210,13 +243,13 @@
     document.getElementById("lightbox-img").src = currentPhotos[currentIndex];
   }
 
-  document.getElementById("lightbox-close").addEventListener("click", closeLightbox);
-  document.getElementById("lightbox-next").addEventListener("click", showNext);
-  document.getElementById("lightbox-prev").addEventListener("click", showPrev);
+  document.getElementById("lightbox-close").onclick = closeLightbox;
+  document.getElementById("lightbox-next").onclick = showNext;
+  document.getElementById("lightbox-prev").onclick = showPrev;
 
-  document.getElementById("lightbox").addEventListener("click", e => {
+  document.getElementById("lightbox").onclick = e => {
     if (e.target.id === "lightbox") closeLightbox();
-  });
+  };
 
   document.addEventListener("keydown", e => {
     if (e.key === "Escape") closeLightbox();
