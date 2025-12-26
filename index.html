@@ -5,20 +5,11 @@
   <title>Travel Map</title>
 
   <!-- Leaflet CSS -->
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-  >
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 
   <!-- MarkerCluster CSS -->
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"
-  >
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"
-  >
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
 
   <style>
     html, body {
@@ -46,36 +37,30 @@
       background-color: #f9f9f9;
     }
 
-    #sidebar h2 {
-      margin-top: 0;
-    }
-
     #sidebar img {
       width: 100%;
       margin-bottom: 10px;
       border-radius: 4px;
+      cursor: pointer;
     }
 
-    #sidebar p {
-      line-height: 1.4;
-    }
-
+    /* ===== LIGHTBOX ===== */
     #lightbox {
       position: fixed;
       inset: 0;
       background: rgba(0, 0, 0, 0.85);
-      display: flex;
+      display: none;
       align-items: center;
       justify-content: center;
       z-index: 1000;
     }
-    
+
     #lightbox img {
       max-width: 95%;
       max-height: 95%;
       border-radius: 6px;
     }
-    
+
     #lightbox-close {
       position: absolute;
       top: 12px;
@@ -89,21 +74,28 @@
 </head>
 
 <body>
+
 <div id="container">
   <div id="map"></div>
 
   <div id="sidebar">
     <h2 id="place-title">Travel Map</h2>
     <div id="place-content">
-      <p>Click a marker on the map to see photos and details.</p>
+      <p>Click a marker on the map to see photos.</p>
     </div>
   </div>
+</div>
+
+<!-- ===== LIGHTBOX (MUST EXIST BEFORE JS) ===== -->
+<div id="lightbox">
+  <span id="lightbox-close">&times;</span>
+  <img id="lightbox-img">
 </div>
 
 <!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-<!-- MarkerCluster plugin -->
+<!-- MarkerCluster JS -->
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 
 <script>
@@ -118,40 +110,56 @@
   const markerCluster = L.markerClusterGroup({
     maxClusterRadius: 25,
     spiderfyOnMaxZoom: true,
-    showCoverageOnHover: false,
-    zoomToBoundsOnClick: true
+    showCoverageOnHover: false
+  });
+
+  // ===== LIGHTBOX =====
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const lightboxClose = document.getElementById("lightbox-close");
+
+  function openLightbox(src) {
+    lightboxImg.src = src;
+    lightbox.style.display = "flex";
+  }
+
+  function closeLightbox() {
+    lightbox.style.display = "none";
+    lightboxImg.src = "";
+  }
+
+  lightboxClose.onclick = closeLightbox;
+
+  lightbox.onclick = e => {
+    if (e.target === lightbox) closeLightbox();
+  };
+
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") closeLightbox();
   });
 
   // ===== SIDEBAR =====
   function updateSidebar(place) {
     document.getElementById("place-title").textContent =
-    [
-      place.year,
-      place.text ? `- ${place.text} in ${place.title}` : `- ${place.title}`
-    ]
-      .filter(Boolean)
-      .join(" ");
-  
-  
-      let html = "";
-  
-      if (place.photos && place.photos.length) {
-        place.photos.forEach(photo => {
-          html += `<img src="${photo}" alt="" onclick="openLightbox('${photo}')">`;
-        });
-      }
-  
-      document.getElementById("place-content").innerHTML = html;
+      `${place.year} – ${place.title}`;
+
+    let html = "";
+
+    if (place.photos && place.photos.length) {
+      place.photos.forEach(photo => {
+        const img = document.createElement("img");
+        img.src = photo;
+        img.onclick = () => openLightbox(photo);
+        document.getElementById("place-content").appendChild(img);
+      });
     }
+
+    document.getElementById("place-content").innerHTML = html;
+  }
 
   // ===== DATA LOAD =====
   fetch("places.json")
-    .then(response => {
-      if (!response.ok) {
-        throw new Error("Failed to load places.json");
-      }
-      return response.json();
-    })
+    .then(r => r.json())
     .then(places => {
       const bounds = L.latLngBounds();
 
@@ -171,8 +179,6 @@
 
       if (places.length > 1) {
         map.fitBounds(bounds, { padding: [50, 50] });
-      } else if (places.length === 1) {
-        map.setView([places[0].lat, places[0].lng], 5);
       }
     })
     .catch(err => {
@@ -180,35 +186,7 @@
       document.getElementById("place-content").innerHTML =
         "<p style='color:red'>Failed to load location data.</p>";
     });
-  
-    // Lightbox //  
-    function openLightbox(src) {
-    const lightbox = document.getElementById("lightbox");
-    const img = document.getElementById("lightbox-img");
-  
-    img.src = src;
-    lightbox.style.display = "flex";
-    }
-    
-    function closeLightbox() {
-      document.getElementById("lightbox").style.display = "none";
-    }
-    
-    document.getElementById("lightbox-close").onclick = closeLightbox;
-    document.getElementById("lightbox").onclick = e => {
-      if (e.target.id === "lightbox") closeLightbox();
-    };
-    
-    document.addEventListener("keydown", e => {
-      if (e.key === "Escape") closeLightbox();
-    });
-
 </script>
-
-  <div id="lightbox" style="display:none;">
-    <span id="lightbox-close">&times;</span>
-    <img id="lightbox-img">
-  </div>
 
 </body>
 </html>
