@@ -5,11 +5,20 @@
   <title>Travel Map</title>
 
   <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  >
 
   <!-- MarkerCluster CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"
+  >
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"
+  >
 
   <style>
     html, body {
@@ -35,6 +44,10 @@
       border-left: 1px solid #ccc;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       background-color: #f9f9f9;
+    }
+
+    #sidebar h2 {
+      margin-top: 0;
     }
 
     #sidebar img {
@@ -86,16 +99,16 @@
   </div>
 </div>
 
-<!-- ===== LIGHTBOX (MUST EXIST BEFORE JS) ===== -->
+<!-- Lightbox -->
 <div id="lightbox">
   <span id="lightbox-close">&times;</span>
-  <img id="lightbox-img">
+  <img id="lightbox-img" alt="">
 </div>
 
 <!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-<!-- MarkerCluster JS -->
+<!-- MarkerCluster plugin -->
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 
 <script>
@@ -108,58 +121,40 @@
   }).addTo(map);
 
   const markerCluster = L.markerClusterGroup({
-    maxClusterRadius: 20,
+    maxClusterRadius: 25,
     spiderfyOnMaxZoom: true,
     showCoverageOnHover: false
   });
 
-  // ===== LIGHTBOX =====
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
-  const lightboxClose = document.getElementById("lightbox-close");
-
-  function openLightbox(src) {
-    lightboxImg.src = src;
-    lightbox.style.display = "flex";
-  }
-
-  function closeLightbox() {
-    lightbox.style.display = "none";
-    lightboxImg.src = "";
-  }
-
-  lightboxClose.onclick = closeLightbox;
-
-  lightbox.onclick = e => {
-    if (e.target === lightbox) closeLightbox();
-  };
-
-  document.addEventListener("keydown", e => {
-    if (e.key === "Escape") closeLightbox();
-  });
-
-  // ===== SIDEBAR =====
+  // ===== SIDEBAR UPDATE =====
   function updateSidebar(place) {
-    document.getElementById("place-title").textContent =
-      `${place.year} – ${place.title}`;
+    const titleEl = document.getElementById("place-title");
+    const contentEl = document.getElementById("place-content");
 
-    let html = "";
+    titleEl.textContent =
+      `${place.year} - ${place.text} in ${place.title}`;
+
+    contentEl.innerHTML = "";
 
     if (place.photos && place.photos.length) {
       place.photos.forEach(photo => {
         const img = document.createElement("img");
         img.src = photo;
-        img.onclick = () => openLightbox(photo);
-        document.getElementById("place-content").appendChild(img);
+        img.alt = "";
+        img.addEventListener("click", () => openLightbox(photo));
+        contentEl.appendChild(img);
       });
     }
-
-    document.getElementById("place-content").innerHTML = html;
   }
 
   // ===== DATA LOAD =====
   fetch("places.json")
-    .then(r => r.json())
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Failed to load places.json");
+      }
+      return response.json();
+    })
     .then(places => {
       const bounds = L.latLngBounds();
 
@@ -179,6 +174,8 @@
 
       if (places.length > 1) {
         map.fitBounds(bounds, { padding: [50, 50] });
+      } else if (places.length === 1) {
+        map.setView([places[0].lat, places[0].lng], 5);
       }
     })
     .catch(err => {
@@ -186,6 +183,29 @@
       document.getElementById("place-content").innerHTML =
         "<p style='color:red'>Failed to load location data.</p>";
     });
+
+  // ===== LIGHTBOX =====
+  function openLightbox(src) {
+    const lightbox = document.getElementById("lightbox");
+    const img = document.getElementById("lightbox-img");
+
+    img.src = src;
+    lightbox.style.display = "flex";
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+
+  document.getElementById("lightbox-close").addEventListener("click", closeLightbox);
+
+  document.getElementById("lightbox").addEventListener("click", e => {
+    if (e.target.id === "lightbox") closeLightbox();
+  });
+
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") closeLightbox();
+  });
 </script>
 
 </body>
