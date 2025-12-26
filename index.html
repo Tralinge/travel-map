@@ -115,7 +115,12 @@
     attribution: "&copy; OpenStreetMap contributors"
   }).addTo(map);
 
-  const markerCluster = L.markerClusterGroup();
+  const markerCluster = L.markerClusterGroup({
+    maxClusterRadius: 25,
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: false,
+    zoomToBoundsOnClick: true
+  });
 
   // ===== SIDEBAR =====
   function updateSidebar(place) {
