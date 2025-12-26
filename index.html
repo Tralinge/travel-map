@@ -5,20 +5,14 @@
   <title>Travel Map</title>
 
   <!-- Leaflet CSS -->
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-  >
+  <link rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 
   <!-- MarkerCluster CSS -->
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"
-  >
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"
-  >
+  <link rel="stylesheet"
+        href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+  <link rel="stylesheet"
+        href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
 
   <style>
     html, body {
@@ -74,6 +68,25 @@
       border-radius: 6px;
     }
 
+    .lightbox-control {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 48px;
+      color: #fff;
+      cursor: pointer;
+      user-select: none;
+      padding: 10px;
+    }
+
+    #lightbox-prev {
+      left: 20px;
+    }
+
+    #lightbox-next {
+      right: 20px;
+    }
+
     #lightbox-close {
       position: absolute;
       top: 12px;
@@ -102,13 +115,15 @@
 <!-- Lightbox -->
 <div id="lightbox">
   <span id="lightbox-close">&times;</span>
+  <span id="lightbox-prev" class="lightbox-control">&#10094;</span>
   <img id="lightbox-img" alt="">
+  <span id="lightbox-next" class="lightbox-control">&#10095;</span>
 </div>
 
 <!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-<!-- MarkerCluster plugin -->
+<!-- MarkerCluster JS -->
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 
 <script>
@@ -126,7 +141,11 @@
     showCoverageOnHover: false
   });
 
-  // ===== SIDEBAR UPDATE =====
+  // ===== LIGHTBOX STATE =====
+  let currentPhotos = [];
+  let currentIndex = 0;
+
+  // ===== SIDEBAR =====
   function updateSidebar(place) {
     const titleEl = document.getElementById("place-title");
     const contentEl = document.getElementById("place-content");
@@ -136,25 +155,20 @@
 
     contentEl.innerHTML = "";
 
-    if (place.photos && place.photos.length) {
-      place.photos.forEach(photo => {
-        const img = document.createElement("img");
-        img.src = photo;
-        img.alt = "";
-        img.addEventListener("click", () => openLightbox(photo));
-        contentEl.appendChild(img);
-      });
-    }
+    currentPhotos = place.photos || [];
+
+    currentPhotos.forEach((photo, index) => {
+      const img = document.createElement("img");
+      img.src = photo;
+      img.alt = "";
+      img.addEventListener("click", () => openLightbox(index));
+      contentEl.appendChild(img);
+    });
   }
 
   // ===== DATA LOAD =====
   fetch("places.json")
-    .then(response => {
-      if (!response.ok) {
-        throw new Error("Failed to load places.json");
-      }
-      return response.json();
-    })
+    .then(response => response.json())
     .then(places => {
       const bounds = L.latLngBounds();
 
@@ -171,33 +185,34 @@
       });
 
       map.addLayer(markerCluster);
-
-      if (places.length > 1) {
-        map.fitBounds(bounds, { padding: [50, 50] });
-      } else if (places.length === 1) {
-        map.setView([places[0].lat, places[0].lng], 5);
-      }
-    })
-    .catch(err => {
-      console.error(err);
-      document.getElementById("place-content").innerHTML =
-        "<p style='color:red'>Failed to load location data.</p>";
+      map.fitBounds(bounds, { padding: [50, 50] });
     });
 
-  // ===== LIGHTBOX =====
-  function openLightbox(src) {
-    const lightbox = document.getElementById("lightbox");
-    const img = document.getElementById("lightbox-img");
-
-    img.src = src;
-    lightbox.style.display = "flex";
+  // ===== LIGHTBOX CONTROLS =====
+  function openLightbox(index) {
+    currentIndex = index;
+    document.getElementById("lightbox-img").src = currentPhotos[currentIndex];
+    document.getElementById("lightbox").style.display = "flex";
   }
 
   function closeLightbox() {
     document.getElementById("lightbox").style.display = "none";
   }
 
+  function showNext() {
+    currentIndex = (currentIndex + 1) % currentPhotos.length;
+    document.getElementById("lightbox-img").src = currentPhotos[currentIndex];
+  }
+
+  function showPrev() {
+    currentIndex =
+      (currentIndex - 1 + currentPhotos.length) % currentPhotos.length;
+    document.getElementById("lightbox-img").src = currentPhotos[currentIndex];
+  }
+
   document.getElementById("lightbox-close").addEventListener("click", closeLightbox);
+  document.getElementById("lightbox-next").addEventListener("click", showNext);
+  document.getElementById("lightbox-prev").addEventListener("click", showPrev);
 
   document.getElementById("lightbox").addEventListener("click", e => {
     if (e.target.id === "lightbox") closeLightbox();
@@ -205,6 +220,8 @@
 
   document.addEventListener("keydown", e => {
     if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowRight") showNext();
+    if (e.key === "ArrowLeft") showPrev();
   });
 </script>
 
