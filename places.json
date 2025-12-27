@@ -19,22 +19,41 @@
       ]
     },
     {
-      "title": "Xingyi, China",
-      "lat": 25.0121,
-      "lng": 104.9077,
-      "text": "Trekking in Guizhou",
+      "title": "Hefei, China",
+      "lat": 31.8349,
+      "lng": 117.2745,
+      "text": "Chinese New Year",
+      "year": 2024,
+      "photos": [
+        "https://tralinge.github.io/travel-map/photos/hefei-12-2024/web_000.jpg",
+        "https://tralinge.github.io/travel-map/photos/hefei-12-2024/web_001.jpg",
+        "https://tralinge.github.io/travel-map/photos/hefei-12-2024/web_002.jpg",
+        "https://tralinge.github.io/travel-map/photos/hefei-12-2024/web_003.jpg",
+        "https://tralinge.github.io/travel-map/photos/hefei-12-2024/web_004.jpg",
+        "https://tralinge.github.io/travel-map/photos/hefei-12-2024/web_005.jpg",
+        "https://tralinge.github.io/travel-map/photos/hefei-12-2024/web_006.jpg",
+        "https://tralinge.github.io/travel-map/photos/hefei-12-2024/web_007.jpg",
+        "https://tralinge.github.io/travel-map/photos/hefei-12-2024/web_008.jpg",
+        "https://tralinge.github.io/travel-map/photos/hefei-12-2024/web_009.jpg"
+      ]
+    },
+    {
+      "title": "Kunming, China",
+      "lat": 25.05,
+      "lng": 102.70,
+      "text": "Fresh Air",
       "year": 2025,
       "photos": [
-        "https://tralinge.github.io/travel-map/photos/xingyi-07-2025/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/xingyi-07-2025/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/xingyi-07-2025/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/xingyi-07-2025/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/xingyi-07-2025/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/xingyi-07-2025/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/xingyi-07-2025/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/xingyi-07-2025/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/xingyi-07-2025/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/xingyi-07-2025/web_009.jpg"
+        "https://tralinge.github.io/travel-map/photos/kunming-01-2025/web_000.jpg",
+        "https://tralinge.github.io/travel-map/photos/kunming-01-2025/web_001.jpg",
+        "https://tralinge.github.io/travel-map/photos/kunming-01-2025/web_002.jpg",
+        "https://tralinge.github.io/travel-map/photos/kunming-01-2025/web_003.jpg",
+        "https://tralinge.github.io/travel-map/photos/kunming-01-2025/web_004.jpg",
+        "https://tralinge.github.io/travel-map/photos/kunming-01-2025/web_005.jpg",
+        "https://tralinge.github.io/travel-map/photos/kunming-01-2025/web_006.jpg",
+        "https://tralinge.github.io/travel-map/photos/kunming-01-2025/web_007.jpg",
+        "https://tralinge.github.io/travel-map/photos/kunming-01-2025/web_008.jpg",
+        "https://tralinge.github.io/travel-map/photos/kunming-01-2025/web_009.jpg"
       ]
     },
     {
@@ -54,6 +73,63 @@
         "https://tralinge.github.io/travel-map/photos/okinawa-11-2025/web_007.jpg",
         "https://tralinge.github.io/travel-map/photos/okinawa-11-2025/web_008.jpg",
         "https://tralinge.github.io/travel-map/photos/okinawa-11-2025/web_009.jpg"
+      ]
+    },
+    {
+      "title": "Shenzhen, China",
+      "lat": 22.57,
+      "lng": 114.02,
+      "text": "Beach Buddies New Year",
+      "year": 2024,
+      "photos": [
+        "https://tralinge.github.io/travel-map/photos/shenzhen-12-2024/web_000.jpg",
+        "https://tralinge.github.io/travel-map/photos/shenzhen-12-2024/web_001.jpg",
+        "https://tralinge.github.io/travel-map/photos/shenzhen-12-2024/web_002.jpg",
+        "https://tralinge.github.io/travel-map/photos/shenzhen-12-2024/web_003.jpg",
+        "https://tralinge.github.io/travel-map/photos/shenzhen-12-2024/web_004.jpg",
+        "https://tralinge.github.io/travel-map/photos/shenzhen-12-2024/web_005.jpg",
+        "https://tralinge.github.io/travel-map/photos/shenzhen-12-2024/web_006.jpg",
+        "https://tralinge.github.io/travel-map/photos/shenzhen-12-2024/web_007.jpg",
+        "https://tralinge.github.io/travel-map/photos/shenzhen-12-2024/web_008.jpg",
+        "https://tralinge.github.io/travel-map/photos/shenzhen-12-2024/web_009.jpg"
+      ]
+    },
+    {
+      "title": "Xiamen, China",
+      "lat": 24.5026,
+      "lng": 118.1313,
+      "text": "Visiting Students",
+      "year": 2024,
+      "photos": [
+        "https://tralinge.github.io/travel-map/photos/xiamen-12-2024/web_000.jpg",
+        "https://tralinge.github.io/travel-map/photos/xiamen-12-2024/web_001.jpg",
+        "https://tralinge.github.io/travel-map/photos/xiamen-12-2024/web_002.jpg",
+        "https://tralinge.github.io/travel-map/photos/xiamen-12-2024/web_003.jpg",
+        "https://tralinge.github.io/travel-map/photos/xiamen-12-2024/web_004.jpg",
+        "https://tralinge.github.io/travel-map/photos/xiamen-12-2024/web_005.jpg",
+        "https://tralinge.github.io/travel-map/photos/xiamen-12-2024/web_006.jpg",
+        "https://tralinge.github.io/travel-map/photos/xiamen-12-2024/web_007.jpg",
+        "https://tralinge.github.io/travel-map/photos/xiamen-12-2024/web_008.jpg",
+        "https://tralinge.github.io/travel-map/photos/xiamen-12-2024/web_009.jpg"
+      ]
+    },
+    {
+      "title": "Xingyi, China",
+      "lat": 25.0121,
+      "lng": 104.9077,
+      "text": "Trekking in Guizhou",
+      "year": 2025,
+      "photos": [
+        "https://tralinge.github.io/travel-map/photos/xingyi-07-2025/web_000.jpg",
+        "https://tralinge.github.io/travel-map/photos/xingyi-07-2025/web_001.jpg",
+        "https://tralinge.github.io/travel-map/photos/xingyi-07-2025/web_002.jpg",
+        "https://tralinge.github.io/travel-map/photos/xingyi-07-2025/web_003.jpg",
+        "https://tralinge.github.io/travel-map/photos/xingyi-07-2025/web_004.jpg",
+        "https://tralinge.github.io/travel-map/photos/xingyi-07-2025/web_005.jpg",
+        "https://tralinge.github.io/travel-map/photos/xingyi-07-2025/web_006.jpg",
+        "https://tralinge.github.io/travel-map/photos/xingyi-07-2025/web_007.jpg",
+        "https://tralinge.github.io/travel-map/photos/xingyi-07-2025/web_008.jpg",
+        "https://tralinge.github.io/travel-map/photos/xingyi-07-2025/web_009.jpg"
       ]
     }
   ]
