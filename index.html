@@ -207,7 +207,29 @@
     return `rgb(${to255(r)}, ${to255(g)}, ${to255(b)})`;
   }
 
+  // ===== SIDEBAR STATE =====
+  let currentPhotos = [];
+  let currentIndex = 0;
+  
+  // ===== SIDEBAR =====
+  function updateSidebar(place) {
+    document.getElementById("place-title").textContent =
+      `${place.year} - ${place.text} in ${place.title}`;
+  
+    const content = document.getElementById("place-content");
+    content.innerHTML = "";
+  
+    currentPhotos = place.photos || [];
+  
+    currentPhotos.forEach((photo, index) => {
+      const img = document.createElement("img");
+      img.src = photo;
+      img.onclick = () => openLightbox(index);
+      content.appendChild(img);
+    });
+  }
 
+  
   // ===== DATA LOAD =====
   fetch("places.json")
     .then(r => r.json())
