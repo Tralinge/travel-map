@@ -1,5 +1,43 @@
 [
     {
+      "title": "Cuenca, Ecuador",
+      "lat": -2.89,
+      "lng": -79.00,
+      "text": "Athens of Ecuador",
+      "year": 2024,
+      "photos": [
+        "https://tralinge.github.io/travel-map/photos/cuenca-09-2024/web_000.jpg",
+        "https://tralinge.github.io/travel-map/photos/cuenca-09-2024/web_001.jpg",
+        "https://tralinge.github.io/travel-map/photos/cuenca-09-2024/web_002.jpg",
+        "https://tralinge.github.io/travel-map/photos/cuenca-09-2024/web_003.jpg",
+        "https://tralinge.github.io/travel-map/photos/cuenca-09-2024/web_004.jpg",
+        "https://tralinge.github.io/travel-map/photos/cuenca-09-2024/web_005.jpg",
+        "https://tralinge.github.io/travel-map/photos/cuenca-09-2024/web_006.jpg",
+        "https://tralinge.github.io/travel-map/photos/cuenca-09-2024/web_007.jpg",
+        "https://tralinge.github.io/travel-map/photos/cuenca-09-2024/web_008.jpg",
+        "https://tralinge.github.io/travel-map/photos/cuenca-09-2024/web_009.jpg"
+      ]
+    },
+    {
+      "title": "Galapagos, Ecuador",
+      "lat": -0.82,
+      "lng": -89.44,
+      "text": "The Enchanted Isles",
+      "year": 2024,
+      "photos": [
+        "https://tralinge.github.io/travel-map/photos/galapagos-10-2024/web_000.jpg",
+        "https://tralinge.github.io/travel-map/photos/galapagos-10-2024/web_001.jpg",
+        "https://tralinge.github.io/travel-map/photos/galapagos-10-2024/web_002.jpg",
+        "https://tralinge.github.io/travel-map/photos/galapagos-10-2024/web_003.jpg",
+        "https://tralinge.github.io/travel-map/photos/galapagos-10-2024/web_004.jpg",
+        "https://tralinge.github.io/travel-map/photos/galapagos-10-2024/web_005.jpg",
+        "https://tralinge.github.io/travel-map/photos/galapagos-10-2024/web_006.jpg",
+        "https://tralinge.github.io/travel-map/photos/galapagos-10-2024/web_007.jpg",
+        "https://tralinge.github.io/travel-map/photos/galapagos-10-2024/web_008.jpg",
+        "https://tralinge.github.io/travel-map/photos/galapagos-10-2024/web_009.jpg"
+      ]
+    },
+    {
       "title": "Hefei, China",
       "lat": 31.8349,
       "lng": 117.2745,
@@ -41,7 +79,7 @@
       "title": "Kunming, China",
       "lat": 25.05,
       "lng": 102.70,
-      "text": "Fresh Air",
+      "text": "City of Eternal Spring",
       "year": 2025,
       "photos": [
         "https://tralinge.github.io/travel-map/photos/kunming-01-2025/web_000.jpg",
@@ -60,7 +98,7 @@
       "title": "Okinawa, Japan",
       "lat": 26.4270,
       "lng": 127.8243,
-      "text": "Beach Time",
+      "text": "The Rock",
       "year": 2025,
       "photos": [
         "https://tralinge.github.io/travel-map/photos/okinawa-11-2025/web_000.jpg",
@@ -79,7 +117,7 @@
       "title": "Shenzhen, China",
       "lat": 22.57,
       "lng": 114.02,
-      "text": "Beach Buddies New Year",
+      "text": "China's Silicone Valley for New Year",
       "year": 2024,
       "photos": [
         "https://tralinge.github.io/travel-map/photos/shenzhen-12-2024/web_000.jpg",
@@ -95,10 +133,29 @@
       ]
     },
     {
+      "title": "Quito, Ecuador",
+      "lat": -0.21,
+      "lng": -78.50,
+      "text": "City of the Skies",
+      "year": 2024,
+      "photos": [
+        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_000.jpg",
+        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_001.jpg",
+        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_002.jpg",
+        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_003.jpg",
+        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_004.jpg",
+        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_005.jpg",
+        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_006.jpg",
+        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_007.jpg",
+        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_008.jpg",
+        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_009.jpg"
+      ]
+    },
+    {
       "title": "Xiamen, China",
       "lat": 24.5026,
       "lng": 118.1313,
-      "text": "Visiting Students",
+      "text": "Garden on the Sea",
       "year": 2024,
       "photos": [
         "https://tralinge.github.io/travel-map/photos/xiamen-12-2024/web_000.jpg",
@@ -117,7 +174,7 @@
       "title": "Xingyi, China",
       "lat": 25.0121,
       "lng": 104.9077,
-      "text": "Trekking in Guizhou",
+      "text": "Karst Paradise",
       "year": 2025,
       "photos": [
         "https://tralinge.github.io/travel-map/photos/xingyi-07-2025/web_000.jpg",
