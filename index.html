@@ -74,7 +74,6 @@
     .pin {
       width: 12px;
       height: 12px;
-      background: #e53935;
       border-radius: 50%;
       border: 2px solid white;
       box-shadow: 0 0 3px rgba(0,0,0,0.4);
@@ -163,6 +162,36 @@
     showCoverageOnHover: false
   });
 
+  // ===== COLOR SCIENCE =====
+  const WL_MIN = 380; // violet
+  const WL_MAX = 700; // red
+
+  function yearToWavelength(year, minYear, maxYear) {
+    if (minYear === maxYear) return (WL_MIN + WL_MAX) / 2;
+    const t = (year - minYear) / (maxYear - minYear);
+    return WL_MAX - t * (WL_MAX - WL_MIN);
+  }
+
+  function wavelengthToRGB(wl) {
+    let r = 0, g = 0, b = 0;
+
+    if (wl < 440) { r = -(wl - 440) / 60; b = 1; }
+    else if (wl < 490) { g = (wl - 440) / 50; b = 1; }
+    else if (wl < 510) { g = 1; b = -(wl - 510) / 20; }
+    else if (wl < 580) { r = (wl - 510) / 70; g = 1; }
+    else if (wl < 645) { r = 1; g = -(wl - 645) / 65; }
+    else { r = 1; }
+
+    let factor = 1;
+    if (wl < 420) factor = (wl - 380) / 40;
+    else if (wl > 645) factor = (700 - wl) / 55;
+
+    const gamma = 0.8;
+    const to255 = v => Math.round(255 * Math.pow(v * factor, gamma));
+
+    return `rgb(${to255(r)}, ${to255(g)}, ${to255(b)})`;
+  }
+
   // ===== LIGHTBOX STATE =====
   let currentPhotos = [];
   let currentIndex = 0;
@@ -189,17 +218,23 @@
   fetch("places.json")
     .then(r => r.json())
     .then(places => {
+      const years = places.map(p => p.year).filter(Number.isFinite);
+      const minYear = Math.min(...years);
+      const maxYear = Math.max(...years);
+
       const bounds = L.latLngBounds();
 
       places.forEach(place => {
         const shortYear = String(place.year).slice(-2);
+        const wl = yearToWavelength(place.year, minYear, maxYear);
+        const color = wavelengthToRGB(wl);
 
         const icon = L.divIcon({
           className: "",
           html: `
             <div class="year-marker">
               <div class="year-label">'${shortYear}</div>
-              <div class="pin"></div>
+              <div class="pin" style="background:${color}"></div>
             </div>
           `,
           iconSize: [30, 40],
