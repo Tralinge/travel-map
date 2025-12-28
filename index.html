@@ -46,10 +46,11 @@
 
     #sidebar img {
       width: 100%;
-      margin-bottom: 10px;
-      border-radius: 4px;
+      margin-bottom: 12px;
+      border-radius: 6px;
       cursor: pointer;
     }
+
 
     /* ===== CUSTOM YEAR MARKER ===== */
     .year-marker {
@@ -78,6 +79,19 @@
       border: 2px solid white;
       box-shadow: 0 0 3px rgba(0,0,0,0.4);
     }
+
+    @media (max-width: 768px) {
+      .year-label {
+        font-size: 10px;
+        padding: 1px 4px;
+      }
+    
+      .pin {
+        width: 10px;
+        height: 10px;
+      }
+    }
+
 
     /* ===== LIGHTBOX ===== */
     #lightbox {
@@ -118,6 +132,25 @@
       color: #fff;
       cursor: pointer;
       user-select: none;
+    }
+    
+    /* === mobile ===*/
+    @media (max-width: 768px) {
+      #container {
+        flex-direction: column;
+      }
+    
+      #map {
+        flex: none;
+        height: 60vh;
+      }
+    
+      #sidebar {
+        max-width: none;
+        height: 40vh;
+        border-left: none;
+        border-top: 1px solid #ccc;
+      }
     }
   </style>
 </head>
@@ -237,14 +270,14 @@
       const years = places.map(p => p.year).filter(Number.isFinite);
       const minYear = Math.min(...years);
       const maxYear = Math.max(...years);
-
+  
       const bounds = L.latLngBounds();
-
+  
       places.forEach(place => {
         const shortYear = String(place.year).slice(-2);
         const wl = yearToWavelength(place.year, minYear, maxYear);
         const color = wavelengthToRGB(wl);
-
+  
         const icon = L.divIcon({
           className: "",
           html: `
@@ -256,21 +289,29 @@
           iconSize: [30, 40],
           iconAnchor: [15, 34]
         });
-
+  
         const marker = L.marker([place.lat, place.lng], { icon });
-
+  
         marker.on("click", () => {
           map.setView([place.lat, place.lng], 6);
           updateSidebar(place);
+  
+          // Mobile
+          if (window.innerWidth <= 768) {
+            document.getElementById("sidebar").scrollIntoView({
+              behavior: "smooth"
+            });
+          }
         });
 
-        markerCluster.addLayer(marker);
-        bounds.extend([place.lat, place.lng]);
-      });
-
-      map.addLayer(markerCluster);
-      map.fitBounds(bounds, { padding: [50, 50] });
+      markerCluster.addLayer(marker);
+      bounds.extend([place.lat, place.lng]);
     });
+
+    map.addLayer(markerCluster);
+    map.fitBounds(bounds, { padding: [50, 50] });
+  });
+
 
   // ===== LIGHTBOX =====
   function openLightbox(index) {
@@ -307,6 +348,25 @@
     if (e.key === "ArrowRight") showNext();
     if (e.key === "ArrowLeft") showPrev();
   });
+
+  // ==== Lightbox Touch ====
+  let startX = null;
+
+  document.getElementById("lightbox").addEventListener("touchstart", e => {
+    startX = e.touches[0].clientX;
+  });
+  
+  document.getElementById("lightbox").addEventListener("touchend", e => {
+    if (!startX) return;
+    const endX = e.changedTouches[0].clientX;
+    const diff = endX - startX;
+  
+    if (diff > 50) showPrev();
+    if (diff < -50) showNext();
+  
+    startX = null;
+  });
+
 </script>
 
 </body>
