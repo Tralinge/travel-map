@@ -80,19 +80,6 @@
       box-shadow: 0 0 3px rgba(0,0,0,0.4);
     }
 
-    @media (max-width: 768px) {
-      .year-label {
-        font-size: 10px;
-        padding: 1px 4px;
-      }
-    
-      .pin {
-        width: 10px;
-        height: 10px;
-      }
-    }
-
-
     /* ===== LIGHTBOX ===== */
     #lightbox {
       position: fixed;
@@ -132,10 +119,23 @@
       color: #fff;
       cursor: pointer;
       user-select: none;
+      z-index: 1001;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 50%;
     }
     
     /* === mobile ===*/
     @media (max-width: 768px) {
+      .year-label {
+        font-size: 10px;
+        padding: 1px 4px;
+      }
+    
+      .pin {
+        width: 10px;
+        height: 10px;
+      }
+      
       #container {
         flex-direction: column;
       }
@@ -151,6 +151,13 @@
         border-left: none;
         border-top: 1px solid #ccc;
       }
+
+      #lightbox-close {
+      font-size: 40px;
+      padding: 16px;
+      top: 8px;
+      right: 8px;
+  }
     }
   </style>
 </head>
