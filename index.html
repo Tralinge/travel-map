@@ -65,6 +65,11 @@
       box-shadow: 0 0 2px rgba(0,0,0,0.3);
     }
 
+    .year-div-icon {
+      background: transparent !important;
+      border: none !important;
+    }
+
     .pin {
       width: 12px;
       height: 12px;
@@ -263,12 +268,15 @@
         const shortYear = String(place.year).slice(-2);
 
         const icon = L.divIcon({
-          html: `<div class="year-marker">
-                  <div class="year-label">'${shortYear}</div>
-                  <div class="pin" style="background:${color}"></div>
-                 </div>`,
-          iconSize: [30,40],
-          iconAnchor: [15,34]
+          className: "year-div-icon",
+          html: `
+            <div class="year-marker">
+              <div class="year-label">'${shortYear}</div>
+              <div class="pin" style="background:${color}"></div>
+            </div>
+          `,
+          iconSize: [30, 40],
+          iconAnchor: [15, 34]
         });
 
         const marker = L.marker([place.lat, place.lng], { icon });
