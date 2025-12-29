@@ -160,24 +160,26 @@ html, body {
   }
 
   #map {
-    flex: 0 0 50%;
+    flex: 1 1 auto;
   }
 
   #sidebar {
-    flex: 1 1 50%;
-    max-width: none;
-    border-left: none;
-    border-top: 1px solid #ccc;
-	transition: height 0.25s ease;
+    height: 50%;
+    transition: height 0.25s ease;
   }
 
   #sidebar.collapsed {
-    flex: 0 0 20%;
+    height: 20%;
   }
-	
+
   #sidebar.expanded {
-    flex: 1 1 50%;
+    height: 50%;
   }
+
+  #sidebar-handle {
+    height: 24px;
+    width: 60px;
+    margin: 8px auto;
 
   .lightbox-arrow {
     font-size: 36px;
