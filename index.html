@@ -56,6 +56,12 @@ html, body {
   margin: 8px auto 6px auto;
 }
 
+#sidebar-handle::after {
+  content: "—";
+  font-size: 24px;
+  color: #666;
+}
+
 /* ===== CUSTOM YEAR MARKER ===== */
 .year-div-icon {
   background: transparent !important;
@@ -238,6 +244,13 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 
 const markerCluster = L.markerClusterGroup({ maxClusterRadius: 20 });
 
+map.on("click", () => {
+  if (window.innerWidth <= 768) {
+    sidebar.classList.add("collapsed");
+    sidebar.classList.remove("expanded");
+  }
+});
+
 /* ===== COLOR SCIENCE ===== */
 const WL_MIN = 410;
 const WL_MAX = 680;
@@ -388,39 +401,13 @@ document.getElementById("lightbox").addEventListener("touchend", e => {
 /* ==== Sidebar collapse ====*/
   const sidebar = document.getElementById("sidebar");
   const handle = document.getElementById("sidebar-handle");
-
-  let startY = null;
-  let startHeight = null;
-
+      
   if (handle && sidebar) {
 
     /* TAP TO TOGGLE */
     handle.addEventListener("click", () => {
       sidebar.classList.toggle("collapsed");
       sidebar.classList.toggle("expanded");
-    });
-
-    /* TOUCH DRAG */
-    handle.addEventListener("touchstart", e => {
-      startY = e.touches[0].clientY;
-      startHeight = sidebar.getBoundingClientRect().height;
-      handle.style.cursor = "grabbing";
-    });
-
-    handle.addEventListener("touchmove", e => {
-      if (!startY) return;
-
-      const delta = startY - e.touches[0].clientY;
-      const newHeight = startHeight + delta;
-
-      sidebar.style.flex = "none";
-      sidebar.style.height = `${newHeight}px`;
-    });
-
-    handle.addEventListener("touchend", () => {
-      startY = null;
-      startHeight = null;
-      handle.style.cursor = "grab";
     });
   }
 
