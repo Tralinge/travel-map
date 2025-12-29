@@ -1,156 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Travel Map</title>
+<meta charset="utf-8">
+<title>Travel Map</title>
 
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet"
-        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<!-- Leaflet CSS -->
+<link rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 
-  <!-- MarkerCluster CSS -->
-  <link rel="stylesheet"
-        href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
-  <link rel="stylesheet"
-        href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
+<!-- MarkerCluster CSS -->
+<link rel="stylesheet"
+      href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+<link rel="stylesheet"
+      href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
 
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-    }
+<style>
+html, body {
+  height: 100%;
+  margin: 0;
+}
 
-    #container {
-      display: flex;
-      height: 100%;
-      width: 100%;
-    }
+/* ===== LAYOUT ===== */
+#container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
 
-    #map {
-      flex: 2;
-    }
+#map {
+  flex: 2;
+}
 
-    #sidebar {
-      flex: 1;
-      max-width: 400px;
-      padding: 12px;
-      overflow-y: auto;
-      border-left: 1px solid #ccc;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: #f9f9f9;
-    }
+#sidebar {
+  flex: 1;
+  max-width: 400px;
+  padding: 12px;
+  overflow-y: auto;
+  border-left: 1px solid #ccc;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f9f9f9;
+}
 
-    #sidebar img {
-      width: 100%;
-      margin-bottom: 12px;
-      border-radius: 6px;
-      cursor: pointer;
-    }
+#sidebar img {
+  width: 100%;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
 
-    /* ===== CUSTOM YEAR MARKER ===== */
-    .year-marker {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      transform: translateY(-8px);
-    }
+/* ===== CUSTOM YEAR MARKER ===== */
+.year-div-icon {
+  background: transparent !important;
+  border: none !important;
+}
 
-    .year-label {
-      font-size: 11px;
-      font-weight: 600;
-      background: rgba(255, 255, 255, 0.9);
-      padding: 1px 5px;
-      border-radius: 8px;
-      margin-bottom: 2px;
-      box-shadow: 0 0 2px rgba(0,0,0,0.3);
-    }
+.year-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(-8px);
+}
 
-    .year-div-icon {
-      background: transparent !important;
-      border: none !important;
-    }
+.year-label {
+  font-size: 11px;
+  font-weight: 600;
+  background: rgba(255,255,255,0.9);
+  padding: 1px 5px;
+  border-radius: 8px;
+  margin-bottom: 2px;
+  box-shadow: 0 0 2px rgba(0,0,0,0.3);
+}
 
-    .pin {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      border: 2px solid white;
-      box-shadow: 0 0 3px rgba(0,0,0,0.4);
-    }
+.pin {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 3px rgba(0,0,0,0.4);
+}
 
-    /* ===== LIGHTBOX ===== */
-    #lightbox {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.85);
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      z-index: 1000;
-    }
+/* ===== LIGHTBOX ===== */
+#lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
 
-    #lightbox-close {
-      position: absolute;
-      top: 10px;
-      right: 14px;
-      font-size: 36px;
-      color: #d4d3cf;
-      cursor: pointer;
-      background: rgba(0,0,0,0.6);
-      border-radius: 20%;
-      padding: 6px 8px;
-    }
+#lightbox-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 36px;
+  color: #d4d3cf;
+  cursor: pointer;
+  background: rgba(0,0,0,0.6);
+  border-radius: 20%;
+  padding: 6px 8px;
+}
 
-    .lightbox-inner {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      max-width: 95%;
-      max-height: 80%;
-    }
+.lightbox-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 95%;
+  max-height: 80%;
+}
 
-    #lightbox-img {
-      max-width: 85vw;
-      max-height: 75vh;
-      border-radius: 6px;
-    }
+#lightbox-img {
+  max-width: 85vw;
+  max-height: 75vh;
+  border-radius: 6px;
+}
 
-    .lightbox-arrow {
-      font-size: 48px;
-      color: #fff;
-      cursor: pointer;
-      padding: 12px;
-      user-select: none;
-    }
+.lightbox-arrow {
+  font-size: 48px;
+  color: #fff;
+  cursor: pointer;
+  padding: 12px;
+  user-select: none;
+}
 
-    /* ===== DOTS ===== */
-    #lightbox-dots {
-      display: flex;
-      gap: 8px;
-      margin-top: 12px;
-    }
+/* ===== DOTS ===== */
+#lightbox-dots {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
 
-    #lightbox-dots span {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.4);
-      cursor: pointer;
-    }
+#lightbox-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  cursor: pointer;
+}
 
-    #lightbox-dots span.active {
-      background: rgba(255,255,255,0.9);
-    }
+#lightbox-dots span.active {
+  background: rgba(255,255,255,0.9);
+}
 
-    /* ===== MOBILE ===== */
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
-
-  /* Layout: map top / sidebar bottom */
   #container {
-    display: flex;
     flex-direction: column;
-    height: 100dvh; /* better than vh on mobile browsers */
+    height: 100dvh;
   }
 
   #map {
@@ -160,32 +158,10 @@
   #sidebar {
     flex: 1 1 50%;
     max-width: none;
-    overflow-y: auto;
     border-left: none;
     border-top: 1px solid #ccc;
-    transition: flex 0.25s ease;
   }
 
-  /* Sidebar states */
-  #sidebar.collapsed {
-    flex: 0 0 20%;
-  }
-
-  #sidebar.expanded {
-    flex: 1 1 50%;
-  }
-
-  /* Drag / tap handle */
-  #sidebar-handle {
-    width: 40px;
-    height: 5px;
-    background: #bbb;
-    border-radius: 3px;
-    margin: 8px auto 6px auto;
-    cursor: grab;
-  }
-
-  /* Lightbox adjustments */
   .lightbox-arrow {
     font-size: 36px;
   }
@@ -195,12 +171,11 @@
     height: 10px;
   }
 
-  /* Prevent Leaflet controls hiding under nav bar */
   .leaflet-top {
-    top: 60px; /* adjust if your site header is taller */
+    top: 60px;
   }
 }
-  </style>
+</style>
 </head>
 
 <body>
@@ -233,157 +208,162 @@
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 
 <script>
-  // ===== MAP INIT =====
-  const map = L.map("map", { zoomControl: false }).setView([20, 0], 2);
-  L.control.zoom({ position: "bottomright" }).addTo(map);
+/* ===== MAP INIT ===== */
+const map = L.map("map", { zoomControl: false }).setView([20, 0], 2);
+L.control.zoom({ position: "bottomright" }).addTo(map);
 
-  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    maxZoom: 19
-  }).addTo(map);
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  maxZoom: 19
+}).addTo(map);
 
-  const markerCluster = L.markerClusterGroup({ maxClusterRadius: 20 });
+const markerCluster = L.markerClusterGroup({ maxClusterRadius: 20 });
 
-  // ===== COLOR SCIENCE =====
-  const WL_MIN = 410;
-  const WL_MAX = 680;
+/* ===== COLOR SCIENCE ===== */
+const WL_MIN = 410;
+const WL_MAX = 680;
 
-  function yearToWavelength(year, minYear, maxYear) {
-    if (minYear === maxYear) return (WL_MIN + WL_MAX) / 2;
-    return WL_MAX - ((year - minYear) / (maxYear - minYear)) * (WL_MAX - WL_MIN);
-  }
+function yearToWavelength(year, minYear, maxYear) {
+  if (minYear === maxYear) return (WL_MIN + WL_MAX) / 2;
+  return WL_MAX - ((year - minYear) / (maxYear - minYear)) * (WL_MAX - WL_MIN);
+}
 
-  function wavelengthToRGB(wl) {
-    let r=0,g=0,b=0;
-    if (wl<440){r=-(wl-440)/30;b=1;}
-    else if (wl<490){g=(wl-440)/50;b=1;}
-    else if (wl<510){g=1;b=-(wl-510)/20;}
-    else if (wl<580){r=(wl-510)/70;g=1;}
-    else if (wl<645){r=1;g=-(wl-645)/65;}
-    else{r=1;}
+function wavelengthToRGB(wl) {
+  let r=0,g=0,b=0;
+  if (wl<440){r=-(wl-440)/30;b=1;}
+  else if (wl<490){g=(wl-440)/50;b=1;}
+  else if (wl<510){g=1;b=-(wl-510)/20;}
+  else if (wl<580){r=(wl-510)/70;g=1;}
+  else if (wl<645){r=1;g=-(wl-645)/65;}
+  else{r=1;}
 
-    const to255=v=>Math.round(255*Math.pow(Math.max(v,0.35),0.8));
-    return `rgb(${to255(r)},${to255(g)},${to255(b)})`;
-  }
+  const to255=v=>Math.round(255*Math.pow(Math.max(v,0.35),0.8));
+  return `rgb(${to255(r)},${to255(g)},${to255(b)})`;
+}
 
-  // ===== SIDEBAR / LIGHTBOX STATE =====
-  let currentPhotos = [];
-  let currentIndex = 0;
+/* ===== STATE ===== */
+let currentPhotos = [];
+let currentIndex = 0;
 
-  function updateSidebar(place) {
-    document.getElementById("place-title").textContent =
-      `${place.year} - ${place.text} in ${place.title}`;
+/* ===== SIDEBAR ===== */
+function updateSidebar(place) {
+  document.getElementById("place-title").textContent =
+    `${place.year} - ${place.text} in ${place.title}`;
 
-    const content = document.getElementById("place-content");
-    content.innerHTML = "";
+  const content = document.getElementById("place-content");
+  content.innerHTML = "";
 
-    currentPhotos = place.photos || [];
-    currentPhotos.forEach((src, i) => {
-      const img = document.createElement("img");
-      img.src = src;
-      img.onclick = () => openLightbox(i);
-      content.appendChild(img);
-    });
-  }
+  currentPhotos = place.photos || [];
+  currentPhotos.forEach((src, i) => {
+    const img = document.createElement("img");
+    img.src = src;
+    img.onclick = () => openLightbox(i);
+    content.appendChild(img);
+  });
+}
 
-  // ===== DATA LOAD =====
-  fetch("places.json")
-    .then(r => r.json())
-    .then(places => {
-      const years = places.map(p => p.year);
-      const minYear = Math.min(...years);
-      const maxYear = Math.max(...years);
-      const bounds = L.latLngBounds();
+/* ===== DATA LOAD ===== */
+fetch("places.json")
+  .then(r => r.json())
+  .then(places => {
+    const years = places.map(p => p.year);
+    const minYear = Math.min(...years);
+    const maxYear = Math.max(...years);
+    const bounds = L.latLngBounds();
 
-      places.forEach(place => {
-        const wl = yearToWavelength(place.year, minYear, maxYear);
-        const color = wavelengthToRGB(wl);
-        const shortYear = String(place.year).slice(-2);
+    places.forEach(place => {
+      const color = wavelengthToRGB(
+        yearToWavelength(place.year, minYear, maxYear)
+      );
+      const shortYear = String(place.year).slice(-2);
 
-        const icon = L.divIcon({
-          className: "year-div-icon",
-          html: `
-            <div class="year-marker">
-              <div class="year-label">'${shortYear}</div>
-              <div class="pin" style="background:${color}"></div>
-            </div>
-          `,
-          iconSize: [30, 40],
-          iconAnchor: [15, 34]
-        });
-
-        const marker = L.marker([place.lat, place.lng], { icon });
-        marker.on("click", () => {
-          map.setView([place.lat, place.lng], 6);
-          updateSidebar(place);
-          if (window.innerWidth <= 768) {
-            document.getElementById("sidebar").scrollIntoView({ behavior: "smooth" });
-          }
-        });
-
-        markerCluster.addLayer(marker);
-        bounds.extend([place.lat, place.lng]);
+      const icon = L.divIcon({
+        className: "year-div-icon",
+        html: `
+          <div class="year-marker">
+            <div class="year-label">'${shortYear}</div>
+            <div class="pin" style="background:${color}"></div>
+          </div>
+        `,
+        iconSize: [30,40],
+        iconAnchor: [15,34]
       });
 
-      map.addLayer(markerCluster);
-      map.fitBounds(bounds, { padding: [50,50] });
+      const marker = L.marker([place.lat, place.lng], { icon });
+      marker.on("click", () => {
+        map.setView([place.lat, place.lng], 6);
+        updateSidebar(place);
+        if (window.innerWidth <= 768) {
+          document.getElementById("sidebar")
+            .scrollIntoView({ behavior: "smooth" });
+        }
+      });
+
+      markerCluster.addLayer(marker);
+      bounds.extend([place.lat, place.lng]);
     });
 
-  // ===== LIGHTBOX LOGIC =====
-  function renderDots() {
-    const dots = document.getElementById("lightbox-dots");
-    dots.innerHTML = "";
-    if (currentPhotos.length <= 1) return;
-
-    currentPhotos.forEach((_, i) => {
-      const d = document.createElement("span");
-      if (i === currentIndex) d.classList.add("active");
-      d.onclick = () => openLightbox(i);
-      dots.appendChild(d);
-    });
-  }
-
-  function openLightbox(index) {
-    currentIndex = index;
-    document.getElementById("lightbox-img").src = currentPhotos[currentIndex];
-    document.getElementById("lightbox").style.display = "flex";
-    renderDots();
-  }
-
-  function closeLightbox() {
-    document.getElementById("lightbox").style.display = "none";
-  }
-
-  function showNext() {
-    currentIndex = (currentIndex + 1) % currentPhotos.length;
-    openLightbox(currentIndex);
-  }
-
-  function showPrev() {
-    currentIndex = (currentIndex - 1 + currentPhotos.length) % currentPhotos.length;
-    openLightbox(currentIndex);
-  }
-
-  document.getElementById("lightbox-close").onclick = closeLightbox;
-  document.getElementById("lightbox-next").onclick = showNext;
-  document.getElementById("lightbox-prev").onclick = showPrev;
-
-  document.addEventListener("keydown", e => {
-    if (e.key === "Escape") closeLightbox();
-    if (e.key === "ArrowRight") showNext();
-    if (e.key === "ArrowLeft") showPrev();
+    map.addLayer(markerCluster);
+    map.fitBounds(bounds, { padding: [50,50] });
   });
 
-  let startX = null;
-  document.getElementById("lightbox").addEventListener("touchstart", e => {
-    startX = e.touches[0].clientX;
+/* ===== LIGHTBOX ===== */
+function renderDots() {
+  const dots = document.getElementById("lightbox-dots");
+  dots.innerHTML = "";
+  if (currentPhotos.length <= 1) return;
+
+  currentPhotos.forEach((_, i) => {
+    const d = document.createElement("span");
+    if (i === currentIndex) d.classList.add("active");
+    d.onclick = () => showIndex(i);
+    dots.appendChild(d);
   });
-  document.getElementById("lightbox").addEventListener("touchend", e => {
-    if (!startX) return;
-    const diff = e.changedTouches[0].clientX - startX;
-    if (diff > 50) showPrev();
-    if (diff < -50) showNext();
-    startX = null;
-  });
+}
+
+function showIndex(i) {
+  currentIndex = i;
+  document.getElementById("lightbox-img").src = currentPhotos[currentIndex];
+  renderDots();
+}
+
+function openLightbox(i) {
+  document.getElementById("lightbox").style.display = "flex";
+  showIndex(i);
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
+
+function showNext() {
+  showIndex((currentIndex + 1) % currentPhotos.length);
+}
+
+function showPrev() {
+  showIndex((currentIndex - 1 + currentPhotos.length) % currentPhotos.length);
+}
+
+document.getElementById("lightbox-close").onclick = closeLightbox;
+document.getElementById("lightbox-next").onclick = showNext;
+document.getElementById("lightbox-prev").onclick = showPrev;
+
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") closeLightbox();
+  if (e.key === "ArrowRight") showNext();
+  if (e.key === "ArrowLeft") showPrev();
+});
+
+let startX = null;
+document.getElementById("lightbox").addEventListener("touchstart", e => {
+  startX = e.touches[0].clientX;
+});
+document.getElementById("lightbox").addEventListener("touchend", e => {
+  if (!startX) return;
+  const diff = e.changedTouches[0].clientX - startX;
+  if (diff > 50) showPrev();
+  if (diff < -50) showNext();
+  startX = null;
+});
 </script>
 
 </body>
