@@ -144,33 +144,62 @@
     }
 
     /* ===== MOBILE ===== */
-    @media (max-width: 768px) {
-      #container {
-        flex: 1 1 50%;
-        height: auto;
-      }
+@media (max-width: 768px) {
 
-      #map {
-        height: 50vh;
-      }
+  /* Layout: map top / sidebar bottom */
+  #container {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh; /* better than vh on mobile browsers */
+  }
 
-      #sidebar {
-        flex: 1 1 50%;
-        max-width: none;
-        height: auto;
-        border-left: none;
-        border-top: 1px solid #ccc;
-      }
+  #map {
+    flex: 0 0 50%;
+  }
 
-      .lightbox-arrow {
-        font-size: 36px;
-      }
+  #sidebar {
+    flex: 1 1 50%;
+    max-width: none;
+    overflow-y: auto;
+    border-left: none;
+    border-top: 1px solid #ccc;
+    transition: flex 0.25s ease;
+  }
 
-      #lightbox-dots span {
-        width: 10px;
-        height: 10px;
-      }
-    }
+  /* Sidebar states */
+  #sidebar.collapsed {
+    flex: 0 0 20%;
+  }
+
+  #sidebar.expanded {
+    flex: 1 1 50%;
+  }
+
+  /* Drag / tap handle */
+  #sidebar-handle {
+    width: 40px;
+    height: 5px;
+    background: #bbb;
+    border-radius: 3px;
+    margin: 8px auto 6px auto;
+    cursor: grab;
+  }
+
+  /* Lightbox adjustments */
+  .lightbox-arrow {
+    font-size: 36px;
+  }
+
+  #lightbox-dots span {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* Prevent Leaflet controls hiding under nav bar */
+  .leaflet-top {
+    top: 60px; /* adjust if your site header is taller */
+  }
+}
   </style>
 </head>
 
