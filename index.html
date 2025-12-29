@@ -170,6 +170,7 @@ html, body {
   }
 
   #sidebar {
+    flex: none;
     height: 50%;
     transition: height 0.25s ease;
   }
@@ -186,6 +187,7 @@ html, body {
     height: 24px;
     width: 60px;
     margin: 8px auto;
+  }
 
   .lightbox-arrow {
     font-size: 36px;
@@ -244,11 +246,6 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 
 const markerCluster = L.markerClusterGroup({ maxClusterRadius: 20 });
 
-map.on("click", () => {
-  if (window.innerWidth <= 768) {
-    sidebar.classList.add("collapsed");
-    sidebar.classList.remove("expanded");
-  }
 });
 
 /* ===== COLOR SCIENCE ===== */
@@ -401,15 +398,22 @@ document.getElementById("lightbox").addEventListener("touchend", e => {
 /* ==== Sidebar collapse ====*/
   const sidebar = document.getElementById("sidebar");
   const handle = document.getElementById("sidebar-handle");
-      
+
+  map.on("click", () => {
+    if (window.innerWidth <= 768) {
+    sidebar.classList.add("collapsed");
+    sidebar.classList.remove("expanded");
+    });
+  }
+        
   if (handle && sidebar) {
 
     /* TAP TO TOGGLE */
     handle.addEventListener("click", () => {
       sidebar.classList.toggle("collapsed");
       sidebar.classList.toggle("expanded");
-    });
-  }
+      });
+    }
 
 </script>
 
