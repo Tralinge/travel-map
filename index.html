@@ -48,6 +48,14 @@ html, body {
   cursor: pointer;
 }
 
+#sidebar-handle {
+  width: 40px;
+  height: 5px;
+  background: #bbb;
+  border-radius: 3px;
+  margin: 8px auto 6px auto;
+}
+
 /* ===== CUSTOM YEAR MARKER ===== */
 .year-div-icon {
   background: transparent !important;
@@ -162,6 +170,14 @@ html, body {
     border-top: 1px solid #ccc;
   }
 
+  #sidebar.collapsed {
+    flex: 0 0 20%;
+  }
+	
+  #sidebar.expanded {
+    flex: 1 1 50%;
+  }
+
   .lightbox-arrow {
     font-size: 36px;
   }
@@ -183,6 +199,7 @@ html, body {
 <div id="container">
   <div id="map"></div>
   <div id="sidebar">
+    <div id="sidebar-handle"></div>
     <h2 id="place-title">Travel Map</h2>
     <div id="place-content">
       <p>Click a marker on the map to see photos.</p>
@@ -364,6 +381,17 @@ document.getElementById("lightbox").addEventListener("touchend", e => {
   if (diff < -50) showNext();
   startX = null;
 });
+
+/* ==== Sidebar collapse ====*/
+  const sidebar = document.getElementById("sidebar");
+  const handle = document.getElementById("sidebar-handle");
+
+  if (handle) {
+    handle.addEventListener("click", () => {
+      sidebar.classList.toggle("collapsed");
+      sidebar.classList.toggle("expanded");
+    });
+  }
 </script>
 
 </body>
