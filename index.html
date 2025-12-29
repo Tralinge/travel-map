@@ -246,8 +246,6 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 
 const markerCluster = L.markerClusterGroup({ maxClusterRadius: 20 });
 
-});
-
 /* ===== COLOR SCIENCE ===== */
 const WL_MIN = 410;
 const WL_MAX = 680;
@@ -395,26 +393,25 @@ document.getElementById("lightbox").addEventListener("touchend", e => {
   startX = null;
 });
 
-/* ==== Sidebar collapse ====*/
-  const sidebar = document.getElementById("sidebar");
-  const handle = document.getElementById("sidebar-handle");
+/* ==== Sidebar collapse ==== */
+const sidebar = document.getElementById("sidebar");
+const handle = document.getElementById("sidebar-handle");
 
-  map.on("click", () => {
-    if (window.innerWidth <= 768) {
+/* Collapse when map is tapped (mobile only) */
+map.on("click", () => {
+  if (window.innerWidth <= 768) {
     sidebar.classList.add("collapsed");
     sidebar.classList.remove("expanded");
-    });
   }
-        
-  if (handle && sidebar) {
+});
 
-    /* TAP TO TOGGLE */
-    handle.addEventListener("click", () => {
-      sidebar.classList.toggle("collapsed");
-      sidebar.classList.toggle("expanded");
-      });
-    }
-
+/* Toggle when handle is tapped */
+if (handle && sidebar) {
+  handle.addEventListener("click", () => {
+    sidebar.classList.toggle("collapsed");
+    sidebar.classList.toggle("expanded");
+  });
+}
 </script>
 
 </body>
