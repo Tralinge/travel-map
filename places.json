@@ -1,5 +1,24 @@
 [
     {
+      "title": "Cabanaconde, Peru",
+      "lat": -15.61,
+      "lng": -71.97,
+      "text": "Colca Canyon",
+      "year": 2024,
+      "photos": [
+        "https://tralinge.github.io/travel-map/photos/cabanaconde-07-2024/web_000.jpg",
+        "https://tralinge.github.io/travel-map/photos/cabanaconde-07-2024/web_001.jpg",
+        "https://tralinge.github.io/travel-map/photos/cabanaconde-07-2024/web_002.jpg",
+        "https://tralinge.github.io/travel-map/photos/cabanaconde-07-2024/web_003.jpg",
+        "https://tralinge.github.io/travel-map/photos/cabanaconde-07-2024/web_004.jpg",
+        "https://tralinge.github.io/travel-map/photos/cabanaconde-07-2024/web_005.jpg",
+        "https://tralinge.github.io/travel-map/photos/cabanaconde-07-2024/web_006.jpg",
+        "https://tralinge.github.io/travel-map/photos/cabanaconde-07-2024/web_007.jpg",
+        "https://tralinge.github.io/travel-map/photos/cabanaconde-07-2024/web_008.jpg",
+        "https://tralinge.github.io/travel-map/photos/cabanaconde-07-2024/web_009.jpg"
+      ]
+    },
+    {
       "title": "Cuenca, Ecuador",
       "lat": -2.89,
       "lng": -79.00,
@@ -95,6 +114,25 @@
       ]
     },
     {
+      "title": "Lujiang, China",
+      "lat": 31.41,
+      "lng": 117.41,
+      "text": "China’s Heartland",
+      "year": 2024,
+      "photos": [
+        "https://tralinge.github.io/travel-map/photos/lujiang-01-2024/web_000.jpg",
+        "https://tralinge.github.io/travel-map/photos/lujiang-01-2024/web_001.jpg",
+        "https://tralinge.github.io/travel-map/photos/lujiang-01-2024/web_002.jpg",
+        "https://tralinge.github.io/travel-map/photos/lujiang-01-2024/web_003.jpg",
+        "https://tralinge.github.io/travel-map/photos/lujiang-01-2024/web_004.jpg",
+        "https://tralinge.github.io/travel-map/photos/lujiang-01-2024/web_005.jpg",
+        "https://tralinge.github.io/travel-map/photos/lujiang-01-2024/web_006.jpg",
+        "https://tralinge.github.io/travel-map/photos/lujiang-01-2024/web_007.jpg",
+        "https://tralinge.github.io/travel-map/photos/lujiang-01-2024/web_008.jpg",
+        "https://tralinge.github.io/travel-map/photos/lujiang-01-2024/web_009.jpg"
+      ]
+    },
+    {
       "title": "Okinawa, Japan",
       "lat": 26.4270,
       "lng": 127.8243,
@@ -111,6 +149,44 @@
         "https://tralinge.github.io/travel-map/photos/okinawa-11-2025/web_007.jpg",
         "https://tralinge.github.io/travel-map/photos/okinawa-11-2025/web_008.jpg",
         "https://tralinge.github.io/travel-map/photos/okinawa-11-2025/web_009.jpg"
+      ]
+    },
+    {
+      "title": "Ouro Preto, Brazil",
+      "lat": -20.38,
+      "lng": -43.50,
+      "text": "Black Gold",
+      "year": 2024,
+      "photos": [
+        "https://tralinge.github.io/travel-map/photos/ouropreto-04-2024/web_000.jpg",
+        "https://tralinge.github.io/travel-map/photos/ouropreto-04-2024/web_001.jpg",
+        "https://tralinge.github.io/travel-map/photos/ouropreto-04-2024/web_002.jpg",
+        "https://tralinge.github.io/travel-map/photos/ouropreto-04-2024/web_003.jpg",
+        "https://tralinge.github.io/travel-map/photos/ouropreto-04-2024/web_004.jpg",
+        "https://tralinge.github.io/travel-map/photos/ouropreto-04-2024/web_005.jpg",
+        "https://tralinge.github.io/travel-map/photos/ouropreto-04-2024/web_006.jpg",
+        "https://tralinge.github.io/travel-map/photos/ouropreto-04-2024/web_007.jpg",
+        "https://tralinge.github.io/travel-map/photos/ouropreto-04-2024/web_008.jpg",
+        "https://tralinge.github.io/travel-map/photos/ouropreto-04-2024/web_009.jpg"
+      ]
+    },
+    {
+      "title": "Sao Paulo, Brazil",
+      "lat": -23.54,
+      "lng": -46.63,
+      "text": "Land of Drizzle",
+      "year": 2024,
+      "photos": [
+        "https://tralinge.github.io/travel-map/photos/saopaulo-05-2024/web_000.jpg",
+        "https://tralinge.github.io/travel-map/photos/saopaulo-05-2024/web_001.jpg",
+        "https://tralinge.github.io/travel-map/photos/saopaulo-05-2024/web_002.jpg",
+        "https://tralinge.github.io/travel-map/photos/saopaulo-05-2024/web_003.jpg",
+        "https://tralinge.github.io/travel-map/photos/saopaulo-05-2024/web_004.jpg",
+        "https://tralinge.github.io/travel-map/photos/saopaulo-05-2024/web_005.jpg",
+        "https://tralinge.github.io/travel-map/photos/saopaulo-05-2024/web_006.jpg",
+        "https://tralinge.github.io/travel-map/photos/saopaulo-05-2024/web_007.jpg",
+        "https://tralinge.github.io/travel-map/photos/saopaulo-05-2024/web_008.jpg",
+        "https://tralinge.github.io/travel-map/photos/saopaulo-05-2024/web_009.jpg"
       ]
     },
     {
