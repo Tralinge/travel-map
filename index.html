@@ -40,14 +40,10 @@
       background-color: #f9f9f9;
     }
 
-    #sidebar h2 {
-      margin-top: 0;
-    }
-
     #sidebar img {
       width: 100%;
-      margin-bottom: 10px;
-      border-radius: 4px;
+      margin-bottom: 12px;
+      border-radius: 6px;
       cursor: pointer;
     }
 
@@ -66,8 +62,6 @@
       padding: 1px 5px;
       border-radius: 8px;
       margin-bottom: 2px;
-      color: #333;
-      line-height: 1;
       box-shadow: 0 0 2px rgba(0,0,0,0.3);
     }
 
@@ -83,41 +77,91 @@
     #lightbox {
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.85);
+      background: rgba(0,0,0,0.85);
       display: none;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       z-index: 1000;
     }
 
-    #lightbox img {
+    #lightbox-close {
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      font-size: 36px;
+      color: #d4d3cf;
+      cursor: pointer;
+      background: rgba(0,0,0,0.6);
+      border-radius: 20%;
+      padding: 6px 8px;
+    }
+
+    .lightbox-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       max-width: 95%;
-      max-height: 95%;
+      max-height: 80%;
+    }
+
+    #lightbox-img {
+      max-width: 85vw;
+      max-height: 75vh;
       border-radius: 6px;
     }
 
-    .lightbox-control {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
+    .lightbox-arrow {
       font-size: 48px;
       color: #fff;
       cursor: pointer;
+      padding: 12px;
       user-select: none;
-      padding: 10px;
     }
 
-    #lightbox-prev { left: 20px; }
-    #lightbox-next { right: 20px; }
+    /* ===== DOTS ===== */
+    #lightbox-dots {
+      display: flex;
+      gap: 8px;
+      margin-top: 12px;
+    }
 
-    #lightbox-close {
-      position: absolute;
-      top: 12px;
-      right: 20px;
-      font-size: 32px;
-      color: #fff;
+    #lightbox-dots span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.4);
       cursor: pointer;
-      user-select: none;
+    }
+
+    #lightbox-dots span.active {
+      background: rgba(255,255,255,0.9);
+    }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 768px) {
+      #container {
+        flex-direction: column;
+      }
+
+      #map {
+        height: 50vh;
+      }
+
+      #sidebar {
+        height: 50vh;
+        border-left: none;
+        border-top: 1px solid #ccc;
+      }
+
+      .lightbox-arrow {
+        font-size: 36px;
+      }
+
+      #lightbox-dots span {
+        width: 10px;
+        height: 10px;
+      }
     }
   </style>
 </head>
@@ -126,7 +170,6 @@
 
 <div id="container">
   <div id="map"></div>
-
   <div id="sidebar">
     <h2 id="place-title">Travel Map</h2>
     <div id="place-content">
@@ -135,12 +178,17 @@
   </div>
 </div>
 
-<!-- Lightbox -->
+<!-- LIGHTBOX -->
 <div id="lightbox">
   <span id="lightbox-close">&times;</span>
-  <span id="lightbox-prev" class="lightbox-control">&#10094;</span>
-  <img id="lightbox-img" alt="">
-  <span id="lightbox-next" class="lightbox-control">&#10095;</span>
+
+  <div class="lightbox-inner">
+    <span id="lightbox-prev" class="lightbox-arrow">&#10094;</span>
+    <img id="lightbox-img" alt="">
+    <span id="lightbox-next" class="lightbox-arrow">&#10095;</span>
+  </div>
+
+  <div id="lightbox-dots"></div>
 </div>
 
 <!-- Leaflet JS -->
@@ -149,119 +197,87 @@
 
 <script>
   // ===== MAP INIT =====
-  const map = L.map("map").setView([20, 0], 2);
+  const map = L.map("map", { zoomControl: false }).setView([20, 0], 2);
+  L.control.zoom({ position: "bottomright" }).addTo(map);
 
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    maxZoom: 19,
-    attribution: "&copy; OpenStreetMap contributors"
+    maxZoom: 19
   }).addTo(map);
 
-  const markerCluster = L.markerClusterGroup({
-    maxClusterRadius: 20,
-    spiderfyOnMaxZoom: true,
-    showCoverageOnHover: false
-  });
+  const markerCluster = L.markerClusterGroup({ maxClusterRadius: 20 });
 
   // ===== COLOR SCIENCE =====
-  const WL_MIN = 410; // avoid near-black violet
-  const WL_MAX = 680; // avoid near-black deep red
-  
+  const WL_MIN = 410;
+  const WL_MAX = 680;
+
   function yearToWavelength(year, minYear, maxYear) {
     if (minYear === maxYear) return (WL_MIN + WL_MAX) / 2;
-    const t = (year - minYear) / (maxYear - minYear);
-    return WL_MAX - t * (WL_MAX - WL_MIN);
-  }
-  
-  function wavelengthToRGB(wl) {
-    let r = 0, g = 0, b = 0;
-  
-    if (wl < 440) {
-      r = -(wl - 440) / 30;
-      b = 1;
-    } else if (wl < 490) {
-      g = (wl - 440) / 50;
-      b = 1;
-    } else if (wl < 510) {
-      g = 1;
-      b = -(wl - 510) / 20;
-    } else if (wl < 580) {
-      r = (wl - 510) / 70;
-      g = 1;
-    } else if (wl < 645) {
-      r = 1;
-      g = -(wl - 645) / 65;
-    } else {
-      r = 1;
-    }
-  
-    // Clamp + force minimum brightness
-    const gamma = 0.8;
-    const minBrightness = 0.35;
-  
-    const to255 = v =>
-      Math.round(
-        255 *
-        Math.pow(Math.max(v, minBrightness), gamma)
-      );
-  
-    return `rgb(${to255(r)}, ${to255(g)}, ${to255(b)})`;
+    return WL_MAX - ((year - minYear) / (maxYear - minYear)) * (WL_MAX - WL_MIN);
   }
 
-  // ===== SIDEBAR STATE =====
+  function wavelengthToRGB(wl) {
+    let r=0,g=0,b=0;
+    if (wl<440){r=-(wl-440)/30;b=1;}
+    else if (wl<490){g=(wl-440)/50;b=1;}
+    else if (wl<510){g=1;b=-(wl-510)/20;}
+    else if (wl<580){r=(wl-510)/70;g=1;}
+    else if (wl<645){r=1;g=-(wl-645)/65;}
+    else{r=1;}
+
+    const to255=v=>Math.round(255*Math.pow(Math.max(v,0.35),0.8));
+    return `rgb(${to255(r)},${to255(g)},${to255(b)})`;
+  }
+
+  // ===== SIDEBAR / LIGHTBOX STATE =====
   let currentPhotos = [];
   let currentIndex = 0;
-  
-  // ===== SIDEBAR =====
+
   function updateSidebar(place) {
     document.getElementById("place-title").textContent =
       `${place.year} - ${place.text} in ${place.title}`;
-  
+
     const content = document.getElementById("place-content");
     content.innerHTML = "";
-  
+
     currentPhotos = place.photos || [];
-  
-    currentPhotos.forEach((photo, index) => {
+    currentPhotos.forEach((src, i) => {
       const img = document.createElement("img");
-      img.src = photo;
-      img.onclick = () => openLightbox(index);
+      img.src = src;
+      img.onclick = () => openLightbox(i);
       content.appendChild(img);
     });
   }
 
-  
   // ===== DATA LOAD =====
   fetch("places.json")
     .then(r => r.json())
     .then(places => {
-      const years = places.map(p => p.year).filter(Number.isFinite);
+      const years = places.map(p => p.year);
       const minYear = Math.min(...years);
       const maxYear = Math.max(...years);
-
       const bounds = L.latLngBounds();
 
       places.forEach(place => {
-        const shortYear = String(place.year).slice(-2);
         const wl = yearToWavelength(place.year, minYear, maxYear);
         const color = wavelengthToRGB(wl);
+        const shortYear = String(place.year).slice(-2);
 
         const icon = L.divIcon({
-          className: "",
-          html: `
-            <div class="year-marker">
-              <div class="year-label">'${shortYear}</div>
-              <div class="pin" style="background:${color}"></div>
-            </div>
-          `,
-          iconSize: [30, 40],
-          iconAnchor: [15, 34]
+          html: `<div class="year-marker">
+                  <div class="year-label">'${shortYear}</div>
+                  <div class="pin" style="background:${color}"></div>
+                 </div>`,
+          iconSize: [30,40],
+          iconAnchor: [15,34]
         });
 
         const marker = L.marker([place.lat, place.lng], { icon });
-
         marker.on("click", () => {
           map.setView([place.lat, place.lng], 6);
           updateSidebar(place);
+          if (window.innerWidth <= 768) {
+            document.getElementById("sidebar").scrollIntoView({ behavior: "smooth" });
+          }
         });
 
         markerCluster.addLayer(marker);
@@ -269,14 +285,28 @@
       });
 
       map.addLayer(markerCluster);
-      map.fitBounds(bounds, { padding: [50, 50] });
+      map.fitBounds(bounds, { padding: [50,50] });
     });
 
-  // ===== LIGHTBOX =====
+  // ===== LIGHTBOX LOGIC =====
+  function renderDots() {
+    const dots = document.getElementById("lightbox-dots");
+    dots.innerHTML = "";
+    if (currentPhotos.length <= 1) return;
+
+    currentPhotos.forEach((_, i) => {
+      const d = document.createElement("span");
+      if (i === currentIndex) d.classList.add("active");
+      d.onclick = () => openLightbox(i);
+      dots.appendChild(d);
+    });
+  }
+
   function openLightbox(index) {
     currentIndex = index;
     document.getElementById("lightbox-img").src = currentPhotos[currentIndex];
     document.getElementById("lightbox").style.display = "flex";
+    renderDots();
   }
 
   function closeLightbox() {
@@ -285,27 +315,34 @@
 
   function showNext() {
     currentIndex = (currentIndex + 1) % currentPhotos.length;
-    document.getElementById("lightbox-img").src = currentPhotos[currentIndex];
+    openLightbox(currentIndex);
   }
 
   function showPrev() {
-    currentIndex =
-      (currentIndex - 1 + currentPhotos.length) % currentPhotos.length;
-    document.getElementById("lightbox-img").src = currentPhotos[currentIndex];
+    currentIndex = (currentIndex - 1 + currentPhotos.length) % currentPhotos.length;
+    openLightbox(currentIndex);
   }
 
   document.getElementById("lightbox-close").onclick = closeLightbox;
   document.getElementById("lightbox-next").onclick = showNext;
   document.getElementById("lightbox-prev").onclick = showPrev;
 
-  document.getElementById("lightbox").onclick = e => {
-    if (e.target.id === "lightbox") closeLightbox();
-  };
-
   document.addEventListener("keydown", e => {
     if (e.key === "Escape") closeLightbox();
     if (e.key === "ArrowRight") showNext();
     if (e.key === "ArrowLeft") showPrev();
+  });
+
+  let startX = null;
+  document.getElementById("lightbox").addEventListener("touchstart", e => {
+    startX = e.touches[0].clientX;
+  });
+  document.getElementById("lightbox").addEventListener("touchend", e => {
+    if (!startX) return;
+    const diff = e.changedTouches[0].clientX - startX;
+    if (diff > 50) showPrev();
+    if (diff < -50) showNext();
+    startX = null;
   });
 </script>
 
