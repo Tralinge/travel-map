@@ -38,6 +38,25 @@
       ]
     },
     {
+      "title": "Chiang Mai, Thailand",
+      "lat": 18.80,
+      "lng": 98.93,
+      "text": "Rose of the North",
+      "year": 2023,
+      "photos": [
+        "https://tralinge.github.io/travel-map/photos/chiangmai-12-2023/web_000.jpg",
+        "https://tralinge.github.io/travel-map/photos/chiangmai-12-2023/web_001.jpg",
+        "https://tralinge.github.io/travel-map/photos/chiangmai-12-2023/web_002.jpg",
+        "https://tralinge.github.io/travel-map/photos/chiangmai-12-2023/web_003.jpg",
+        "https://tralinge.github.io/travel-map/photos/chiangmai-12-2023/web_004.jpg",
+        "https://tralinge.github.io/travel-map/photos/chiangmai-12-2023/web_005.jpg",
+        "https://tralinge.github.io/travel-map/photos/chiangmai-12-2023/web_006.jpg",
+        "https://tralinge.github.io/travel-map/photos/chiangmai-12-2023/web_007.jpg",
+        "https://tralinge.github.io/travel-map/photos/chiangmai-12-2023/web_008.jpg",
+        "https://tralinge.github.io/travel-map/photos/chiangmai-12-2023/web_009.jpg"
+      ]
+    },
+    {
       "title": "Cuenca, Ecuador",
       "lat": -2.89,
       "lng": -79.00,
