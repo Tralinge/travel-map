@@ -275,7 +275,7 @@ let currentIndex = 0;
 /* ===== SIDEBAR ===== */
 function updateSidebar(place) {
   document.getElementById("place-title").textContent =
-    `${place.year} - ${place.text} in ${place.title}`;
+    `${place.year} - ${place.text} - ${place.title}`;
 
   const content = document.getElementById("place-content");
   content.innerHTML = "";
