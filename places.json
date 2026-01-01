@@ -1,5 +1,24 @@
 [
     {
+      "title": "Ankara, Türkiye",
+      "lat": 39.93,
+      "lng": 32.85,
+      "text": "Heart of Türkiye",
+      "year": 2023,
+      "photos": [
+        "https://tralinge.github.io/travel-map/photos/ankara-06-2023/web_000.jpg",
+        "https://tralinge.github.io/travel-map/photos/ankara-06-2023/web_001.jpg",
+        "https://tralinge.github.io/travel-map/photos/ankara-06-2023/web_002.jpg",
+        "https://tralinge.github.io/travel-map/photos/ankara-06-2023/web_003.jpg",
+        "https://tralinge.github.io/travel-map/photos/ankara-06-2023/web_004.jpg",
+        "https://tralinge.github.io/travel-map/photos/ankara-06-2023/web_005.jpg",
+        "https://tralinge.github.io/travel-map/photos/ankara-06-2023/web_006.jpg",
+        "https://tralinge.github.io/travel-map/photos/ankara-06-2023/web_007.jpg",
+        "https://tralinge.github.io/travel-map/photos/ankara-06-2023/web_008.jpg",
+        "https://tralinge.github.io/travel-map/photos/ankara-06-2023/web_009.jpg"
+      ]
+    },
+    {
       "title": "Arequipa, Peru",
       "lat": -16.40,
       "lng": -71.53,
@@ -206,6 +225,25 @@
         "https://tralinge.github.io/travel-map/photos/hefei-10-2023/web_007.jpg",
         "https://tralinge.github.io/travel-map/photos/hefei-10-2023/web_008.jpg",
         "https://tralinge.github.io/travel-map/photos/hefei-10-2023/web_009.jpg"
+      ]
+    },
+    {
+      "title": "Istanbul, Türkiye",
+      "lat": 41.01,
+      "lng": 28.97,
+      "text": "City on Two Continents",
+      "year": 2023,
+      "photos": [
+        "https://tralinge.github.io/travel-map/photos/istanbul-06-2023/web_000.jpg",
+        "https://tralinge.github.io/travel-map/photos/istanbul-06-2023/web_001.jpg",
+        "https://tralinge.github.io/travel-map/photos/istanbul-06-2023/web_002.jpg",
+        "https://tralinge.github.io/travel-map/photos/istanbul-06-2023/web_003.jpg",
+        "https://tralinge.github.io/travel-map/photos/istanbul-06-2023/web_004.jpg",
+        "https://tralinge.github.io/travel-map/photos/istanbul-06-2023/web_005.jpg",
+        "https://tralinge.github.io/travel-map/photos/istanbul-06-2023/web_006.jpg",
+        "https://tralinge.github.io/travel-map/photos/istanbul-06-2023/web_007.jpg",
+        "https://tralinge.github.io/travel-map/photos/istanbul-06-2023/web_008.jpg",
+        "https://tralinge.github.io/travel-map/photos/istanbul-06-2023/web_009.jpg"
       ]
     },
     {
