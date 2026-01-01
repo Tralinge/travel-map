@@ -284,6 +284,25 @@
         "https://tralinge.github.io/travel-map/photos/lujiang-01-2024/web_009.jpg"
       ]
     },
+     {
+      "title": "Anamur, Türkiye",
+      "lat": 36.08,
+      "lng": 32.89,
+      "text": "Mamure Castle",
+      "year": 2023,
+      "photos": [
+        "https://tralinge.github.io/travel-map/photos/mamure-04-2023/web_000.jpg",
+        "https://tralinge.github.io/travel-map/photos/mamure-04-2023/web_001.jpg",
+        "https://tralinge.github.io/travel-map/photos/mamure-04-2023/web_002.jpg",
+        "https://tralinge.github.io/travel-map/photos/mamure-04-2023/web_003.jpg",
+        "https://tralinge.github.io/travel-map/photos/mamure-04-2023/web_004.jpg",
+        "https://tralinge.github.io/travel-map/photos/mamure-04-2023/web_005.jpg",
+        "https://tralinge.github.io/travel-map/photos/mamure-04-2023/web_006.jpg",
+        "https://tralinge.github.io/travel-map/photos/mamure-04-2023/web_007.jpg",
+        "https://tralinge.github.io/travel-map/photos/mamure-04-2023/web_008.jpg",
+        "https://tralinge.github.io/travel-map/photos/mamure-04-2023/web_009.jpg"
+      ]
+    },
     {
       "title": "Okinawa, Japan",
       "lat": 26.4270,
@@ -323,7 +342,7 @@
       ]
     },
     {
-      "title": "Pamukkale, Turkiye",
+      "title": "Pamukkale, Türkiye",
       "lat": 37.92,
       "lng": 29.12,
       "text": "Cotton Castle",
