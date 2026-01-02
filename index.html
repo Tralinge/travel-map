@@ -76,13 +76,25 @@ html, body {
 }
 
 .year-label {
+  display: none;
+  white-space: nowrap;
   font-size: 11px;
   font-weight: 600;
-  background: rgba(255,255,255,0.9);
-  padding: 1px 5px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2px 6px;
   border-radius: 8px;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
   box-shadow: 0 0 2px rgba(0,0,0,0.3);
+  pointer-events: none;
+}
+
+.year-marker.hover {
+  transform: translateY(-12px);
+}
+
+/* Visible only when marker is hovered */
+.year-marker.hover .year-label {
+  display: block;
 }
 
 .pin {
@@ -302,13 +314,12 @@ fetch("places.json")
       const color = wavelengthToRGB(
         yearToWavelength(place.year, minYear, maxYear)
       );
-      const shortYear = String(place.year).slice(-2);
 
       const icon = L.divIcon({
         className: "year-div-icon",
         html: `
           <div class="year-marker">
-            <div class="year-label">'${shortYear}</div>
+            <div class="year-label"></div>
             <div class="pin" style="background:${color}"></div>
           </div>
         `,
@@ -317,12 +328,38 @@ fetch("places.json")
       });
 
       const marker = L.marker([place.lat, place.lng], { icon });
+
+      /* CLICK */
       marker.on("click", () => {
         map.setView([place.lat, place.lng], 6);
         updateSidebar(place);
         if (window.innerWidth <= 768) {
           document.getElementById("sidebar")
             .scrollIntoView({ behavior: "smooth" });
+        }
+      });
+
+      /* HOVER */
+      marker.on("mouseover", e => {
+        const el = e.target.getElement();
+        if (!el) return;
+
+        const markerDiv = el.querySelector(".year-marker");
+        const label = el.querySelector(".year-label");
+
+        if (markerDiv && label) {
+          label.textContent = `${place.year} – ${place.text} in ${place.title}`;
+          markerDiv.classList.add("hover");
+        }
+      });
+
+      marker.on("mouseout", e => {
+        const el = e.target.getElement();
+        if (!el) return;
+
+        const markerDiv = el.querySelector(".year-marker");
+        if (markerDiv) {
+          markerDiv.classList.remove("hover");
         }
       });
 
