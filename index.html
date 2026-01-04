@@ -69,27 +69,27 @@ html, body {
 }
 
 .year-marker {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transform: translateY(-8px);
 }
 
 .year-label {
   display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
   white-space: nowrap;
   font-size: 11px;
   font-weight: 600;
   background: rgba(255, 255, 255, 0.95);
   padding: 2px 6px;
   border-radius: 8px;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   box-shadow: 0 0 2px rgba(0,0,0,0.3);
   pointer-events: none;
-}
-
-.year-marker.hover {
-  transform: translateY(-12px);
 }
 
 /* Visible only when marker is hovered */
@@ -100,6 +100,7 @@ html, body {
 .pin {
   width: 12px;
   height: 12px;
+  flex-shrink: 0;
   border-radius: 50%;
   border: 2px solid white;
   box-shadow: 0 0 3px rgba(0,0,0,0.4);
@@ -323,8 +324,7 @@ fetch("places.json")
             <div class="pin" style="background:${color}"></div>
           </div>
         `,
-        iconSize: [30,40],
-        iconAnchor: [15,34]
+        iconAnchor: [6, 6]   // center of the 12×12 pin
       });
 
       const marker = L.marker([place.lat, place.lng], { icon });

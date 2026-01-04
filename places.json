@@ -1,5 +1,24 @@
 [
     {
+      "title": "Aït Benhaddou, Morocco",
+      "lat": 31.04,
+      "lng": -7.11,
+      "text": "The Fortified City",
+      "year": 2023,
+      "photos": [
+        "https://tralinge.github.io/travel-map/photos/ait_benhaddou-02-2023/web_000.jpg",
+        "https://tralinge.github.io/travel-map/photos/ait_benhaddou-02-2023/web_001.jpg",
+        "https://tralinge.github.io/travel-map/photos/ait_benhaddou-02-2023/web_002.jpg",
+        "https://tralinge.github.io/travel-map/photos/ait_benhaddou-02-2023/web_003.jpg",
+        "https://tralinge.github.io/travel-map/photos/ait_benhaddou-02-2023/web_004.jpg",
+        "https://tralinge.github.io/travel-map/photos/ait_benhaddou-02-2023/web_005.jpg",
+        "https://tralinge.github.io/travel-map/photos/ait_benhaddou-02-2023/web_006.jpg",
+        "https://tralinge.github.io/travel-map/photos/ait_benhaddou-02-2023/web_007.jpg",
+        "https://tralinge.github.io/travel-map/photos/ait_benhaddou-02-2023/web_008.jpg",
+        "https://tralinge.github.io/travel-map/photos/ait_benhaddou-02-2023/web_009.jpg"
+      ]
+    },
+    {
       "title": "Ankara, Türkiye",
       "lat": 39.93,
       "lng": 32.85,
@@ -16,6 +35,25 @@
         "https://tralinge.github.io/travel-map/photos/ankara-06-2023/web_007.jpg",
         "https://tralinge.github.io/travel-map/photos/ankara-06-2023/web_008.jpg",
         "https://tralinge.github.io/travel-map/photos/ankara-06-2023/web_009.jpg"
+      ]
+    },
+    {
+      "title": "Antalya, Türkiye",
+      "lat": 36.89,
+      "lng": 30.70,
+      "text": "Turkish Riviera",
+      "year": 2023,
+      "photos": [
+        "https://tralinge.github.io/travel-map/photos/antalya-03-2023/web_000.jpg",
+        "https://tralinge.github.io/travel-map/photos/antalya-03-2023/web_001.jpg",
+        "https://tralinge.github.io/travel-map/photos/antalya-03-2023/web_002.jpg",
+        "https://tralinge.github.io/travel-map/photos/antalya-03-2023/web_003.jpg",
+        "https://tralinge.github.io/travel-map/photos/antalya-03-2023/web_004.jpg",
+        "https://tralinge.github.io/travel-map/photos/antalya-03-2023/web_005.jpg",
+        "https://tralinge.github.io/travel-map/photos/antalya-03-2023/web_006.jpg",
+        "https://tralinge.github.io/travel-map/photos/antalya-03-2023/web_007.jpg",
+        "https://tralinge.github.io/travel-map/photos/antalya-03-2023/web_008.jpg",
+        "https://tralinge.github.io/travel-map/photos/antalya-03-2023/web_009.jpg"
       ]
     },
     {
@@ -54,6 +92,25 @@
         "https://tralinge.github.io/travel-map/photos/cabanaconde-07-2024/web_007.jpg",
         "https://tralinge.github.io/travel-map/photos/cabanaconde-07-2024/web_008.jpg",
         "https://tralinge.github.io/travel-map/photos/cabanaconde-07-2024/web_009.jpg"
+      ]
+    },
+    {
+      "title": "Casablanca, Morocco",
+      "lat": 33.59,
+      "lng": -7.61,
+      "text": "The White House",
+      "year": 2023,
+      "photos": [
+        "https://tralinge.github.io/travel-map/photos/casablanca-03-2023/web_000.jpg",
+        "https://tralinge.github.io/travel-map/photos/casablanca-03-2023/web_001.jpg",
+        "https://tralinge.github.io/travel-map/photos/casablanca-03-2023/web_002.jpg",
+        "https://tralinge.github.io/travel-map/photos/casablanca-03-2023/web_003.jpg",
+        "https://tralinge.github.io/travel-map/photos/casablanca-03-2023/web_004.jpg",
+        "https://tralinge.github.io/travel-map/photos/casablanca-03-2023/web_005.jpg",
+        "https://tralinge.github.io/travel-map/photos/casablanca-03-2023/web_006.jpg",
+        "https://tralinge.github.io/travel-map/photos/casablanca-03-2023/web_007.jpg",
+        "https://tralinge.github.io/travel-map/photos/casablanca-03-2023/web_008.jpg",
+        "https://tralinge.github.io/travel-map/photos/casablanca-03-2023/web_009.jpg"
       ]
     },
     {
@@ -152,6 +209,25 @@
       ]
     },
     {
+      "title": "Essaouira, Morocco",
+      "lat": 31.50,
+      "lng": -9.76,
+      "text": "City of the Winds",
+      "year": 2023,
+      "photos": [
+        "https://tralinge.github.io/travel-map/photos/essaouira-01-2023/web_000.jpg",
+        "https://tralinge.github.io/travel-map/photos/essaouira-01-2023/web_001.jpg",
+        "https://tralinge.github.io/travel-map/photos/essaouira-01-2023/web_002.jpg",
+        "https://tralinge.github.io/travel-map/photos/essaouira-01-2023/web_003.jpg",
+        "https://tralinge.github.io/travel-map/photos/essaouira-01-2023/web_004.jpg",
+        "https://tralinge.github.io/travel-map/photos/essaouira-01-2023/web_005.jpg",
+        "https://tralinge.github.io/travel-map/photos/essaouira-01-2023/web_006.jpg",
+        "https://tralinge.github.io/travel-map/photos/essaouira-01-2023/web_007.jpg",
+        "https://tralinge.github.io/travel-map/photos/essaouira-01-2023/web_008.jpg",
+        "https://tralinge.github.io/travel-map/photos/essaouira-01-2023/web_009.jpg"
+      ]
+    },
+    {
       "title": "Eskişehir, Türkiye",
       "lat": 39.78,
       "lng": 30.49,
@@ -168,6 +244,25 @@
         "https://tralinge.github.io/travel-map/photos/eskisehir-05-2023/web_007.jpg",
         "https://tralinge.github.io/travel-map/photos/eskisehir-05-2023/web_008.jpg",
         "https://tralinge.github.io/travel-map/photos/eskisehir-05-2023/web_009.jpg"
+      ]
+    },
+    {
+      "title": "Fès, Morocco",
+      "lat": 34.02,
+      "lng": -5.01,
+      "text": "Mecca of the West",
+      "year": 2023,
+      "photos": [
+        "https://tralinge.github.io/travel-map/photos/fes-03-2023/web_000.jpg",
+        "https://tralinge.github.io/travel-map/photos/fes-03-2023/web_001.jpg",
+        "https://tralinge.github.io/travel-map/photos/fes-03-2023/web_002.jpg",
+        "https://tralinge.github.io/travel-map/photos/fes-03-2023/web_003.jpg",
+        "https://tralinge.github.io/travel-map/photos/fes-03-2023/web_004.jpg",
+        "https://tralinge.github.io/travel-map/photos/fes-03-2023/web_005.jpg",
+        "https://tralinge.github.io/travel-map/photos/fes-03-2023/web_006.jpg",
+        "https://tralinge.github.io/travel-map/photos/fes-03-2023/web_007.jpg",
+        "https://tralinge.github.io/travel-map/photos/fes-03-2023/web_008.jpg",
+        "https://tralinge.github.io/travel-map/photos/fes-03-2023/web_009.jpg"
       ]
     },
     {
@@ -418,6 +513,44 @@
       ]
     },
     {
+      "title": "Marrakesh, Morocco",
+      "lat": 31.64,
+      "lng": -7.99,
+      "text": "The Red City",
+      "year": 2023,
+      "photos": [
+        "https://tralinge.github.io/travel-map/photos/marrakesh-01-2023/web_000.jpg",
+        "https://tralinge.github.io/travel-map/photos/marrakesh-01-2023/web_001.jpg",
+        "https://tralinge.github.io/travel-map/photos/marrakesh-01-2023/web_002.jpg",
+        "https://tralinge.github.io/travel-map/photos/marrakesh-01-2023/web_003.jpg",
+        "https://tralinge.github.io/travel-map/photos/marrakesh-01-2023/web_004.jpg",
+        "https://tralinge.github.io/travel-map/photos/marrakesh-01-2023/web_005.jpg",
+        "https://tralinge.github.io/travel-map/photos/marrakesh-01-2023/web_006.jpg",
+        "https://tralinge.github.io/travel-map/photos/marrakesh-01-2023/web_007.jpg",
+        "https://tralinge.github.io/travel-map/photos/marrakesh-01-2023/web_008.jpg",
+        "https://tralinge.github.io/travel-map/photos/marrakesh-01-2023/web_009.jpg"
+      ]
+    },
+    {
+      "title": "Merzouga, Morocco",
+      "lat": 31.11,
+      "lng": -4.00,
+      "text": "Gateway to the Sahara",
+      "year": 2023,
+      "photos": [
+        "https://tralinge.github.io/travel-map/photos/merzouga-01-2023/web_000.jpg",
+        "https://tralinge.github.io/travel-map/photos/merzouga-01-2023/web_001.jpg",
+        "https://tralinge.github.io/travel-map/photos/merzouga-01-2023/web_002.jpg",
+        "https://tralinge.github.io/travel-map/photos/merzouga-01-2023/web_003.jpg",
+        "https://tralinge.github.io/travel-map/photos/merzouga-01-2023/web_004.jpg",
+        "https://tralinge.github.io/travel-map/photos/merzouga-01-2023/web_005.jpg",
+        "https://tralinge.github.io/travel-map/photos/merzouga-01-2023/web_006.jpg",
+        "https://tralinge.github.io/travel-map/photos/merzouga-01-2023/web_007.jpg",
+        "https://tralinge.github.io/travel-map/photos/merzouga-01-2023/web_008.jpg",
+        "https://tralinge.github.io/travel-map/photos/merzouga-01-2023/web_009.jpg"
+      ]
+    },
+    {
       "title": "Okinawa, Japan",
       "lat": 26.4270,
       "lng": 127.8243,
@@ -491,6 +624,44 @@
         "https://tralinge.github.io/travel-map/photos/pamukkale-04-2023/web_007.jpg",
         "https://tralinge.github.io/travel-map/photos/pamukkale-04-2023/web_008.jpg",
         "https://tralinge.github.io/travel-map/photos/pamukkale-04-2023/web_009.jpg"
+      ]
+    },
+    {
+      "title": "Quito, Ecuador",
+      "lat": -0.21,
+      "lng": -78.50,
+      "text": "City of the Skies",
+      "year": 2024,
+      "photos": [
+        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_000.jpg",
+        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_001.jpg",
+        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_002.jpg",
+        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_003.jpg",
+        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_004.jpg",
+        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_005.jpg",
+        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_006.jpg",
+        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_007.jpg",
+        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_008.jpg",
+        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_009.jpg"
+      ]
+    },
+     {
+      "title": "Rabat, Morocco",
+      "lat": 34.01,
+      "lng": -6.85,
+      "text": "Royal Capital",
+      "year": 2023,
+      "photos": [
+        "https://tralinge.github.io/travel-map/photos/rabat-02-2023/web_000.jpg",
+        "https://tralinge.github.io/travel-map/photos/rabat-02-2023/web_001.jpg",
+        "https://tralinge.github.io/travel-map/photos/rabat-02-2023/web_002.jpg",
+        "https://tralinge.github.io/travel-map/photos/rabat-02-2023/web_003.jpg",
+        "https://tralinge.github.io/travel-map/photos/rabat-02-2023/web_004.jpg",
+        "https://tralinge.github.io/travel-map/photos/rabat-02-2023/web_005.jpg",
+        "https://tralinge.github.io/travel-map/photos/rabat-02-2023/web_006.jpg",
+        "https://tralinge.github.io/travel-map/photos/rabat-02-2023/web_007.jpg",
+        "https://tralinge.github.io/travel-map/photos/rabat-02-2023/web_008.jpg",
+        "https://tralinge.github.io/travel-map/photos/rabat-02-2023/web_009.jpg"
       ]
     },
     {
@@ -570,22 +741,22 @@
       ]
     },
     {
-      "title": "Quito, Ecuador",
-      "lat": -0.21,
-      "lng": -78.50,
-      "text": "City of the Skies",
-      "year": 2024,
+      "title": "Timizguida Ouftas, Morocco",
+      "lat": 30.99,
+      "lng": -9.81,
+      "text": "Beach Homestay",
+      "year": 2023,
       "photos": [
-        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_009.jpg"
+        "https://tralinge.github.io/travel-map/photos/tamanar-01-2023/web_000.jpg",
+        "https://tralinge.github.io/travel-map/photos/tamanar-01-2023/web_001.jpg",
+        "https://tralinge.github.io/travel-map/photos/tamanar-01-2023/web_002.jpg",
+        "https://tralinge.github.io/travel-map/photos/tamanar-01-2023/web_003.jpg",
+        "https://tralinge.github.io/travel-map/photos/tamanar-01-2023/web_004.jpg",
+        "https://tralinge.github.io/travel-map/photos/tamanar-01-2023/web_005.jpg",
+        "https://tralinge.github.io/travel-map/photos/tamanar-01-2023/web_006.jpg",
+        "https://tralinge.github.io/travel-map/photos/tamanar-01-2023/web_007.jpg",
+        "https://tralinge.github.io/travel-map/photos/tamanar-01-2023/web_008.jpg",
+        "https://tralinge.github.io/travel-map/photos/tamanar-01-2023/web_009.jpg"
       ]
     },
     {
