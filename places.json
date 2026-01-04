@@ -513,6 +513,25 @@
       ]
     },
     {
+      "title": "Marrakesh, Morocco",
+      "lat": 31.64,
+      "lng": -7.99,
+      "text": "The Red City",
+      "year": 2023,
+      "photos": [
+        "https://tralinge.github.io/travel-map/photos/marrakesh-01-2023/web_000.jpg",
+        "https://tralinge.github.io/travel-map/photos/marrakesh-01-2023/web_001.jpg",
+        "https://tralinge.github.io/travel-map/photos/marrakesh-01-2023/web_002.jpg",
+        "https://tralinge.github.io/travel-map/photos/marrakesh-01-2023/web_003.jpg",
+        "https://tralinge.github.io/travel-map/photos/marrakesh-01-2023/web_004.jpg",
+        "https://tralinge.github.io/travel-map/photos/marrakesh-01-2023/web_005.jpg",
+        "https://tralinge.github.io/travel-map/photos/marrakesh-01-2023/web_006.jpg",
+        "https://tralinge.github.io/travel-map/photos/marrakesh-01-2023/web_007.jpg",
+        "https://tralinge.github.io/travel-map/photos/marrakesh-01-2023/web_008.jpg",
+        "https://tralinge.github.io/travel-map/photos/marrakesh-01-2023/web_009.jpg"
+      ]
+    },
+    {
       "title": "Merzouga, Morocco",
       "lat": 31.11,
       "lng": -4.00,
@@ -722,7 +741,7 @@
       ]
     },
     {
-      "title": "Timezguida Oufettas, Morocco",
+      "title": "Timizguida Ouftas, Morocco",
       "lat": 30.99,
       "lng": -9.81,
       "text": "Beach Homestay",
