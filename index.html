@@ -348,7 +348,7 @@ fetch("places.json")
         const label = el.querySelector(".year-label");
 
         if (markerDiv && label) {
-          label.textContent = `${place.year} – ${place.text} in ${place.title}`;
+          label.textContent = `${place.year} – ${place.text} - ${place.title}`;
           markerDiv.classList.add("hover");
         }
       });
