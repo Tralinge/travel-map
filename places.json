@@ -1,5 +1,24 @@
 [
     {
+      "title": "Aït Benhaddou, Morocco",
+      "lat": 31.04,
+      "lng": -7.11,
+      "text": "The Fortified City",
+      "year": 2023,
+      "photos": [
+        "https://tralinge.github.io/travel-map/photos/ait_benhaddou-02-2023/web_000.jpg",
+        "https://tralinge.github.io/travel-map/photos/ait_benhaddou-02-2023/web_001.jpg",
+        "https://tralinge.github.io/travel-map/photos/ait_benhaddou-02-2023/web_002.jpg",
+        "https://tralinge.github.io/travel-map/photos/ait_benhaddou-02-2023/web_003.jpg",
+        "https://tralinge.github.io/travel-map/photos/ait_benhaddou-02-2023/web_004.jpg",
+        "https://tralinge.github.io/travel-map/photos/ait_benhaddou-02-2023/web_005.jpg",
+        "https://tralinge.github.io/travel-map/photos/ait_benhaddou-02-2023/web_006.jpg",
+        "https://tralinge.github.io/travel-map/photos/ait_benhaddou-02-2023/web_007.jpg",
+        "https://tralinge.github.io/travel-map/photos/ait_benhaddou-02-2023/web_008.jpg",
+        "https://tralinge.github.io/travel-map/photos/ait_benhaddou-02-2023/web_009.jpg"
+      ]
+    },
+    {
       "title": "Ankara, Türkiye",
       "lat": 39.93,
       "lng": 32.85,
@@ -73,6 +92,25 @@
         "https://tralinge.github.io/travel-map/photos/cabanaconde-07-2024/web_007.jpg",
         "https://tralinge.github.io/travel-map/photos/cabanaconde-07-2024/web_008.jpg",
         "https://tralinge.github.io/travel-map/photos/cabanaconde-07-2024/web_009.jpg"
+      ]
+    },
+    {
+      "title": "Casablanca, Morocco",
+      "lat": 33.59,
+      "lng": -7.61,
+      "text": "The White House",
+      "year": 2023,
+      "photos": [
+        "https://tralinge.github.io/travel-map/photos/casablanca-03-2023/web_000.jpg",
+        "https://tralinge.github.io/travel-map/photos/casablanca-03-2023/web_001.jpg",
+        "https://tralinge.github.io/travel-map/photos/casablanca-03-2023/web_002.jpg",
+        "https://tralinge.github.io/travel-map/photos/casablanca-03-2023/web_003.jpg",
+        "https://tralinge.github.io/travel-map/photos/casablanca-03-2023/web_004.jpg",
+        "https://tralinge.github.io/travel-map/photos/casablanca-03-2023/web_005.jpg",
+        "https://tralinge.github.io/travel-map/photos/casablanca-03-2023/web_006.jpg",
+        "https://tralinge.github.io/travel-map/photos/casablanca-03-2023/web_007.jpg",
+        "https://tralinge.github.io/travel-map/photos/casablanca-03-2023/web_008.jpg",
+        "https://tralinge.github.io/travel-map/photos/casablanca-03-2023/web_009.jpg"
       ]
     },
     {
@@ -569,6 +607,25 @@
         "https://tralinge.github.io/travel-map/photos/pamukkale-04-2023/web_009.jpg"
       ]
     },
+    {
+      "title": "Quito, Ecuador",
+      "lat": -0.21,
+      "lng": -78.50,
+      "text": "City of the Skies",
+      "year": 2024,
+      "photos": [
+        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_000.jpg",
+        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_001.jpg",
+        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_002.jpg",
+        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_003.jpg",
+        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_004.jpg",
+        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_005.jpg",
+        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_006.jpg",
+        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_007.jpg",
+        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_008.jpg",
+        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_009.jpg"
+      ]
+    },
      {
       "title": "Rabat, Morocco",
       "lat": 34.01,
@@ -681,25 +738,6 @@
         "https://tralinge.github.io/travel-map/photos/tamanar-01-2023/web_007.jpg",
         "https://tralinge.github.io/travel-map/photos/tamanar-01-2023/web_008.jpg",
         "https://tralinge.github.io/travel-map/photos/tamanar-01-2023/web_009.jpg"
-      ]
-    },
-    {
-      "title": "Quito, Ecuador",
-      "lat": -0.21,
-      "lng": -78.50,
-      "text": "City of the Skies",
-      "year": 2024,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_009.jpg"
       ]
     },
     {
