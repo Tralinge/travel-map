@@ -221,7 +221,7 @@ html, body {
 
 <div id="container">
   <div id="map"></div>
-  <div id="sidebar" class="expanded">
+  <div id="sidebar" class="collapsed">
     <div id="sidebar-handle"></div>
     <h2 id="place-title">Travel Map</h2>
     <div id="place-content">
@@ -392,8 +392,8 @@ function createPlaceMarker(place, minYear, maxYear) {
     updateSidebar(place);
 
     if (window.innerWidth <= CONFIG.mobileBreakpoint) {
-      document.getElementById("sidebar")
-        .scrollIntoView({ behavior: "smooth" });
+      sidebar.classList.remove("collapsed");
+      sidebar.classList.add("expanded");
     }
   });
 
@@ -563,6 +563,19 @@ if (handle && sidebar) {
     sidebar.classList.toggle("expanded");
   });
 }
+
+// Avoid accidental sidebar collapse when dragging map
+let isDragging = false;
+
+map.on("dragstart", () => isDragging = true);
+map.on("dragend", () => isDragging = false);
+
+map.on("click", () => {
+  if (!isDragging && window.innerWidth <= CONFIG.mobileBreakpoint) {
+    sidebar.classList.add("collapsed");
+    sidebar.classList.remove("expanded");
+  }
+});
 </script>
 
 </body>
