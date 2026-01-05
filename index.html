@@ -248,145 +248,234 @@ html, body {
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 
 <script>
-/* ===== MAP INIT ===== */
-const map = L.map("map", { zoomControl: false }).setView([20, 0], 2);
+/* ============================================================
+   CONFIGURATION
+   Centralized constants to avoid magic numbers and simplify tuning
+============================================================ */
+
+const CONFIG = {
+  initialView: [20, 0],
+  initialZoom: 2,
+  focusZoom: 6,
+  clusterRadius: 20,
+  fitPadding: [50, 50],
+  mobileBreakpoint: 768,
+
+  // Wavelength range used to encode year → color
+  WL_MIN: 410,
+  WL_MAX: 680
+};
+
+
+/* ============================================================
+   STATE
+   Tracks current sidebar / lightbox context
+============================================================ */
+
+let currentPhotos = [];
+let currentIndex = 0;
+
+
+/* ============================================================
+   COLOR MAPPING (YEAR → RGB)
+   Older years map to cooler colors, newer years to warmer colors
+============================================================ */
+
+function yearToWavelength(year, minYear, maxYear) {
+  if (minYear === maxYear) {
+    return (CONFIG.WL_MIN + CONFIG.WL_MAX) / 2;
+  }
+
+  return CONFIG.WL_MAX -
+    ((year - minYear) / (maxYear - minYear)) *
+    (CONFIG.WL_MAX - CONFIG.WL_MIN);
+}
+
+function wavelengthToRGB(wl) {
+  let r = 0, g = 0, b = 0;
+
+  if (wl < 440) {
+    r = -(wl - 440) / 30;
+    b = 1;
+  } else if (wl < 490) {
+    g = (wl - 440) / 50;
+    b = 1;
+  } else if (wl < 510) {
+    g = 1;
+    b = -(wl - 510) / 20;
+  } else if (wl < 580) {
+    r = (wl - 510) / 70;
+    g = 1;
+  } else if (wl < 645) {
+    r = 1;
+    g = -(wl - 645) / 65;
+  } else {
+    r = 1;
+  }
+
+  const to255 = v =>
+    Math.round(255 * Math.pow(Math.max(v, 0.35), 0.8));
+
+  return `rgb(${to255(r)},${to255(g)},${to255(b)})`;
+}
+
+
+/* ============================================================
+   MAP INITIALIZATION
+============================================================ */
+
+const map = L.map("map", { zoomControl: false })
+  .setView(CONFIG.initialView, CONFIG.initialZoom);
+
 L.control.zoom({ position: "bottomright" }).addTo(map);
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 19
 }).addTo(map);
 
-const markerCluster = L.markerClusterGroup({ maxClusterRadius: 20 });
+const markerCluster = L.markerClusterGroup({
+  maxClusterRadius: CONFIG.clusterRadius
+});
 
-/* ===== COLOR SCIENCE ===== */
-const WL_MIN = 410;
-const WL_MAX = 680;
 
-function yearToWavelength(year, minYear, maxYear) {
-  if (minYear === maxYear) return (WL_MIN + WL_MAX) / 2;
-  return WL_MAX - ((year - minYear) / (maxYear - minYear)) * (WL_MAX - WL_MIN);
-}
+/* ============================================================
+   SIDEBAR
+============================================================ */
 
-function wavelengthToRGB(wl) {
-  let r=0,g=0,b=0;
-  if (wl<440){r=-(wl-440)/30;b=1;}
-  else if (wl<490){g=(wl-440)/50;b=1;}
-  else if (wl<510){g=1;b=-(wl-510)/20;}
-  else if (wl<580){r=(wl-510)/70;g=1;}
-  else if (wl<645){r=1;g=-(wl-645)/65;}
-  else{r=1;}
-
-  const to255=v=>Math.round(255*Math.pow(Math.max(v,0.35),0.8));
-  return `rgb(${to255(r)},${to255(g)},${to255(b)})`;
-}
-
-/* ===== STATE ===== */
-let currentPhotos = [];
-let currentIndex = 0;
-
-/* ===== SIDEBAR ===== */
 function updateSidebar(place) {
+  const title = place.title ?? "Untitled";
+  const text = place.text ?? "";
+  const year = place.year ?? "";
+
   document.getElementById("place-title").textContent =
-    `${place.year} - ${place.text} - ${place.title}`;
+    `${year} - ${text} - ${title}`;
 
   const content = document.getElementById("place-content");
   content.innerHTML = "";
 
-  currentPhotos = place.photos || [];
-  currentPhotos.forEach((src, i) => {
+  currentPhotos = place.photos ?? [];
+
+  currentPhotos.forEach((src, index) => {
     const img = document.createElement("img");
     img.src = src;
-    img.onclick = () => openLightbox(i);
+    img.onclick = () => openLightbox(index);
     content.appendChild(img);
   });
 }
 
-/* ===== DATA LOAD ===== */
+
+/* ============================================================
+   MARKER CREATION
+============================================================ */
+
+function createPlaceMarker(place, minYear, maxYear) {
+  const color = wavelengthToRGB(
+    yearToWavelength(place.year, minYear, maxYear)
+  );
+
+  const icon = L.divIcon({
+    className: "year-div-icon",
+    html: `
+      <div class="year-marker">
+        <div class="year-label"></div>
+        <div class="pin" style="background:${color}"></div>
+      </div>
+    `,
+    iconAnchor: [6, 6]
+  });
+
+  const marker = L.marker([place.lat, place.lng], { icon });
+
+  // Click → focus map and update sidebar
+  marker.on("click", () => {
+    map.setView([place.lat, place.lng], CONFIG.focusZoom);
+    updateSidebar(place);
+
+    if (window.innerWidth <= CONFIG.mobileBreakpoint) {
+      document.getElementById("sidebar")
+        .scrollIntoView({ behavior: "smooth" });
+    }
+  });
+
+  // Hover → show year/title label
+  marker.on("mouseover", e => {
+    const el = e.target.getElement();
+    if (!el) return;
+
+    const markerDiv = el.querySelector(".year-marker");
+    const label = el.querySelector(".year-label");
+
+    if (markerDiv && label) {
+      label.textContent = `${place.year} – ${place.text} - ${place.title}`;
+      markerDiv.classList.add("hover");
+    }
+  });
+
+  marker.on("mouseout", e => {
+    const el = e.target.getElement();
+    if (!el) return;
+
+    const markerDiv = el.querySelector(".year-marker");
+    if (markerDiv) {
+      markerDiv.classList.remove("hover");
+    }
+  });
+
+  return marker;
+}
+
+
+/* ============================================================
+   DATA LOADING
+============================================================ */
+
 fetch("places.json")
-  .then(r => r.json())
+  .then(response => response.json())
   .then(places => {
+    if (!Array.isArray(places) || places.length === 0) return;
+
     const years = places.map(p => p.year);
     const minYear = Math.min(...years);
     const maxYear = Math.max(...years);
+
     const bounds = L.latLngBounds();
 
     places.forEach(place => {
-      const color = wavelengthToRGB(
-        yearToWavelength(place.year, minYear, maxYear)
-      );
-
-      const icon = L.divIcon({
-        className: "year-div-icon",
-        html: `
-          <div class="year-marker">
-            <div class="year-label"></div>
-            <div class="pin" style="background:${color}"></div>
-          </div>
-        `,
-        iconAnchor: [6, 6]   // center of the 12×12 pin
-      });
-
-      const marker = L.marker([place.lat, place.lng], { icon });
-
-      /* CLICK */
-      marker.on("click", () => {
-        map.setView([place.lat, place.lng], 6);
-        updateSidebar(place);
-        if (window.innerWidth <= 768) {
-          document.getElementById("sidebar")
-            .scrollIntoView({ behavior: "smooth" });
-        }
-      });
-
-      /* HOVER */
-      marker.on("mouseover", e => {
-        const el = e.target.getElement();
-        if (!el) return;
-
-        const markerDiv = el.querySelector(".year-marker");
-        const label = el.querySelector(".year-label");
-
-        if (markerDiv && label) {
-          label.textContent = `${place.year} – ${place.text} - ${place.title}`;
-          markerDiv.classList.add("hover");
-        }
-      });
-
-      marker.on("mouseout", e => {
-        const el = e.target.getElement();
-        if (!el) return;
-
-        const markerDiv = el.querySelector(".year-marker");
-        if (markerDiv) {
-          markerDiv.classList.remove("hover");
-        }
-      });
-
+      const marker = createPlaceMarker(place, minYear, maxYear);
       markerCluster.addLayer(marker);
       bounds.extend([place.lat, place.lng]);
     });
 
     map.addLayer(markerCluster);
-    map.fitBounds(bounds, { padding: [50,50] });
+    map.fitBounds(bounds, { padding: CONFIG.fitPadding });
+  })
+  .catch(err => {
+    console.error("Failed to load places.json", err);
   });
 
-/* ===== LIGHTBOX ===== */
+
+/* ============================================================
+   LIGHTBOX
+============================================================ */
+
 function renderDots() {
   const dots = document.getElementById("lightbox-dots");
   dots.innerHTML = "";
+
   if (currentPhotos.length <= 1) return;
 
   currentPhotos.forEach((_, i) => {
-    const d = document.createElement("span");
-    if (i === currentIndex) d.classList.add("active");
-    d.onclick = () => showIndex(i);
-    dots.appendChild(d);
+    const dot = document.createElement("span");
+    if (i === currentIndex) dot.classList.add("active");
+    dot.onclick = () => showIndex(i);
+    dots.appendChild(dot);
   });
 }
 
 function showIndex(i) {
   currentIndex = i;
-  document.getElementById("lightbox-img").src = currentPhotos[currentIndex];
+  document.getElementById("lightbox-img").src =
+    currentPhotos[currentIndex];
   renderDots();
 }
 
@@ -404,9 +493,11 @@ function showNext() {
 }
 
 function showPrev() {
-  showIndex((currentIndex - 1 + currentPhotos.length) % currentPhotos.length);
+  showIndex((currentIndex - 1 + currentPhotos.length) %
+            currentPhotos.length);
 }
 
+// Controls
 document.getElementById("lightbox-close").onclick = closeLightbox;
 document.getElementById("lightbox-next").onclick = showNext;
 document.getElementById("lightbox-prev").onclick = showPrev;
@@ -417,31 +508,42 @@ document.addEventListener("keydown", e => {
   if (e.key === "ArrowLeft") showPrev();
 });
 
+// Touch swipe support
 let startX = null;
-document.getElementById("lightbox").addEventListener("touchstart", e => {
-  startX = e.touches[0].clientX;
-});
-document.getElementById("lightbox").addEventListener("touchend", e => {
-  if (!startX) return;
-  const diff = e.changedTouches[0].clientX - startX;
-  if (diff > 50) showPrev();
-  if (diff < -50) showNext();
-  startX = null;
-});
 
-/* ==== Sidebar collapse ==== */
+document.getElementById("lightbox")
+  .addEventListener("touchstart", e => {
+    startX = e.touches[0].clientX;
+  });
+
+document.getElementById("lightbox")
+  .addEventListener("touchend", e => {
+    if (startX === null) return;
+
+    const diff = e.changedTouches[0].clientX - startX;
+    if (diff > 50) showPrev();
+    if (diff < -50) showNext();
+
+    startX = null;
+  });
+
+
+/* ============================================================
+   MOBILE SIDEBAR COLLAPSE
+============================================================ */
+
 const sidebar = document.getElementById("sidebar");
 const handle = document.getElementById("sidebar-handle");
 
-/* Collapse when map is tapped (mobile only) */
+// Collapse sidebar when map is tapped (mobile only)
 map.on("click", () => {
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= CONFIG.mobileBreakpoint) {
     sidebar.classList.add("collapsed");
     sidebar.classList.remove("expanded");
   }
 });
 
-/* Toggle when handle is tapped */
+// Toggle sidebar via handle
 if (handle && sidebar) {
   handle.addEventListener("click", () => {
     sidebar.classList.toggle("collapsed");
