@@ -188,7 +188,16 @@ html, body {
 
   #sidebar-handle {
     display: block;
-    background: #bbb;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: linear-gradient(
+      to bottom,
+      #f9f9f9 70%,
+      rgba(249,249,249,0)
+    );
+    padding-top: 6px;
+    padding-bottom: 6px;
     border-radius: 3px;
     height: 18px;
     width: 60px;
