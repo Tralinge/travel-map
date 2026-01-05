@@ -529,12 +529,25 @@ document.getElementById("lightbox")
 
 
 /* ============================================================
-   MOBILE SIDEBAR COLLAPSE
+   MOBILE SIDEBAR COLLAPSE + MAP RESIZE SYNC
 ============================================================ */
 
 const sidebar = document.getElementById("sidebar");
 const handle = document.getElementById("sidebar-handle");
 
+/*
+  Leaflet does NOT automatically react to container size changes.
+  When the sidebar height transitions (mobile), we must explicitly
+  notify the map once the transition completes.
+*/
+if (sidebar) {
+  sidebar.addEventListener("transitionend", e => {
+    if (e.propertyName === "height") {
+      map.invalidateSize();
+    }
+  });
+}
+      
 // Collapse sidebar when map is tapped (mobile only)
 map.on("click", () => {
   if (window.innerWidth <= CONFIG.mobileBreakpoint) {
