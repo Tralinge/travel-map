@@ -437,6 +437,11 @@ function updateSidebar(place) {
     img.onclick = () => openLightbox(index);
     wrapper.appendChild(img);
     placeContent.appendChild(wrapper);
+
+    img.addEventListener('load', () => {
+    img.classList.add('loaded');
+});
+
   });
 }
 
