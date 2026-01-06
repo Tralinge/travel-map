@@ -678,14 +678,6 @@ if (sidebar) {
     }
   });
 }
-      
-// Collapse sidebar when map is tapped (mobile only)
-map.on("click", () => {
-  if (window.innerWidth <= CONFIG.mobileBreakpoint) {
-    sidebar.classList.add("collapsed");
-    sidebar.classList.remove("expanded");
-  }
-});
 
 // Toggle sidebar via handle
 if (handle && sidebar) {
