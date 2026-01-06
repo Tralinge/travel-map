@@ -462,10 +462,10 @@ function startHandleNudge() {
       return;
     }
 
-    sidebarHandle.classList.remove('nudge');
+    sidebar-handle.classList.remove('nudge');
     // force reflow to allow retrigger
-    void sidebarHandle.offsetWidth;
-    sidebarHandle.classList.add('nudge');
+    void sidebar-handle.offsetWidth;
+    sidebar-handle.classList.add('nudge');
   }, 8000);
 }
 
@@ -479,10 +479,10 @@ function stopHandleNudge() {
 function markHandleUsed() {
   handleHasBeenUsed = true;
   stopHandleNudge();
-  sidebarHandle.classList.remove('nudge');
+  sidebar-handle.classList.remove('nudge');
 }
 
-sidebarHandle.addEventListener('click', () => {
+sidebar-handle.addEventListener('click', () => {
   markHandleUsed();
   toggleSidebar();
 });
