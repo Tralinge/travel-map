@@ -520,6 +520,8 @@ function createPlaceMarker(place, minYear, maxYear) {
 
   // Click → focus map and update sidebar
   marker.on("click", () => {
+    onMarkerSelected();
+        
     map.setView([place.lat, place.lng], CONFIG.focusZoom);
     updateSidebar(place);
 
