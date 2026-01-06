@@ -169,6 +169,27 @@ html, body {
   background: rgba(255,255,255,0.9);
 }
 
+/* ===== IMAGES ===== */
+.photo-wrapper {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: #f0f0f0;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+.photo-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+.photo-wrapper img.loaded {
+  opacity: 1;
+}
+
+
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
   #container {
@@ -368,7 +389,6 @@ function wavelengthToRGB(wl) {
   return `rgb(${to255(r)},${to255(g)},${to255(b)})`;
 }
 
-
 /* ============================================================
    MAP INITIALIZATION
 ============================================================ */
@@ -391,6 +411,10 @@ const markerCluster = L.markerClusterGroup({
    SIDEBAR
 ============================================================ */
 
+img.addEventListener('load', () => {
+  img.classList.add('loaded');
+});
+
 function updateSidebar(place) {
   const title = place.title ?? "Untitled";
   const text = place.text ?? "";
@@ -405,10 +429,14 @@ function updateSidebar(place) {
   currentPhotos = place.photos ?? [];
 
   currentPhotos.forEach((src, index) => {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'photo-wrapper';
+        
     const img = document.createElement("img");
     img.src = src;
     img.onclick = () => openLightbox(index);
-    content.appendChild(img);
+    wrapper.appendChild(img);
+    placeContent.appendChild(wrapper);
   });
 }
 
