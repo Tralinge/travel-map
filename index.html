@@ -469,7 +469,7 @@ function startHandleNudge() {
     handle.classList.remove('nudge');
     // force reflow to allow retrigger
     void handle.offsetWidth;
-    sidebar-handle.classList.add('nudge');
+    handle.classList.add('nudge');
   }, 8000);
 }
 
@@ -483,10 +483,10 @@ function stopHandleNudge() {
 function markHandleUsed() {
   handleHasBeenUsed = true;
   stopHandleNudge();
-  sidebar-handle.classList.remove('nudge');
+  handle.classList.remove('nudge');
 }
 
-sidebar-handle.addEventListener('click', () => {
+handle.addEventListener('click', () => {
   markHandleUsed();
 });
 
