@@ -484,17 +484,14 @@ function markHandleUsed() {
 
 sidebar-handle.addEventListener('click', () => {
   markHandleUsed();
-  toggleSidebar();
 });
 
 map.on('click', () => {
   markHandleUsed();
-  collapseSidebar();
 });
 
 function onMarkerSelected() {
   markHandleUsed();
-  expandSidebar();
 }
 
 if (isMobileLayout() && sidebar.classList.contains('collapsed')) {
