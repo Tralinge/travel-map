@@ -519,15 +519,13 @@ function createPlaceMarker(place, minYear, maxYear) {
   const marker = L.marker([place.lat, place.lng], { icon });
 
   // Click → focus map and update sidebar
-  marker.on("click", () => {
-    onMarkerSelected();
-        
+  marker.on("click", () => {  
     map.setView([place.lat, place.lng], CONFIG.focusZoom);
     updateSidebar(place);
+    onMarkerSelected();
 
     if (window.innerWidth <= CONFIG.mobileBreakpoint) {
-      sidebar.classList.remove("collapsed");
-      sidebar.classList.add("expanded");
+      setSidebarState('expanded');
     }
   });
 
