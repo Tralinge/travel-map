@@ -295,7 +295,13 @@ const CONFIG = {
 let currentPhotos = [];
 let currentIndex = 0;
 
+/* ============================================================
+   DOM REFERENCES
+============================================================ */
 
+const sidebar = document.getElementById("sidebar");
+const handle = document.getElementById("sidebar-handle");
+      
 /* ============================================================
    COLOR MAPPING (YEAR → RGB)
    Older years map to cooler colors, newer years to warmer colors
@@ -558,9 +564,6 @@ document.getElementById("lightbox")
 /* ============================================================
    MOBILE SIDEBAR COLLAPSE + MAP RESIZE SYNC
 ============================================================ */
-
-const sidebar = document.getElementById("sidebar");
-const handle = document.getElementById("sidebar-handle");
 
 /*
   Leaflet does NOT automatically react to container size changes.
