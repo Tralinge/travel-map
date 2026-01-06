@@ -432,7 +432,7 @@ function updateSidebar(place) {
     img.src = src;
     img.onclick = () => openLightbox(index);
     wrapper.appendChild(img);
-    placeContent.appendChild(wrapper);
+    content.appendChild(wrapper);
 
     img.addEventListener('load', () => {
     img.classList.add('loaded');
