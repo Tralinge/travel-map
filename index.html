@@ -411,10 +411,6 @@ const markerCluster = L.markerClusterGroup({
    SIDEBAR
 ============================================================ */
 
-img.addEventListener('load', () => {
-  img.classList.add('loaded');
-});
-
 function updateSidebar(place) {
   const title = place.title ?? "Untitled";
   const text = place.text ?? "";
