@@ -200,6 +200,7 @@ html, body {
     width: 100%;
     max-width: none;
     margin: 0;
+    box-sizing: border-box;
     height: 20%;
     transition: height 0.25s ease;
   }
@@ -413,7 +414,7 @@ const markerCluster = L.markerClusterGroup({
 ============================================================ */
 
 function updateSidebar(place) {
-  sidebar.scrollTo({ top: 0, behavior: "smooth" });
+  sidebar.scrollTop = 0;
   const title = place.title ?? "Untitled";
   const text = place.text ?? "";
   const year = place.year ?? "";
