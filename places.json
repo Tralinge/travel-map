@@ -760,6 +760,44 @@
       ]
     },
     {
+      "title": "Tampa, USA",
+      "lat": 17.39,
+      "lng": 78.39,
+      "text": "The Big Guava",
+      "year": 2022,
+      "photos": [
+        "https://tralinge.github.io/travel-map/photos/tampa-09-2022/web_000.jpg",
+        "https://tralinge.github.io/travel-map/photos/tampa-09-2022/web_001.jpg",
+        "https://tralinge.github.io/travel-map/photos/tampa-09-2022/web_002.jpg",
+        "https://tralinge.github.io/travel-map/photos/tampa-09-2022/web_003.jpg",
+        "https://tralinge.github.io/travel-map/photos/tampa-09-2022/web_004.jpg",
+        "https://tralinge.github.io/travel-map/photos/tampa-09-2022/web_005.jpg",
+        "https://tralinge.github.io/travel-map/photos/tampa-09-2022/web_006.jpg",
+        "https://tralinge.github.io/travel-map/photos/tampa-09-2022/web_007.jpg",
+        "https://tralinge.github.io/travel-map/photos/tampa-09-2022/web_008.jpg",
+        "https://tralinge.github.io/travel-map/photos/tampa-09-2022/web_009.jpg"
+      ]
+    },
+    {
+      "title": "Umasbamba, Peru",
+      "lat": -13.42,
+      "lng": -72.00,
+      "text": "Local Wedding",
+      "year": 2022,
+      "photos": [
+        "https://tralinge.github.io/travel-map/photos/umasbamba-06-2022/web_000.jpg",
+        "https://tralinge.github.io/travel-map/photos/umasbamba-06-2022/web_001.jpg",
+        "https://tralinge.github.io/travel-map/photos/umasbamba-06-2022/web_002.jpg",
+        "https://tralinge.github.io/travel-map/photos/umasbamba-06-2022/web_003.jpg",
+        "https://tralinge.github.io/travel-map/photos/umasbamba-06-2022/web_004.jpg",
+        "https://tralinge.github.io/travel-map/photos/umasbamba-06-2022/web_005.jpg",
+        "https://tralinge.github.io/travel-map/photos/umasbamba-06-2022/web_006.jpg",
+        "https://tralinge.github.io/travel-map/photos/umasbamba-06-2022/web_007.jpg",
+        "https://tralinge.github.io/travel-map/photos/umasbamba-06-2022/web_008.jpg",
+        "https://tralinge.github.io/travel-map/photos/umasbamba-06-2022/web_009.jpg"
+      ]
+    },
+    {
       "title": "Xiamen, China",
       "lat": 24.5026,
       "lng": 118.1313,
