@@ -397,11 +397,22 @@ function wavelengthToRGB(wl) {
 const map = L.map("map", { zoomControl: false })
   .setView(CONFIG.initialView, CONFIG.initialZoom);
 
+const worldBounds = L.latLngBounds(
+  [-90, -180],
+  [90, 180]
+);
+
+map.setMaxBounds(worldBounds);
+
 L.control.zoom({ position: "bottomright" }).addTo(map);
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  maxZoom: 19
+  maxZoom: 19,
+  noWrap: true
 }).addTo(map);
+
+map.setMaxBounds(worldBounds);
+map.options.maxBoundsViscosity = 1.0;
 
 const markerCluster = L.markerClusterGroup({
   maxClusterRadius: CONFIG.clusterRadius
