@@ -284,7 +284,6 @@ html, body {
   <div id="map"></div>
   <div id="sidebar" class="collapsed">
     <div id="sidebar-handle"></div>
-    <h2 id="place-title">Travel Map</h2>
     <div id="place-content">
       <p>Click a marker on the map to see photos.</p>
     </div>
@@ -395,13 +394,23 @@ function wavelengthToRGB(wl) {
    MAP INITIALIZATION
 ============================================================ */
 
-const map = L.map("map", { zoomControl: false })
-  .setView(CONFIG.initialView, CONFIG.initialZoom);
+const map = L.map("map", { 
+  zoomControl: false,
+  maxBoundsViscosity: 1.0
+}).setView(CONFIG.initialView, CONFIG.initialZoom);
+
+const worldBounds = L.latLngBounds(
+  [-90, -180],
+  [90, 180]
+);
+
+map.setMaxBounds(worldBounds);
 
 L.control.zoom({ position: "bottomright" }).addTo(map);
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  maxZoom: 19
+  maxZoom: 19,
+  noWrap: true
 }).addTo(map);
 
 const markerCluster = L.markerClusterGroup({
