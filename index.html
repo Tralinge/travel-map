@@ -394,8 +394,10 @@ function wavelengthToRGB(wl) {
    MAP INITIALIZATION
 ============================================================ */
 
-const map = L.map("map", { zoomControl: false })
-  .setView(CONFIG.initialView, CONFIG.initialZoom);
+const map = L.map("map", { 
+  zoomControl: false,
+  maxBoundsViscosity: 1.0
+}).setView(CONFIG.initialView, CONFIG.initialZoom);
 
 const worldBounds = L.latLngBounds(
   [-90, -180],
@@ -410,9 +412,6 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 19,
   noWrap: true
 }).addTo(map);
-
-map.setMaxBounds(worldBounds);
-map.options.maxBoundsViscosity = 1.0;
 
 const markerCluster = L.markerClusterGroup({
   maxClusterRadius: CONFIG.clusterRadius
