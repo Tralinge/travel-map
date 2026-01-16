@@ -5,18 +5,8 @@
       "lng": -7.11,
       "text": "The Fortified City",
       "year": 2023,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/ait_benhaddou-02-2023/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/ait_benhaddou-02-2023/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/ait_benhaddou-02-2023/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/ait_benhaddou-02-2023/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/ait_benhaddou-02-2023/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/ait_benhaddou-02-2023/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/ait_benhaddou-02-2023/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/ait_benhaddou-02-2023/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/ait_benhaddou-02-2023/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/ait_benhaddou-02-2023/web_009.jpg"
-      ]
+      "photoFolder": "ait_benhaddou-02-2023",
+      "photoCount": 10
     },
     {
       "title": "Ankara, Türkiye",
@@ -24,18 +14,8 @@
       "lng": 32.85,
       "text": "Heart of Türkiye",
       "year": 2023,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/ankara-06-2023/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/ankara-06-2023/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/ankara-06-2023/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/ankara-06-2023/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/ankara-06-2023/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/ankara-06-2023/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/ankara-06-2023/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/ankara-06-2023/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/ankara-06-2023/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/ankara-06-2023/web_009.jpg"
-      ]
+      "photoFolder": "ankara-06-2023",
+      "photoCount": 10
     },
     {
       "title": "Antalya, Türkiye",
@@ -43,18 +23,8 @@
       "lng": 30.70,
       "text": "Turkish Riviera",
       "year": 2023,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/antalya-03-2023/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/antalya-03-2023/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/antalya-03-2023/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/antalya-03-2023/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/antalya-03-2023/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/antalya-03-2023/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/antalya-03-2023/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/antalya-03-2023/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/antalya-03-2023/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/antalya-03-2023/web_009.jpg"
-      ]
+      "photoFolder": "antalya-03-2023",
+      "photoCount": 10
     },
     {
       "title": "Arequipa, Peru",
@@ -62,18 +32,8 @@
       "lng": -71.53,
       "text": "The White City",
       "year": 2024,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/arequipa-07-2024/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/arequipa-07-2024/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/arequipa-07-2024/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/arequipa-07-2024/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/arequipa-07-2024/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/arequipa-07-2024/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/arequipa-07-2024/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/arequipa-07-2024/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/arequipa-07-2024/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/arequipa-07-2024/web_009.jpg"
-      ]
+      "photoFolder": "arequipa-07-2024",
+      "photoCount": 10
     },
     {
       "title": "Auzangate, Peru",
@@ -81,18 +41,8 @@
       "lng": -71.22,
       "text": "Father of Mountains",
       "year": 2022,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/ausangate-07-2022/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/ausangate-07-2022/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/ausangate-07-2022/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/ausangate-07-2022/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/ausangate-07-2022/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/ausangate-07-2022/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/ausangate-07-2022/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/ausangate-07-2022/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/ausangate-07-2022/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/ausangate-07-2022/web_009.jpg"
-      ]
+      "photoFolder": "ausangate-07-2022",
+      "photoCount": 10
     },
     {
       "title": "Bengaluru, India",
@@ -100,18 +50,8 @@
       "lng": 77.57,
       "text": "Coming Soon!",
       "year": 2026,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/bengaluru-01-2026/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/bengaluru-01-2026/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/bengaluru-01-2026/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/bengaluru-01-2026/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/bengaluru-01-2026/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/bengaluru-01-2026/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/bengaluru-01-2026/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/bengaluru-01-2026/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/bengaluru-01-2026/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/bengaluru-01-2026/web_009.jpg"
-      ]
+      "photoFolder": "bengaluru-01-2026",
+      "photoCount": 10
     },
     {
       "title": "Cabanaconde, Peru",
@@ -119,18 +59,8 @@
       "lng": -71.97,
       "text": "Colca Canyon",
       "year": 2024,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/cabanaconde-07-2024/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/cabanaconde-07-2024/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/cabanaconde-07-2024/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/cabanaconde-07-2024/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/cabanaconde-07-2024/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/cabanaconde-07-2024/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/cabanaconde-07-2024/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/cabanaconde-07-2024/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/cabanaconde-07-2024/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/cabanaconde-07-2024/web_009.jpg"
-      ]
+      "photoFolder": "cabanaconde-07-2024",
+      "photoCount": 10
     },
     {
       "title": "Casablanca, Morocco",
@@ -138,18 +68,8 @@
       "lng": -7.61,
       "text": "The White House",
       "year": 2023,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/casablanca-03-2023/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/casablanca-03-2023/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/casablanca-03-2023/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/casablanca-03-2023/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/casablanca-03-2023/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/casablanca-03-2023/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/casablanca-03-2023/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/casablanca-03-2023/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/casablanca-03-2023/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/casablanca-03-2023/web_009.jpg"
-      ]
+      "photoFolder": "casablanca-03-2023",
+      "photoCount": 10
     },
     {
       "title": "Chiang Mai, Thailand",
@@ -157,18 +77,8 @@
       "lng": 98.93,
       "text": "Rose of the North",
       "year": 2023,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/chiangmai-12-2023/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/chiangmai-12-2023/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/chiangmai-12-2023/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/chiangmai-12-2023/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/chiangmai-12-2023/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/chiangmai-12-2023/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/chiangmai-12-2023/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/chiangmai-12-2023/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/chiangmai-12-2023/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/chiangmai-12-2023/web_009.jpg"
-      ]
+      "photoFolder": "chiangmai-12-2023",
+      "photoCount": 10
     },
     {
       "title": "Cuenca, Ecuador",
@@ -176,18 +86,8 @@
       "lng": -79.00,
       "text": "Athens of Ecuador",
       "year": 2024,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/cuenca-09-2024/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/cuenca-09-2024/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/cuenca-09-2024/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/cuenca-09-2024/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/cuenca-09-2024/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/cuenca-09-2024/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/cuenca-09-2024/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/cuenca-09-2024/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/cuenca-09-2024/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/cuenca-09-2024/web_009.jpg"
-      ]
+      "photoFolder": "cuenca-09-2024",
+      "photoCount": 10
     },
     {
       "title": "Dali, China",
@@ -195,18 +95,8 @@
       "lng": 100.15,
       "text": "Land South of the Clouds",
       "year": 2023,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/dali-11-2023/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/dali-11-2023/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/dali-11-2023/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/dali-11-2023/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/dali-11-2023/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/dali-11-2023/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/dali-11-2023/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/dali-11-2023/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/dali-11-2023/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/dali-11-2023/web_009.jpg"
-      ]
+      "photoFolder": "cuenca-09-2024",
+      "photoCount": 10
     },
     {
       "title": "Diqing, China",
@@ -214,18 +104,8 @@
       "lng": 100.11,
       "text": "Tiger Leaping Gorge",
       "year": 2023,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/tiger_gorge-11-2023/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/tiger_gorge-11-2023/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/tiger_gorge-11-2023/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/tiger_gorge-11-2023/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/tiger_gorge-11-2023/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/tiger_gorge-11-2023/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/tiger_gorge-11-2023/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/tiger_gorge-11-2023/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/tiger_gorge-11-2023/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/tiger_gorge-11-2023/web_009.jpg"
-      ]
+      "photoFolder": "tiger_gorge-11-2023",
+      "photoCount": 10
     },
     {
       "title": "Dubai, UAE",
@@ -242,18 +122,8 @@
       "lng": -9.76,
       "text": "City of the Winds",
       "year": 2023,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/essaouira-01-2023/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/essaouira-01-2023/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/essaouira-01-2023/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/essaouira-01-2023/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/essaouira-01-2023/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/essaouira-01-2023/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/essaouira-01-2023/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/essaouira-01-2023/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/essaouira-01-2023/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/essaouira-01-2023/web_009.jpg"
-      ]
+      "photoFolder": "essaouira-01-2023",
+      "photoCount": 10
     },
     {
       "title": "Eskişehir, Türkiye",
@@ -261,18 +131,8 @@
       "lng": 30.49,
       "text": "Student City",
       "year": 2023,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/eskisehir-05-2023/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/eskisehir-05-2023/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/eskisehir-05-2023/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/eskisehir-05-2023/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/eskisehir-05-2023/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/eskisehir-05-2023/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/eskisehir-05-2023/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/eskisehir-05-2023/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/eskisehir-05-2023/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/eskisehir-05-2023/web_009.jpg"
-      ]
+      "photoFolder": "eskisehir-05-2023",
+      "photoCount": 10
     },
     {
       "title": "Fès, Morocco",
@@ -280,18 +140,8 @@
       "lng": -5.01,
       "text": "Mecca of the West",
       "year": 2023,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/fes-03-2023/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/fes-03-2023/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/fes-03-2023/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/fes-03-2023/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/fes-03-2023/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/fes-03-2023/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/fes-03-2023/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/fes-03-2023/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/fes-03-2023/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/fes-03-2023/web_009.jpg"
-      ]
+      "photoFolder": "fes-03-2023",
+      "photoCount": 10
     },
     {
       "title": "Fethiye, Türkiye",
@@ -299,18 +149,8 @@
       "lng": 29.12,
       "text": "Land of Lights",
       "year": 2023,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/fethiye-04-2023/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/fethiye-04-2023/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/fethiye-04-2023/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/fethiye-04-2023/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/fethiye-04-2023/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/fethiye-04-2023/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/fethiye-04-2023/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/fethiye-04-2023/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/fethiye-04-2023/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/fethiye-04-2023/web_009.jpg"
-      ]
+      "photoFolder": "fethiye-04-2023",
+      "photoCount": 10
     },
     {
       "title": "Galapagos, Ecuador",
@@ -318,18 +158,8 @@
       "lng": -89.44,
       "text": "The Enchanted Isles",
       "year": 2024,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/galapagos-10-2024/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/galapagos-10-2024/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/galapagos-10-2024/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/galapagos-10-2024/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/galapagos-10-2024/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/galapagos-10-2024/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/galapagos-10-2024/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/galapagos-10-2024/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/galapagos-10-2024/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/galapagos-10-2024/web_009.jpg"
-      ]
+      "photoFolder": "galapagos-10-2024",
+      "photoCount": 10
     },
     {
       "title": "Göreme, Türkiye",
@@ -337,18 +167,8 @@
       "lng": 34.84,
       "text": "Paradise of Rocks",
       "year": 2023,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/goreme-04-2023/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/goreme-04-2023/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/goreme-04-2023/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/goreme-04-2023/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/goreme-04-2023/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/goreme-04-2023/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/goreme-04-2023/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/goreme-04-2023/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/goreme-04-2023/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/goreme-04-2023/web_009.jpg"
-      ]
+      "photoFolder": "goreme-04-2023",
+      "photoCount": 10
     },
     {
       "title": "Hefei, China",
@@ -356,18 +176,8 @@
       "lng": 117.2745,
       "text": "Birth of Kaiya",
       "year": 2025,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/hefei-04-2025/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/hefei-04-2025/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/hefei-04-2025/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/hefei-04-2025/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/hefei-04-2025/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/hefei-04-2025/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/hefei-04-2025/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/hefei-04-2025/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/hefei-04-2025/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/hefei-04-2025/web_009.jpg"
-      ]
+      "photoFolder": "hefei-04-2025",
+      "photoCount": 10
     },
     {
       "title": "Hefei, China",
@@ -375,18 +185,8 @@
       "lng": 117.2745,
       "text": "Chinese New Year",
       "year": 2024,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/hefei-12-2024/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/hefei-12-2024/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/hefei-12-2024/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/hefei-12-2024/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/hefei-12-2024/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/hefei-12-2024/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/hefei-12-2024/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/hefei-12-2024/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/hefei-12-2024/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/hefei-12-2024/web_009.jpg"
-      ]
+      "photoFolder": "hefei-12-2024",
+      "photoCount": 10
     },
     {
       "title": "Hefei, China",
@@ -394,18 +194,8 @@
       "lng": 117.2745,
       "text": "Hometown Vibes",
       "year": 2023,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/hefei-10-2023/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/hefei-10-2023/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/hefei-10-2023/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/hefei-10-2023/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/hefei-10-2023/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/hefei-10-2023/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/hefei-10-2023/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/hefei-10-2023/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/hefei-10-2023/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/hefei-10-2023/web_009.jpg"
-      ]
+      "photoFolder": "hefei-10-2023",
+      "photoCount": 10
     },
     {
       "title": "Huchuy Qosqo, Peru",
@@ -413,18 +203,8 @@
       "lng": -71.94,
       "text": "Little Cusco",
       "year": 2022,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/huchuy_qosqo-06-2022/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/huchuy_qosqo-06-2022/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/huchuy_qosqo-06-2022/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/huchuy_qosqo-06-2022/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/huchuy_qosqo-06-2022/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/huchuy_qosqo-06-2022/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/huchuy_qosqo-06-2022/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/huchuy_qosqo-06-2022/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/huchuy_qosqo-06-2022/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/huchuy_qosqo-06-2022/web_009.jpg"
-      ]
+      "photoFolder": "huchuy_qosqo-06-2022",
+      "photoCount": 10
     },
     {
       "title": "Hyderabad, India",
@@ -432,18 +212,8 @@
       "lng": 78.39,
       "text": "Coming Soon!",
       "year": 2026,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/hyderabad-01-2026/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/hyderabad-01-2026/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/hyderabad-01-2026/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/hyderabad-01-2026/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/hyderabad-01-2026/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/hyderabad-01-2026/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/hyderabad-01-2026/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/hyderabad-01-2026/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/hyderabad-01-2026/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/hyderabad-01-2026/web_009.jpg"
-      ]
+      "photoFolder": "hyderabad-01-2026",
+      "photoCount": 10
     },
     {
       "title": "Istanbul, Türkiye",
@@ -451,18 +221,8 @@
       "lng": 28.97,
       "text": "City on Two Continents",
       "year": 2023,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/istanbul-06-2023/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/istanbul-06-2023/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/istanbul-06-2023/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/istanbul-06-2023/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/istanbul-06-2023/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/istanbul-06-2023/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/istanbul-06-2023/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/istanbul-06-2023/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/istanbul-06-2023/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/istanbul-06-2023/web_009.jpg"
-      ]
+      "photoFolder": "istanbul-06-2023",
+      "photoCount": 10
     },
     {
       "title": "Konya, Türkiye",
@@ -470,18 +230,8 @@
       "lng": 32.49,
       "text": "City of Rumi",
       "year": 2023,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/konya-04-2023/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/konya-04-2023/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/konya-04-2023/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/konya-04-2023/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/konya-04-2023/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/konya-04-2023/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/konya-04-2023/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/konya-04-2023/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/konya-04-2023/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/konya-04-2023/web_009.jpg"
-      ]
+      "photoFolder": "konya-04-2023",
+      "photoCount": 10
     },
     {
       "title": "Kunming, China",
@@ -489,18 +239,8 @@
       "lng": 102.70,
       "text": "City of Eternal Spring",
       "year": 2025,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/kunming-01-2025/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/kunming-01-2025/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/kunming-01-2025/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/kunming-01-2025/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/kunming-01-2025/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/kunming-01-2025/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/kunming-01-2025/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/kunming-01-2025/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/kunming-01-2025/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/kunming-01-2025/web_009.jpg"
-      ]
+      "photoFolder": "kunming-01-2025",
+      "photoCount": 10
     },
     {
       "title": "Kunming, China",
@@ -508,18 +248,8 @@
       "lng": 102.70,
       "text": "Flower Capital",
       "year": 2023,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/kunming-08-2023/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/kunming-08-2023/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/kunming-08-2023/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/kunming-08-2023/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/kunming-08-2023/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/kunming-08-2023/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/kunming-08-2023/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/kunming-08-2023/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/kunming-08-2023/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/kunming-08-2023/web_009.jpg"
-      ]
+      "photoFolder": "kunming-08-2023",
+      "photoCount": 10
     },
     {
       "title": "Lijiang, China",
@@ -527,18 +257,8 @@
       "lng": 100.22,
       "text": "Jade Dragon Snow Mountain",
       "year": 2023,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/lijiang-11-2023/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/lijiang-11-2023/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/lijiang-11-2023/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/lijiang-11-2023/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/lijiang-11-2023/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/lijiang-11-2023/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/lijiang-11-2023/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/lijiang-11-2023/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/lijiang-11-2023/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/lijiang-11-2023/web_009.jpg"
-      ]
+      "photoFolder": "lijiang-11-2023",
+      "photoCount": 10
     },
     {
       "title": "Lujiang, China",
@@ -546,18 +266,8 @@
       "lng": 117.41,
       "text": "China’s Heartland",
       "year": 2024,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/lujiang-01-2024/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/lujiang-01-2024/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/lujiang-01-2024/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/lujiang-01-2024/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/lujiang-01-2024/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/lujiang-01-2024/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/lujiang-01-2024/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/lujiang-01-2024/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/lujiang-01-2024/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/lujiang-01-2024/web_009.jpg"
-      ]
+      "photoFolder": "lujiang-01-2024",
+      "photoCount": 10
     },
     {
       "title": "Machu Picchu, Peru",
@@ -565,18 +275,8 @@
       "lng": -72.54,
       "text": "Lost City of the Incas",
       "year": 2022,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/machu_picchu-07-2022/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/machu_picchu-07-2022/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/machu_picchu-07-2022/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/machu_picchu-07-2022/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/machu_picchu-07-2022/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/machu_picchu-07-2022/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/machu_picchu-07-2022/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/machu_picchu-07-2022/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/machu_picchu-07-2022/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/machu_picchu-07-2022/web_009.jpg"
-      ]
+      "photoFolder": "machu_picchu-07-2022",
+      "photoCount": 10
     },
     {
       "title": "Anamur, Türkiye",
@@ -584,18 +284,8 @@
       "lng": 32.89,
       "text": "Mamure Castle",
       "year": 2023,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/mamure-04-2023/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/mamure-04-2023/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/mamure-04-2023/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/mamure-04-2023/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/mamure-04-2023/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/mamure-04-2023/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/mamure-04-2023/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/mamure-04-2023/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/mamure-04-2023/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/mamure-04-2023/web_009.jpg"
-      ]
+      "photoFolder": "mamure-04-2023",
+      "photoCount": 10
     },
     {
       "title": "Manú, Peru",
@@ -603,18 +293,8 @@
       "lng": -70.92,
       "text": "Into the Jungle",
       "year": 2022,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/manu-06-2022/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/manu-06-2022/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/manu-06-2022/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/manu-06-2022/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/manu-06-2022/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/manu-06-2022/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/manu-06-2022/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/manu-06-2022/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/manu-06-2022/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/manu-06-2022/web_009.jpg"
-      ]
+      "photoFolder": "manu-06-2022",
+      "photoCount": 10
     },
     {
       "title": "Maras, Peru",
@@ -622,18 +302,8 @@
       "lng": -72.15,
       "text": "Salt Mines",
       "year": 2022,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/maras-06-2022/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/maras-06-2022/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/maras-06-2022/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/maras-06-2022/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/maras-06-2022/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/maras-06-2022/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/maras-06-2022/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/maras-06-2022/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/maras-06-2022/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/maras-06-2022/web_009.jpg"
-      ]
+      "photoFolder": "maras-06-2022",
+      "photoCount": 10
     },
     {
       "title": "Marrakesh, Morocco",
@@ -641,18 +311,8 @@
       "lng": -7.99,
       "text": "The Red City",
       "year": 2023,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/marrakesh-01-2023/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/marrakesh-01-2023/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/marrakesh-01-2023/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/marrakesh-01-2023/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/marrakesh-01-2023/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/marrakesh-01-2023/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/marrakesh-01-2023/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/marrakesh-01-2023/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/marrakesh-01-2023/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/marrakesh-01-2023/web_009.jpg"
-      ]
+      "photoFolder": "marrakesh-01-2023",
+      "photoCount": 10
     },
     {
       "title": "Merzouga, Morocco",
@@ -660,18 +320,8 @@
       "lng": -4.00,
       "text": "Gateway to the Sahara",
       "year": 2023,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/merzouga-01-2023/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/merzouga-01-2023/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/merzouga-01-2023/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/merzouga-01-2023/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/merzouga-01-2023/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/merzouga-01-2023/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/merzouga-01-2023/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/merzouga-01-2023/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/merzouga-01-2023/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/merzouga-01-2023/web_009.jpg"
-      ]
+      "photoFolder": "merzouga-01-2023",
+      "photoCount": 10
     },
     {
       "title": "Okinawa, Japan",
@@ -679,18 +329,8 @@
       "lng": 127.8243,
       "text": "The Rock",
       "year": 2025,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/okinawa-11-2025/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/okinawa-11-2025/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/okinawa-11-2025/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/okinawa-11-2025/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/okinawa-11-2025/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/okinawa-11-2025/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/okinawa-11-2025/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/okinawa-11-2025/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/okinawa-11-2025/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/okinawa-11-2025/web_009.jpg"
-      ]
+      "photoFolder": "okinawa-11-2025",
+      "photoCount": 10
     },
     {
       "title": "Ortaca, Türkiye",
@@ -698,18 +338,8 @@
       "lng": 28.76,
       "text": "Central Place",
       "year": 2023,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/ortaca-05-2023/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/ortaca-05-2023/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/ortaca-05-2023/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/ortaca-05-2023/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/ortaca-05-2023/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/ortaca-05-2023/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/ortaca-05-2023/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/ortaca-05-2023/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/ortaca-05-2023/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/ortaca-05-2023/web_009.jpg"
-      ]
+      "photoFolder": "ortaca-05-2023",
+      "photoCount": 10
     },
     {
       "title": "Ouro Preto, Brazil",
@@ -717,18 +347,8 @@
       "lng": -43.50,
       "text": "Black Gold",
       "year": 2024,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/ouropreto-04-2024/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/ouropreto-04-2024/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/ouropreto-04-2024/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/ouropreto-04-2024/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/ouropreto-04-2024/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/ouropreto-04-2024/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/ouropreto-04-2024/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/ouropreto-04-2024/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/ouropreto-04-2024/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/ouropreto-04-2024/web_009.jpg"
-      ]
+      "photoFolder": "ouropreto-04-2024",
+      "photoCount": 10
     },
     {
       "title": "Pamukkale, Türkiye",
@@ -736,18 +356,8 @@
       "lng": 29.12,
       "text": "Cotton Castle",
       "year": 2023,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/pamukkale-04-2023/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/pamukkale-04-2023/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/pamukkale-04-2023/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/pamukkale-04-2023/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/pamukkale-04-2023/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/pamukkale-04-2023/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/pamukkale-04-2023/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/pamukkale-04-2023/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/pamukkale-04-2023/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/pamukkale-04-2023/web_009.jpg"
-      ]
+      "photoFolder": "pamukkale-04-2023",
+      "photoCount": 10
     },
     {
       "title": "Pisac, Peru",
@@ -755,18 +365,8 @@
       "lng": -71.84,
       "text": "City of Towers",
       "year": 2022,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/pisac-06-2022/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/pisac-06-2022/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/pisac-06-2022/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/pisac-06-2022/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/pisac-06-2022/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/pisac-06-2022/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/pisac-06-2022/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/pisac-06-2022/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/pisac-06-2022/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/pisac-06-2022/web_009.jpg"
-      ]
+      "photoFolder": "pisac-06-2022",
+      "photoCount": 10
     },
     {
       "title": "Quito, Ecuador",
@@ -774,37 +374,17 @@
       "lng": -78.50,
       "text": "City of the Skies",
       "year": 2024,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/quito-10-2024/web_009.jpg"
-      ]
+      "photoFolder": "quito-10-2024",
+      "photoCount": 10
     },
-     {
+    {
       "title": "Rabat, Morocco",
       "lat": 34.01,
       "lng": -6.85,
       "text": "Royal Capital",
       "year": 2023,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/rabat-02-2023/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/rabat-02-2023/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/rabat-02-2023/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/rabat-02-2023/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/rabat-02-2023/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/rabat-02-2023/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/rabat-02-2023/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/rabat-02-2023/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/rabat-02-2023/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/rabat-02-2023/web_009.jpg"
-      ]
+      "photoFolder": "rabat-02-2023",
+      "photoCount": 10
     },
     {
       "title": "Sao Paulo, Brazil",
@@ -812,18 +392,8 @@
       "lng": -46.63,
       "text": "Land of Drizzle",
       "year": 2024,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/saopaulo-05-2024/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/saopaulo-05-2024/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/saopaulo-05-2024/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/saopaulo-05-2024/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/saopaulo-05-2024/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/saopaulo-05-2024/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/saopaulo-05-2024/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/saopaulo-05-2024/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/saopaulo-05-2024/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/saopaulo-05-2024/web_009.jpg"
-      ]
+      "photoFolder": "saopaulo-05-2024",
+      "photoCount": 10
     },
     {
       "title": "Shangri-La, China",
@@ -831,18 +401,8 @@
       "lng": 99.70,
       "text": "Royal Plains",
       "year": 2023,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/shangrila-11-2023/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/shangrila-11-2023/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/shangrila-11-2023/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/shangrila-11-2023/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/shangrila-11-2023/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/shangrila-11-2023/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/shangrila-11-2023/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/shangrila-11-2023/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/shangrila-11-2023/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/shangrila-11-2023/web_009.jpg"
-      ]
+      "photoFolder": "shangrila-11-2023",
+      "photoCount": 10
     },
     {
       "title": "Shenzhen, China",
@@ -850,18 +410,8 @@
       "lng": 114.02,
       "text": "China's Silicone Valley for New Year",
       "year": 2024,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/shenzhen-12-2024/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/shenzhen-12-2024/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/shenzhen-12-2024/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/shenzhen-12-2024/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/shenzhen-12-2024/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/shenzhen-12-2024/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/shenzhen-12-2024/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/shenzhen-12-2024/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/shenzhen-12-2024/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/shenzhen-12-2024/web_009.jpg"
-      ]
+      "photoFolder": "shenzhen-12-2024",
+      "photoCount": 10
     },
     {
       "title": "Sukhothai, Thailand",
@@ -869,37 +419,16 @@
       "lng": 99.70,
       "text": "Dawn of Happiness",
       "year": 2023,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/sukhothai-12-2023/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/sukhothai-12-2023/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/sukhothai-12-2023/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/sukhothai-12-2023/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/sukhothai-12-2023/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/sukhothai-12-2023/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/sukhothai-12-2023/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/sukhothai-12-2023/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/sukhothai-12-2023/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/sukhothai-12-2023/web_009.jpg"
-      ]
-    },
+      "photoFolder": "sukhothai-12-2023",
+      "photoCount": 10
     {
       "title": "Timizguida Ouftas, Morocco",
       "lat": 30.99,
       "lng": -9.81,
       "text": "Beach Homestay",
       "year": 2023,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/tamanar-01-2023/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/tamanar-01-2023/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/tamanar-01-2023/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/tamanar-01-2023/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/tamanar-01-2023/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/tamanar-01-2023/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/tamanar-01-2023/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/tamanar-01-2023/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/tamanar-01-2023/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/tamanar-01-2023/web_009.jpg"
-      ]
+      "photoFolder": "tamanar-01-2023",
+      "photoCount": 10
     },
     {
       "title": "Tampa, USA",
@@ -907,18 +436,8 @@
       "lng": -82.41,
       "text": "The Big Guava",
       "year": 2022,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/tampa-09-2022/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/tampa-09-2022/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/tampa-09-2022/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/tampa-09-2022/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/tampa-09-2022/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/tampa-09-2022/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/tampa-09-2022/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/tampa-09-2022/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/tampa-09-2022/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/tampa-09-2022/web_009.jpg"
-      ]
+      "photoFolder": "tampa-09-2022",
+      "photoCount": 10
     },
     {
       "title": "Lake Titicaca, Peru",
@@ -926,18 +445,8 @@
       "lng": -69.69,
       "text": "Rock of the Puma",
       "year": 2022,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/titicaca-06-2022/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/titicaca-06-2022/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/titicaca-06-2022/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/titicaca-06-2022/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/titicaca-06-2022/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/titicaca-06-2022/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/titicaca-06-2022/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/titicaca-06-2022/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/titicaca-06-2022/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/titicaca-06-2022/web_009.jpg"
-      ]
+      "photoFolder": "titicaca-06-2022",
+      "photoCount": 10
     },
     {
       "title": "Uchullujllo, Peru",
@@ -945,18 +454,8 @@
       "lng": -71.24,
       "text": "Palccoyo Rainbow Mountain",
       "year": 2022,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/palccoyo-06-2022/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/palccoyo-06-2022/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/palccoyo-06-2022/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/palccoyo-06-2022/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/palccoyo-06-2022/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/palccoyo-06-2022/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/palccoyo-06-2022/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/palccoyo-06-2022/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/palccoyo-06-2022/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/palccoyo-06-2022/web_009.jpg"
-      ]
+      "photoFolder": "palccoyo-06-2022",
+      "photoCount": 10
     },
     {
       "title": "Umasbamba, Peru",
@@ -964,18 +463,8 @@
       "lng": -72.00,
       "text": "Local Wedding",
       "year": 2022,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/umasbamba-06-2022/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/umasbamba-06-2022/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/umasbamba-06-2022/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/umasbamba-06-2022/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/umasbamba-06-2022/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/umasbamba-06-2022/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/umasbamba-06-2022/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/umasbamba-06-2022/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/umasbamba-06-2022/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/umasbamba-06-2022/web_009.jpg"
-      ]
+      "photoFolder": "umasbamba-06-2022",
+      "photoCount": 10
     },
     {
       "title": "Xiamen, China",
@@ -983,18 +472,8 @@
       "lng": 118.1313,
       "text": "Garden on the Sea",
       "year": 2024,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/xiamen-12-2024/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/xiamen-12-2024/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/xiamen-12-2024/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/xiamen-12-2024/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/xiamen-12-2024/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/xiamen-12-2024/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/xiamen-12-2024/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/xiamen-12-2024/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/xiamen-12-2024/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/xiamen-12-2024/web_009.jpg"
-      ]
+      "photoFolder": "xiamen-12-2024",
+      "photoCount": 10
     },
     {
       "title": "Xingyi, China",
@@ -1002,17 +481,7 @@
       "lng": 104.9077,
       "text": "Karst Paradise",
       "year": 2025,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/xingyi-07-2025/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/xingyi-07-2025/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/xingyi-07-2025/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/xingyi-07-2025/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/xingyi-07-2025/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/xingyi-07-2025/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/xingyi-07-2025/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/xingyi-07-2025/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/xingyi-07-2025/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/xingyi-07-2025/web_009.jpg"
-      ]
+      "photoFolder": "xingyi-07-2025",
+      "photoCount": 10
     }
   ]
