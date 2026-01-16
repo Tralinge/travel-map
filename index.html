@@ -286,7 +286,7 @@ html, body {
     <div id="sidebar-handle"></div>
     <h2 id="place-title"></h2> <!-- initially blank -->
     <div id="place-content">
-      <p>Click a marker on the map to see photos.</p>
+      <p>Click a map marker to see photos.</p>
     </div>
   </div>
 </div>
@@ -418,6 +418,26 @@ const markerCluster = L.markerClusterGroup({
   maxClusterRadius: CONFIG.clusterRadius
 });
 
+/* ============================================================
+   LOAD PHOTO LIST
+============================================================ */
+function buildPhotoList(place) {
+  if (Array.isArray(place.photos)) {
+    return place.photos; // backward compatibility
+  }
+
+  if (!place.photoFolder || !place.photoCount) {
+    return [];
+  }
+
+  const base =
+    "https://tralinge.github.io/travel-map/photos/";
+
+  return Array.from({ length: place.photoCount }, (_, i) => {
+    const index = String(i).padStart(3, "0");
+    return `${base}${place.photoFolder}/web_${index}.jpg`;
+  });
+}
 
 /* ============================================================
    SIDEBAR
