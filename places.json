@@ -261,6 +261,15 @@
       "photoCount": 10
     },
     {
+      "title": "Lima, Peru",
+      "lat": -12.11,
+      "lng": -77.03,
+      "text": "The Octopus",
+      "year": 2022,
+      "photoFolder": "lima-05-2022",
+      "photoCount": 10
+    },
+    {
       "title": "Lujiang, China",
       "lat": 31.41,
       "lng": 117.41,
