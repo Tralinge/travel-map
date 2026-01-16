@@ -233,18 +233,8 @@
       "lng": 55.27,
       "text": "Pearl of the Gulf",
       "year": 2023,
-      "photos": [
-        "https://tralinge.github.io/travel-map/photos/dubai-08-2023/web_000.jpg",
-        "https://tralinge.github.io/travel-map/photos/dubai-08-2023/web_001.jpg",
-        "https://tralinge.github.io/travel-map/photos/dubai-08-2023/web_002.jpg",
-        "https://tralinge.github.io/travel-map/photos/dubai-08-2023/web_003.jpg",
-        "https://tralinge.github.io/travel-map/photos/dubai-08-2023/web_004.jpg",
-        "https://tralinge.github.io/travel-map/photos/dubai-08-2023/web_005.jpg",
-        "https://tralinge.github.io/travel-map/photos/dubai-08-2023/web_006.jpg",
-        "https://tralinge.github.io/travel-map/photos/dubai-08-2023/web_007.jpg",
-        "https://tralinge.github.io/travel-map/photos/dubai-08-2023/web_008.jpg",
-        "https://tralinge.github.io/travel-map/photos/dubai-08-2023/web_009.jpg"
-      ]
+      "photoFolder": "ait_benhaddou-02-2023"
+      "photoCount": 10
     },
     {
       "title": "Essaouira, Morocco",
