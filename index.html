@@ -455,7 +455,7 @@ function updateSidebar(place) {
   const content = document.getElementById("place-content");
   content.innerHTML = "";
 
-  currentPhotos = place.photos ?? [];
+  currentPhotos = buildPhotoList(place);
 
   currentPhotos.forEach((src, index) => {
     const wrapper = document.createElement('div');
