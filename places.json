@@ -90,6 +90,15 @@
       "photoCount": 10
     },
     {
+      "title": "Cusco, Peru",
+      "lat": -13.51,
+      "lng": -71.97,
+      "text": "Navel of the World",
+      "year": 2022,
+      "photoFolder": "cusco-05-2022",
+      "photoCount": 10
+    },
+    {
       "title": "Dali, China",
       "lat": 25.70,
       "lng": 100.15,
