@@ -90,6 +90,15 @@
       "photoCount": 10
     },
     {
+      "title": "Cusco, Peru",
+      "lat": -13.51,
+      "lng": -71.97,
+      "text": "Navel of the World",
+      "year": 2022,
+      "photoFolder": "cusco-05-2022",
+      "photoCount": 10
+    },
+    {
       "title": "Dali, China",
       "lat": 25.70,
       "lng": 100.15,
@@ -333,6 +342,15 @@
       "photoCount": 10
     },
     {
+      "title": "Oaxaca, Mexico",
+      "lat": 17.06,
+      "lng": -96.72,
+      "text": "Land of the Seven Moles",
+      "year": 2022,
+      "photoFolder": "oaxaca-04-2022",
+      "photoCount": 10
+    },
+    {
       "title": "Okinawa, Japan",
       "lat": 26.4270,
       "lng": 127.8243,
@@ -357,6 +375,15 @@
       "text": "Black Gold",
       "year": 2024,
       "photoFolder": "ouropreto-04-2024",
+      "photoCount": 10
+    },
+    {
+      "title": "Palenque, Mexico",
+      "lat": 17.48,
+      "lng": -92.04,
+      "text": "Place of Great Waters",
+      "year": 2022,
+      "photoFolder": "palenque-03-2022",
       "photoCount": 10
     },
     {
