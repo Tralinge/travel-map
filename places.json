@@ -342,6 +342,15 @@
       "photoCount": 10
     },
     {
+      "title": "Oaxaca, Mexico",
+      "lat": 17.06,
+      "lng": -96.72,
+      "text": "Land of the Seven Moles",
+      "year": 2022,
+      "photoFolder": "oaxaca-04-2022",
+      "photoCount": 10
+    },
+    {
       "title": "Okinawa, Japan",
       "lat": 26.4270,
       "lng": 127.8243,
