@@ -712,6 +712,9 @@ if (sidebar) {
   sidebar.addEventListener("transitionend", e => {
     if (e.propertyName === "height") {
       map.invalidateSize();
+
+      const minWorldZoom = map.getBoundsZoom(worldBounds, true);
+      map.setMinZoom(minWorldZoom);
     }
   });
 }
