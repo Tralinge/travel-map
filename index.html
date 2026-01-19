@@ -407,8 +407,9 @@ const worldBounds = L.latLngBounds(
 
 map.setMaxBounds(worldBounds);
 
-const minWorldZoom = map.getBoundsZoom(worldBounds, true);
-map.setMinZoom(minWorldZoom);
+// Lock zoom-out by WIDTH ONLY
+const minZoomWidth = getMinZoomForWorldWidth(map);
+map.setMinZoom(minZoomWidth);
 
 L.control.zoom({ position: "bottomright" }).addTo(map);
 
@@ -420,6 +421,16 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 const markerCluster = L.markerClusterGroup({
   maxClusterRadius: CONFIG.clusterRadius
 });
+
+function getMinZoomForWorldWidth(map) {
+  const mapWidth = map.getSize().x;
+
+  // World width at zoom 0 is 256px
+  // worldWidth = 256 * 2^zoom
+  const zoom = Math.log2(mapWidth / 256);
+
+  return Math.floor(zoom);
+}
 
 /* ============================================================
    LOAD PHOTO LIST
@@ -713,8 +724,8 @@ if (sidebar) {
     if (e.propertyName === "height") {
       map.invalidateSize();
 
-      const minWorldZoom = map.getBoundsZoom(worldBounds, true);
-      map.setMinZoom(minWorldZoom);
+      const minZoomWidth = getMinZoomForWorldWidth(map);
+      map.setMinZoom(minZoomWidth);
     }
   });
 }
