@@ -407,6 +407,9 @@ const worldBounds = L.latLngBounds(
 
 map.setMaxBounds(worldBounds);
 
+const minWorldZoom = map.getBoundsZoom(worldBounds, true);
+map.setMinZoom(minWorldZoom);
+
 L.control.zoom({ position: "bottomright" }).addTo(map);
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
