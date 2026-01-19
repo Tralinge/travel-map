@@ -418,6 +418,10 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   noWrap: true
 }).addTo(map);
 
+map.whenReady(() => {
+  updateMinZoomFromWidth();
+});
+
 const markerCluster = L.markerClusterGroup({
   maxClusterRadius: CONFIG.clusterRadius
 });
@@ -723,6 +727,7 @@ if (sidebar) {
   sidebar.addEventListener("transitionend", e => {
     if (e.propertyName === "height") {
       map.invalidateSize();
+      updateMinZoomFromWidth();
 
       function updateMinZoomFromWidth() {
         const centerLat = map.getCenter().lat;
