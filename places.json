@@ -351,6 +351,15 @@
       "photoCount": 10
     },
     {
+      "title": "Mitla, Mexico",
+      "lat": 16.92,
+      "lng": -96.35,
+      "text": "Place of the Dead",
+      "year": 2022,
+      "photoFolder": "mitla-04-2022",
+      "photoCount": 10
+    },
+    {
       "title": "Oaxaca, Mexico",
       "lat": 17.06,
       "lng": -96.72,
