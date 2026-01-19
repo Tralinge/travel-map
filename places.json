@@ -81,6 +81,15 @@
       "photoCount": 10
     },
     {
+      "title": "Cintalapa, Mexico",
+      "lat": 16.68,
+      "lng": -93.72,
+      "text": "Hill of the Opossums",
+      "year": 2022,
+      "photoFolder": "cintalapa-03-2022",
+      "photoCount": 10
+    },
+    {
       "title": "Cuenca, Ecuador",
       "lat": -2.89,
       "lng": -79.00,
@@ -483,6 +492,15 @@
       "text": "Rock of the Puma",
       "year": 2022,
       "photoFolder": "titicaca-06-2022",
+      "photoCount": 10
+    },
+    {
+      "title": "Toniná, Mexico",
+      "lat": 16.90,
+      "lng": -92.00,
+      "text": "House of Stone",
+      "year": 2022,
+      "photoFolder": "tonina-03-2022",
       "photoCount": 10
     },
     {
