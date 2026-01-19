@@ -431,7 +431,7 @@ function updateMinZoomFromWidth() {
     [centerLat + 0.0001,  180]
   );
 
-  const minZoom = map.getBoundsZoom(horizontalBounds, false);
+  const minZoom = map.getBoundsZoom(horizontalBounds, false) + 1;
   map.setMinZoom(minZoom);
 }
 
@@ -573,7 +573,6 @@ function createPlaceMarker(place, minYear, maxYear) {
   // Click → focus map and update sidebar
   marker.on("click", () => {  
     const targetZoom = Math.max(map.getZoom(), CONFIG.focusZoom);
-    map.setView([place.lat, place.lng], targetZoom);
     updateSidebar(place);
     onMarkerSelected();
 
@@ -632,7 +631,6 @@ fetch("places.json")
     });
 
     map.addLayer(markerCluster);
-    map.fitBounds(bounds, { padding: CONFIG.fitPadding });
   })
   .catch(err => {
     console.error("Failed to load places.json", err);
