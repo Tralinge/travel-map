@@ -441,6 +441,15 @@
       "photoCount": 10
     },
     {
+      "title": "San Cristóbal de las Casas, Mexico",
+      "lat": 16.73,
+      "lng": -92.63,
+      "text": "Magic Town",
+      "year": 2022,
+      "photoFolder": "san_cristobal-04-2022",
+      "photoCount": 10
+    },
+    {
       "title": "Sao Paulo, Brazil",
       "lat": -23.54,
       "lng": -46.63,
