@@ -423,15 +423,13 @@ const markerCluster = L.markerClusterGroup({
 });
 
 function updateMinZoomFromWidth() {
-  const centerLat = map.getCenter().lat;
-
-  // A very thin horizontal strip that spans the whole world
+  // Always compute width at the equator to avoid Mercator distortion
   const horizontalBounds = L.latLngBounds(
-    [centerLat - 0.0001, -180],
-    [centerLat + 0.0001,  180]
+    [-0.0001, -180],
+    [ 0.0001,  180]
   );
 
-  const minZoom = map.getBoundsZoom(horizontalBounds, false) + 1;
+  const minZoom = map.getBoundsZoom(horizontalBounds, false);
   map.setMinZoom(minZoom);
 }
 
