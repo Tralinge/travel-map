@@ -402,9 +402,12 @@ const worldBounds = L.latLngBounds(
       
 const map = L.map("map", { 
   zoomControl: false,
+  zoomSnap: 1,
+  zoomDelta: 1,
+  minZoom: 0, // temporary, overridden later
   maxBounds: worldBounds,
   maxBoundsViscosity: 1.0,
-  worldCopyJump: false
+  worldCopyJump: false  
 }).setView(CONFIG.initialView, CONFIG.initialZoom);
 
 L.control.zoom({ position: "bottomright" }).addTo(map);
@@ -416,6 +419,24 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 
 const markerCluster = L.markerClusterGroup({
   maxClusterRadius: CONFIG.clusterRadius
+});
+
+function computeMinZoomFromWidth() {
+  const mapWidth = map.getSize().x;
+
+  // World is 256px wide at zoom 0
+  const minZoom = Math.ceil(Math.log2(mapWidth / 256));
+
+  map.setMinZoom(minZoom);
+}
+
+map.whenReady(() => {
+  computeMinZoomFromWidth();
+});
+
+window.addEventListener("resize", () => {
+  map.invalidateSize();
+  computeMinZoomFromWidth();
 });
 
 /* ============================================================
@@ -704,16 +725,11 @@ document.getElementById("lightbox")
 /* ============================================================
    MOBILE SIDEBAR COLLAPSE + MAP RESIZE SYNC
 ============================================================ */
-
-/*
-  Leaflet does NOT automatically react to container size changes.
-  When the sidebar height transitions (mobile), we must explicitly
-  notify the map once the transition completes.
-*/
 if (sidebar) {
   sidebar.addEventListener("transitionend", e => {
     if (e.propertyName === "height") {
       map.invalidateSize();
+      computeMinZoomFromWidth();
     }
   });
 }
