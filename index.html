@@ -395,17 +395,17 @@ function wavelengthToRGB(wl) {
    MAP INITIALIZATION
 ============================================================ */
 
+const worldBounds = L.latLngBounds(
+  [-85, -180],
+  [85, 180]
+);
+      
 const map = L.map("map", { 
   zoomControl: false,
   maxBounds: worldBounds,
   maxBoundsViscosity: 1.0,
   worldCopyJump: false
 }).setView(CONFIG.initialView, CONFIG.initialZoom);
-
-const worldBounds = L.latLngBounds(
-  [-85, -180],
-  [85, 180]
-);
 
 L.control.zoom({ position: "bottomright" }).addTo(map);
 
@@ -556,6 +556,13 @@ function createPlaceMarker(place, minYear, maxYear) {
   // Click → focus map and update sidebar
   marker.on("click", () => {  
     const targetZoom = Math.max(map.getZoom(), CONFIG.focusZoom);
+        
+    map.flyTo(
+      [place.lat, place.lng],
+      targetZoom,
+      { duration: 0.6 }
+    );
+        
     updateSidebar(place);
     onMarkerSelected();
 
