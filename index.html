@@ -428,10 +428,16 @@ function computeMinZoomFromWidth() {
   const minZoom = Math.ceil(Math.log2(mapWidth / 256));
 
   map.setMinZoom(minZoom);
+
+  //ENFORCE
+  if (map.getZoom() < minZoom) {
+    map.setZoom(minZoom, { animate: false });
+  }
 }
 
 map.whenReady(() => {
   computeMinZoomFromWidth();
+  map.setZoom(map.getMinZoom(), { animate: false });
 });
 
 window.addEventListener("resize", () => {
