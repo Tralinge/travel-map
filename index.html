@@ -377,6 +377,7 @@ const CONFIG = {
 
 let currentPhotos = [];
 let currentIndex = 0;
+let currentFilterYear = null;
 
 function setSidebarState(state) {
   sidebar.classList.remove('collapsed', 'expanded');
@@ -692,6 +693,7 @@ function applyYearFilter(year) {
 
 slider.addEventListener("input", e => {
   const year = Number(e.target.value);
+  currentFilterYear = year;
   label.textContent = `Up to ${year}`;
   applyYearFilter(year);
 });
@@ -730,6 +732,20 @@ fetch("places.json")
 
     map.addLayer(markerCluster);
     applyYearFilter(maxYear);
+
+    function reapplyYearFilter() {
+          if(currentFilterYear !== null) {
+                applyYearFilter(currentFilterYear);
+          }
+    }
+      markerCluster.on("animationend", reapplyYearFilter);
+      markerCluster.on("clusterclick", reapplyYearFilter);
+      markerCluster.on("spiderfied", reapplyYearFilter);
+      markerCluster.on("unspiderfied", reapplyYearFilter);
+      
+      map.on("zoomend", reapplyYearFilter);
+      map.on("moveend", reapplyYearFilter);
+
   })
   .catch(err => {
     console.error("Failed to load places.json", err);
