@@ -389,6 +389,9 @@ function setSidebarState(state) {
 
 const sidebar = document.getElementById("sidebar");
 const handle = document.getElementById("sidebar-handle");
+const timeControl = document.getElementById("time-control");
+const slider = document.getElementById("year-slider");
+const label = document.getElementById("year-label");
       
 /* ============================================================
    COLOR MAPPING (YEAR → RGB)
@@ -705,8 +708,6 @@ fetch("places.json")
     const years = places.map(p => p.year);
     const minYear = Math.min(...years);
     const maxYear = Math.max(...years);
-    const slider = document.getElementById("year-slider");
-    const label  = document.getElementById("year-label");
   
     slider.min = minYear;
     slider.max = maxYear;
@@ -724,6 +725,7 @@ fetch("places.json")
     });
 
     map.addLayer(markerCluster);
+    applyYearFilter(maxYear);
   })
   .catch(err => {
     console.error("Failed to load places.json", err);
