@@ -672,6 +672,26 @@ function createPlaceMarker(place, minYear, maxYear) {
 ============================================================ */
 const allMarkers = [];
 
+function applyYearFilter(year) {
+  allMarkers.forEach(marker => {
+    const el = marker.getElement();
+    if (!el) return;
+
+    el.style.opacity =
+      marker.placeYear <= year ? "1" : "0.2";
+  });
+}
+
+slider.addEventListener("input", e => {
+  const year = Number(e.target.value);
+  label.textContent = `Up to ${year}`;
+  applyYearFilter(year);
+});
+
+const control = document.getElementById("time-control");
+document.getElementById("time-toggle").onclick = () => {
+  control.classList.toggle("collapsed");
+};
       
 /* ============================================================
    DATA LOADING
@@ -685,6 +705,13 @@ fetch("places.json")
     const years = places.map(p => p.year);
     const minYear = Math.min(...years);
     const maxYear = Math.max(...years);
+    const slider = document.getElementById("year-slider");
+    const label  = document.getElementById("year-label");
+  
+    slider.min = minYear;
+    slider.max = maxYear;
+    slider.value = maxYear;
+    label.textContent = `Up to ${maxYear}`;
 
     const bounds = L.latLngBounds();
 
@@ -692,6 +719,8 @@ fetch("places.json")
       const marker = createPlaceMarker(place, minYear, maxYear);
       markerCluster.addLayer(marker);
       bounds.extend([place.lat, place.lng]);
+      marker.placeYear = place.year;
+      allMarkers.push(marker);
     });
 
     map.addLayer(markerCluster);
