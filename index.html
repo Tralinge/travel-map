@@ -683,6 +683,11 @@ function applyYearFilter(year) {
     el.style.opacity =
       marker.placeYear <= year ? "1" : "0.2";
   });
+
+  // Force cluster icons to redraw after opacity changes
+  if (markerCluster) {
+    markerCluster.refreshClusters();
+  }
 }
 
 slider.addEventListener("input", e => {
