@@ -182,39 +182,6 @@ html, body {
   opacity: 1;
 }
 
-/* ===== YEAR FILTER ===== */
-#time-control {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  background: rgba(255,255,255,0.95);
-  padding: 6px 8px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  font-family: system-ui, sans-serif;
-  z-index: 500;
-}
-
-#time-control.collapsed input,
-#time-control.collapsed #year-label {
-  display: none;
-}
-
-#time-toggle {
-  font-size: 13px;
-  cursor: pointer;
-}
-
-#year-slider {
-  width: 160px;
-  margin-top: 6px;
-}
-
-#year-label {
-  font-size: 12px;
-  text-align: center;
-  margin-top: 4px;
-}
 
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
@@ -315,20 +282,11 @@ html, body {
 
 <div id="container">
   <div id="map"></div>
-  <div id="time-control" class="collapsed">
-        <button id="time-toggle">Time</button>
-        <input
-          id="year-slider"
-          type="range"
-          step="1"
-        >
-        <div id="year-label"></div>
-  </div>
   <div id="sidebar" class="collapsed">
     <div id="sidebar-handle"></div>
     <h2 id="place-title"></h2> <!-- initially blank -->
     <div id="place-content">
-      <p>Click a map marker to see photos. Marker colors indicate years.</p>
+      <p>Click a map marker to see photos.</p>
     </div>
   </div>
 </div>
@@ -377,7 +335,6 @@ const CONFIG = {
 
 let currentPhotos = [];
 let currentIndex = 0;
-let currentFilterYear = null;
 
 function setSidebarState(state) {
   sidebar.classList.remove('collapsed', 'expanded');
@@ -390,9 +347,6 @@ function setSidebarState(state) {
 
 const sidebar = document.getElementById("sidebar");
 const handle = document.getElementById("sidebar-handle");
-const timeControl = document.getElementById("time-control");
-const slider = document.getElementById("year-slider");
-const label = document.getElementById("year-label");
       
 /* ============================================================
    COLOR MAPPING (YEAR → RGB)
@@ -671,37 +625,7 @@ function createPlaceMarker(place, minYear, maxYear) {
   return marker;
 }
 
-/* ============================================================
-   YEAR SLIDER
-============================================================ */
-const allMarkers = [];
 
-function applyYearFilter(year) {
-  allMarkers.forEach(marker => {
-    const el = marker.getElement();
-    if (!el) return;
-
-    el.style.opacity =
-      marker.placeYear <= year ? "1" : "0.2";
-  });
-
-  // Force cluster icons to redraw after opacity changes
-  if (markerCluster) {
-    markerCluster.refreshClusters();
-  }
-}
-
-slider.addEventListener("input", e => {
-  const year = Number(e.target.value);
-  currentFilterYear = year;
-  label.textContent = `Up to ${year}`;
-  applyYearFilter(year);
-});
-
-document.getElementById("time-toggle").onclick = () => {
-  timeControl.classList.toggle("collapsed");
-};
-      
 /* ============================================================
    DATA LOADING
 ============================================================ */
@@ -714,11 +638,6 @@ fetch("places.json")
     const years = places.map(p => p.year);
     const minYear = Math.min(...years);
     const maxYear = Math.max(...years);
-  
-    slider.min = minYear;
-    slider.max = maxYear;
-    slider.value = maxYear;
-    label.textContent = `Up to ${maxYear}`;
 
     const bounds = L.latLngBounds();
 
@@ -726,26 +645,9 @@ fetch("places.json")
       const marker = createPlaceMarker(place, minYear, maxYear);
       markerCluster.addLayer(marker);
       bounds.extend([place.lat, place.lng]);
-      marker.placeYear = place.year;
-      allMarkers.push(marker);
     });
 
     map.addLayer(markerCluster);
-    applyYearFilter(maxYear);
-
-    function reapplyYearFilter() {
-          if(currentFilterYear !== null) {
-                applyYearFilter(currentFilterYear);
-          }
-    }
-      markerCluster.on("animationend", reapplyYearFilter);
-      markerCluster.on("clusterclick", reapplyYearFilter);
-      markerCluster.on("spiderfied", reapplyYearFilter);
-      markerCluster.on("unspiderfied", reapplyYearFilter);
-      
-      map.on("zoomend", reapplyYearFilter);
-      map.on("moveend", reapplyYearFilter);
-
   })
   .catch(err => {
     console.error("Failed to load places.json", err);
