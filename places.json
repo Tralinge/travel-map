@@ -36,6 +36,15 @@
       "photoCount": 10
     },
     {
+      "title": "Athens, Greece",
+      "lat": 37.96,
+      "lng": 23.71,
+      "text": "Cradle of Western Civilization",
+      "year": 2026,
+      "photoFolder": "athens-03-2026",
+      "photoCount": 10
+    },
+    {
       "title": "Auzangate, Peru",
       "lat": -13.75,
       "lng": -71.22,
