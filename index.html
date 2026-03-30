@@ -733,6 +733,11 @@ document.getElementById("lightbox")
     startX = null;
   });
 
+  // Tap anywhere to close
+  document.getElementById("lightbox").addEventListener("click", e => {
+    if (e.target.id === "lightbox") closeLightbox();
+  });
+
 
 /* ============================================================
    MOBILE SIDEBAR COLLAPSE + MAP RESIZE SYNC
