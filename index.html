@@ -747,6 +747,18 @@ document.getElementById("lightbox")
     if (e.target.id === "lightbox") closeLightbox();
   });
 
+  // Scroll to hide nav bar
+  function openLightbox(i) {
+    document.body.style.overflow = "hidden";
+    document.getElementById("lightbox").style.display = "flex";
+    showIndex(i);
+      
+    // trigger address bar collapse
+    setTimeout(() => {
+      window.scrollTo(0, 1);
+      }, 50);
+    }
+
 
 /* ============================================================
    MOBILE SIDEBAR COLLAPSE + MAP RESIZE SYNC
