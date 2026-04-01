@@ -133,6 +133,10 @@ html, body {
   border-radius: 0;
 }
 
+.lightbox-inner {
+  position: relative;
+}
+      
 .lightbox-arrow {
   position: absolute;
   top: 50%;
@@ -311,9 +315,8 @@ html, body {
   <span id="lightbox-close">&times;</span>
 
   <div class="lightbox-inner">
-    <span id="lightbox-prev" class="lightbox-arrow">&#10094;</span>
-    <img id="lightbox-img" alt="">
-    <span id="lightbox-next" class="lightbox-arrow">&#10095;</span>
+    <span id="lightbox-prev" class="lightbox-arrow">‹</span>
+    <span id="lightbox-next" class="lightbox-arrow">›</span>
   </div>
 
   <div id="lightbox-dots"></div>
@@ -694,10 +697,17 @@ function showIndex(i) {
   renderDots();
 }
 
-function openLightbox(i) {
-  document.getElementById("lightbox").style.display = "flex";
-  showIndex(i);
-}
+ // open lightbox, scroll to collapse address bar?
+ function openLightbox(i) {
+   document.body.style.overflow = "hidden";
+   document.getElementById("lightbox").style.display = "flex";
+   showIndex(i);
+      
+   // trigger address bar collapse
+   setTimeout(() => {
+     window.scrollTo(0, 1);
+     }, 50);
+   }
 
 function closeLightbox() {
   document.getElementById("lightbox").style.display = "none";
@@ -747,19 +757,7 @@ document.getElementById("lightbox")
     if (e.target.id === "lightbox") closeLightbox();
   });
 
-  // Scroll to hide nav bar
-  function openLightbox(i) {
-    document.body.style.overflow = "hidden";
-    document.getElementById("lightbox").style.display = "flex";
-    showIndex(i);
-      
-    // trigger address bar collapse
-    setTimeout(() => {
-      window.scrollTo(0, 1);
-      }, 50);
-    }
-
-
+ 
 /* ============================================================
    MOBILE SIDEBAR COLLAPSE + MAP RESIZE SYNC
 ============================================================ */
