@@ -744,6 +744,18 @@ function showPrev() {
             currentPhotos.length);
 }
 
+// lightbox closing only when clicking on background
+const lightbox = document.getElementById("lightbox");
+const inner = document.querySelector(".lightbox-inner");
+
+lightbox.addEventListener("click", () => {
+  closeLightbox();
+});
+
+inner.addEventListener("click", e => {
+  e.stopPropagation();
+});
+      
 // Controls
 document.getElementById("lightbox-close").onclick = closeLightbox;
 document.getElementById("lightbox-next").onclick = showNext;
