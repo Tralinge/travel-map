@@ -131,6 +131,8 @@ html, body {
   max-height: 100%;
   object-fit: contain;
   border-radius: 0;
+  user-drag: none;
+  -webkit-user-drag: none;
 }
 
 .lightbox-inner {
@@ -155,7 +157,7 @@ html, body {
   font-size: 48px;
   color: #fff;
   cursor: pointer;
-  padding: 12px;
+  padding: 20px;
   user-select: none;
   z-index: 2100;
 }
@@ -699,13 +701,6 @@ function renderDots() {
   });
 }
 
-function showIndex(i) {
-  currentIndex = i;
-  document.getElementById("lightbox-img").src =
-    currentPhotos[currentIndex];
-  renderDots();
-}
-
  // open lightbox, scroll to collapse address bar?
  function openLightbox(i) {
    document.body.style.overflow = "hidden";
@@ -718,6 +713,22 @@ function showIndex(i) {
      }, 50);
    }
 
+// Preload previous and next photo
+function preload(i) {
+  const img = new Image();
+  img.src = currentPhotos[i];
+}
+
+function showIndex(i) {
+  currentIndex = i;
+  document.getElementById("lightbox-img").src = currentPhotos[i];
+
+  preload((i + 1) % currentPhotos.length);
+  preload((i - 1 + currentPhotos.length) % currentPhotos.length);
+
+  renderDots();
+}
+      
 function closeLightbox() {
   document.getElementById("lightbox").style.display = "none";
   document.getElementById("lightbox-img").src = "";
@@ -763,11 +774,10 @@ document.getElementById("lightbox")
     startX = null;
   });
 
-  // Tap anywhere to close
-  document.getElementById("lightbox").addEventListener("click", e => {
-    if (e.target.id === "lightbox") closeLightbox();
+  // Tap anywhere to close (not arrows or image)
+  document.querySelector(".lightbox-inner").addEventListener("click", e => {
+    e.stopPropagation();
   });
-
  
 /* ============================================================
    MOBILE SIDEBAR COLLAPSE + MAP RESIZE SYNC
